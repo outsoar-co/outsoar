@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'TitilliumWeb-Regular';
+    src: url('~assets/fonts/TitilliumWeb-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'TitilliumWeb-Light';
+    src: url('~assets/fonts/TitilliumWeb-Light.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'TitilliumWeb-Bold';
+    src: url('~assets/fonts/TitilliumWeb-Bold.otf') format('opentype');
+}
+
