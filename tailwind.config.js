@@ -11,6 +11,17 @@ module.exports = {
             'sans-light': ['TitilliumWeb-Light', 'sans-serif'],
             'sans-bold': ['TitilliumWeb-Bold', 'sans-serif'],
         },
+        extend: {
+            colors: {
+                outsoar: '#f8981e',
+                // terracotta: '#be8856',
+                // latte: '#e0c6ab',
+                // shadow: '#3c3c3b',
+            },
+            // fontSize: {
+            //     xxs: '.65rem',
+            // },
+        },
     },
     variants: {},
     plugins: [],
