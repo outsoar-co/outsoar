@@ -16,7 +16,8 @@
     "@nuxtjs/axios": "^5.11.0",
     "@nuxtjs/pwa": "^3.0.0-beta.20",
     "nuxt": "^2.13.0",
-    "vue-tasty-burgers": "^1.2.3"
+    "vue-tasty-burgers": "^1.2.3",
+    "vue-typed-js": "^0.1.2"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.0.0",

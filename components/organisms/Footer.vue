@@ -1,9 +1,11 @@
 <template>
     <footer>
         <div class="container mx-auto">
-            <grid cols="2" class="p-4" breakpoints="lg:grid-cols-4">
+            <grid cols="2" class="p-4 my-4" breakpoints="lg:grid-cols-4">
                 <div class="flex flex-col">
-                    <h3 class="text-lg font-bold my-2 uppercase">Follow us</h3>
+                    <footer-title class="my-2 uppercase"
+                        >Follow us</footer-title
+                    >
                     <ul>
                         <li v-for="(s, i) in social" :key="i">
                             <anchor-link
@@ -22,7 +24,7 @@
                     </ul>
                 </div>
                 <div class="flex flex-col">
-                    <h3 class="text-lg font-bold my-2 uppercase">Services</h3>
+                    <footer-title class="my-2 uppercase">Services</footer-title>
                     <ul>
                         <li v-for="(s, i) in services" :key="i">
                             <anchor-link
@@ -37,7 +39,7 @@
                     </ul>
                 </div>
                 <div class="flex flex-col">
-                    <h3 class="text-lg font-bold my-2 uppercase">Discover</h3>
+                    <footer-title class="my-2 uppercase">Discover</footer-title>
                     <ul>
                         <li v-for="(s, i) in discoveries" :key="i">
                             <anchor-link
@@ -56,10 +58,10 @@
                         class="flex flex-wrap py-2 content-center justify-center"
                     >
                         <outsoar class="h-16 w-16" />
-                        <h3 class="font-bold p-2">
+                        <p class="p-2">
                             We build better Web Experience that will outsoar
                             your company
-                        </h3>
+                        </p>
                     </div>
                 </div>
             </grid>
@@ -76,6 +78,7 @@ import {
 } from '@/components/atoms/icons';
 import Grid from '@/components/molecules/Grid';
 import AnchorLink from '@/components/atoms/AnchorLink';
+import FooterTitle from '@/components/atoms/title';
 
 export default {
     components: {
@@ -85,6 +88,7 @@ export default {
         Twitter,
         Outsoar,
         AnchorLink,
+        FooterTitle,
     },
     data() {
         return {

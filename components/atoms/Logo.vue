@@ -36,15 +36,11 @@
                 transform="translate(362.09 278.09) scale(1.25)"
             >
                 outsoar
-                <!-- <tspan class="cls-3" x="169.54" y="0">ut</tspan>
-                <tspan class="cls-4" x="501.2" y="0">s</tspan>
-                <tspan class="cls-5" x="670.73" y="0">oa</tspan>
-                <tspan class="cls-6" x="1014.81" y="0">r</tspan> -->
             </text>
         </g>
     </svg>
 </template>
-<style>
+<style scoped>
 .cls-1 {
     fill: #f8971d;
 }
@@ -54,17 +50,5 @@
     text-transform: uppercase;
     font-weight: 500;
     letter-spacing: 0.2em;
-}
-.cls-3 {
-    letter-spacing: 0.29em;
-}
-.cls-4 {
-    letter-spacing: 0.3em;
-}
-.cls-5 {
-    letter-spacing: 0.29em;
-}
-.cls-6 {
-    letter-spacing: 0.3em;
 }
 </style>

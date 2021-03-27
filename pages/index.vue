@@ -4,7 +4,9 @@
             <hero />
         </Segment>
         <Segment class="bg-gray-200">
-            <h3 class="text-5xl mb-4">We write & ship beautiful code</h3>
+            <h3 class="text-5xl mb-4 text-center">
+                We write & ship beautiful code
+            </h3>
             <btn-link> Let's chat </btn-link>
         </Segment>
     </main>
