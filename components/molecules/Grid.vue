@@ -1,6 +1,6 @@
 <template>
     <div :class="['grid', colClass, gapClass, breakpoints]">
-        <slot>Grid 1</slot>
+        <slot />
     </div>
 </template>
 <script>

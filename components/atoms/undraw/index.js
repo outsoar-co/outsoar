@@ -1,5 +1,5 @@
 const BuildingWebsites = () => import('./BuildingWebsites');
-const ScrumBoard = () => import('./ScrumBoard.vue');
-const BugFixing = () => import('./BugFixing.vue');
+const ScrumBoard = () => import('./ScrumBoard');
+const BugFixing = () => import('./BugFixing');
 
 export { BuildingWebsites, ScrumBoard, BugFixing };

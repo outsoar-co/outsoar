@@ -9,8 +9,8 @@
             <div class="flex justify-center">
                 <grid gap="4" breakpoints="lg:grid-cols-3">
                     <div
-                        v-for="n in topMenuItems"
-                        :key="n"
+                        v-for="(n, i) in topMenuItems"
+                        :key="i"
                         class="flex flex-col justify-items-center hover:text-outsoar cursor-pointer"
                     >
                         <h3
@@ -31,8 +31,8 @@
             <hr />
             <div class="flex flex-wrap justify-center overflow-hidden my-4">
                 <a
-                    v-for="n in MenuItems"
-                    :key="n"
+                    v-for="(n, i) in MenuItems"
+                    :key="i"
                     href="#"
                     :class="[
                         'py-2 font-medium text-xl text-center uppercase hover:text-outsoar',
