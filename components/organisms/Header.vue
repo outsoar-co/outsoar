@@ -8,12 +8,13 @@
         <div
             class="container relative mx-auto px-4 py-2 flex items-center lg:py-6 h-full"
         >
-            <a
+            <nuxt-link
+                to="/"
                 class="inline-block text-nuxt-gray h-10 lg:h-10 z-10 mr-auto nuxt-link-active"
             >
                 <logo :class="['h-10 lg:h-12 sans-bold']" />
-            </a>
-            <navigation :display="navigation.display" />
+            </nuxt-link>
+            <navigation @close="onToggle" :display="navigation.display" />
             <hamburger @toggle="onToggle" />
         </div>
     </header>
@@ -49,7 +50,7 @@ export default {
         },
         handleScroll(event) {
             this.scrollY = window.scrollY;
-            console.log('event: ', this.scrollY);
+            // console.log('event: ', this.scrollY);
             // Any code to be executed when the window is scrolled
         },
     },

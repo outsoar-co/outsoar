@@ -14,14 +14,14 @@
             >
                 <span class="block typing"></span>
             </vue-typed-js>
-            <h3 class="block text-center text-4xl lg:text-6xl">
+            <h3 class="block font-sans text-center text-4xl lg:text-6xl">
                 <span class="block">that will</span>
                 <transition-group tag="span">
                     <span
                         v-for="(w, i) in words"
                         :key="w"
                         :class="{ hidden: current !== i }"
-                        class="font-extrabold underline uppercase font-sans-bold"
+                        class="font-extrabold underline uppercase"
                         >{{ w }}</span
                     >
                 </transition-group>

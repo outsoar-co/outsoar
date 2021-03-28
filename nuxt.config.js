@@ -14,7 +14,7 @@ export default {
      ** See https://nuxtjs.org/api/configuration-head
      */
     head: {
-        title: process.env.npm_package_name || '',
+        title: 'Outsoar - Development Company In North PHL',
         meta: [
             { charset: 'utf-8' },
             {
@@ -24,7 +24,8 @@ export default {
             {
                 hid: 'description',
                 name: 'description',
-                content: process.env.npm_package_description || '',
+                content:
+                    'Building better websites, mobile and custom softwares',
             },
         ],
         link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
