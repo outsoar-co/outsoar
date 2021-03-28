@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col mx-auto items-center mb-36 py-24 lg:mb-32">
+    <div class="flex flex-col mx-auto items-center py-32 mb-32">
         <div class="flex flex-col mb-8 text-center items-center">
             <h1
                 class="font-extrabold text-center text-6xl lg:text-8xl font-sans-bold my-2"
@@ -37,7 +37,11 @@
             <span class="block">and create new income streams.</span>
         </div>
         <btn-link to="#">Learn How </btn-link>
-        <chevron-double-down class="h-6 w-6 my-6 fill-current animate-bounce" />
+        <div class="absolute bottom-0 mb-4">
+            <chevron-double-down
+                class="h-6 w-6 my-6 fill-current animate-bounce"
+            />
+        </div>
     </div>
 </template>
 <script>
