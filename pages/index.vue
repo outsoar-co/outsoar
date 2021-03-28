@@ -3,8 +3,10 @@
         <Segment class="bg-white">
             <hero />
         </Segment>
-        <Segment class="bg-gray-200 shadow-inner">
-            <card class="container p-6 transform -translate-y-32">
+        <Segment class="bg-gray-200 shadow-inner px-8">
+            <card
+                class="container p-6 transform -translate-y-12 lg:-translate-y-32"
+            >
                 <template #body>
                     <h-title size="text-4xl" class="text-center">
                         We are experts in
@@ -61,6 +63,7 @@ import BtnLink from '@/components/atoms/BtnLink';
 import Card from '@/components/molecules/Card';
 import Segment from '@/components/organisms/Segment.vue';
 import HTitle from '@/components/atoms/HTitle.vue';
+
 export default {
     components: {
         Hero,

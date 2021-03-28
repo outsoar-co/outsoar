@@ -3,7 +3,7 @@
         <div class="container mx-auto">
             <grid
                 cols="2"
-                class="p-2 lg:p-12 lg:my-4"
+                class="p-6 lg:p-12 lg:my-4"
                 breakpoints="lg:grid-cols-4"
             >
                 <div class="flex flex-col">
