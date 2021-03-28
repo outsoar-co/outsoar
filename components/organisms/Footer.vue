@@ -1,7 +1,11 @@
 <template>
     <footer>
         <div class="container mx-auto">
-            <grid cols="2" class="p-12 my-4" breakpoints="lg:grid-cols-4">
+            <grid
+                cols="2"
+                class="p-2 lg:p-12 lg:my-4"
+                breakpoints="lg:grid-cols-4"
+            >
                 <div class="flex flex-col">
                     <h-title class="my-2 uppercase">Follow us</h-title>
                     <ul>
@@ -66,7 +70,7 @@
         </div>
         <div class="bg-black text-white">
             <div
-                class="container text-sm mx-auto flex flex-row justify-between p-2"
+                class="container text-xs lg:text-sm mx-auto flex flex-row justify-between p-2"
             >
                 <p>{{ copyright }}</p>
                 <p>{{ madewithlove }}</p>

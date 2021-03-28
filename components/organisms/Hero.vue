@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col mx-auto items-center my-24 py-16">
+    <div class="flex flex-col mx-auto items-center mb-36 py-24 lg:mb-32">
         <div class="flex flex-col mb-8 text-center items-center">
             <h1
                 class="font-extrabold text-center text-6xl lg:text-8xl font-sans-bold my-2"
@@ -7,7 +7,7 @@
                 <span class="block"> We build better </span>
             </h1>
             <vue-typed-js
-                class="text-center text-white text-6xl p-3 bg-gray-900 my-2"
+                class="text-center text-white text-4xl lg:text-6xl p-3 bg-gray-900 my-2"
                 :loop="true"
                 :cursor-char="'|'"
                 :fade-out-delay="1000"
