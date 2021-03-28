@@ -5,7 +5,7 @@
                 <component :is="item.icon" />
             </slot>
             <slot name="title" :item="item">
-                <link-title>{{ item.title }}</link-title>
+                <h-title>{{ item.title }}</h-title>
             </slot>
             <slot name="body" :item="item">
                 <div class="text-base line-clamp-3">{{ item.body }}</div>
@@ -20,12 +20,12 @@
 </template>
 <script>
 import BtnLink from '@/components/atoms/BtnLink';
-import LinkTitle from '@/components/atoms/Title';
+import HTitle from '@/components/atoms/HTitle';
 
 export default {
     components: {
         BtnLink,
-        LinkTitle,
+        HTitle,
     },
     props: {
         items: {

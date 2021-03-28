@@ -3,9 +3,7 @@
         <div class="container mx-auto">
             <grid cols="2" class="p-12 my-4" breakpoints="lg:grid-cols-4">
                 <div class="flex flex-col">
-                    <footer-title class="my-2 uppercase"
-                        >Follow us</footer-title
-                    >
+                    <h-title class="my-2 uppercase">Follow us</h-title>
                     <ul>
                         <li v-for="(s, i) in social" :key="i">
                             <anchor-link
@@ -24,7 +22,7 @@
                     </ul>
                 </div>
                 <div class="flex flex-col">
-                    <footer-title class="my-2 uppercase">Services</footer-title>
+                    <h-title class="my-2 uppercase">Services</h-title>
                     <ul>
                         <li v-for="(s, i) in services" :key="i">
                             <anchor-link
@@ -39,7 +37,7 @@
                     </ul>
                 </div>
                 <div class="flex flex-col">
-                    <footer-title class="my-2 uppercase">Discover</footer-title>
+                    <h-title class="my-2 uppercase">Discover</h-title>
                     <ul>
                         <li v-for="(s, i) in discoveries" :key="i">
                             <anchor-link
@@ -86,7 +84,7 @@ import {
 } from '@/components/atoms/icons';
 import Grid from '@/components/molecules/Grid';
 import AnchorLink from '@/components/atoms/AnchorLink';
-import FooterTitle from '@/components/atoms/title';
+import HTitle from '@/components/atoms/HTitle';
 
 export default {
     components: {
@@ -96,7 +94,7 @@ export default {
         Twitter,
         Outsoar,
         AnchorLink,
-        FooterTitle,
+        HTitle,
     },
     data() {
         return {

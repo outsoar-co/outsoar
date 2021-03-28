@@ -6,9 +6,9 @@
         <Segment class="bg-gray-200 shadow-inner">
             <card class="container p-6 transform -translate-y-32">
                 <template #body>
-                    <h3-title size="text-4xl" class="text-center">
+                    <h-title size="text-4xl" class="text-center">
                         We are experts in
-                    </h3-title>
+                    </h-title>
                     <list :items="services">
                         <template #icon="{ item }">
                             <component
@@ -26,26 +26,26 @@
         <Segment class="bg-white">
             <!-- <hero /> -->
             <div class="flex flex-col my-6 justify-center items-center">
-                <h3-title size="text-4xl"> Who we are</h3-title>
+                <h-title size="text-4xl"> Who we are</h-title>
             </div>
         </Segment>
         <Segment class="bg-gray-200 shadow-inner">
             <!-- <hero /> -->
             <div class="flex flex-col my-6 justify-center items-center">
-                <h3-title size="text-4xl"> How we do it</h3-title>
+                <h-title size="text-4xl"> How we do it</h-title>
             </div>
         </Segment>
         <Segment class="bg-white">
             <!-- <hero /> -->
             <div class="flex flex-col my-6 justify-center items-center">
-                <h3-title size="text-4xl"> Trusted by</h3-title>
+                <h-title size="text-4xl"> Trusted by</h-title>
             </div>
         </Segment>
         <Segment class="bg-gray-200 shadow-inner">
             <div class="flex flex-col my-6 justify-center items-center">
-                <h3-title class="text-5xl mb-4 text-center">
+                <h-title class="text-5xl mb-4 text-center">
                     We write & ship beautiful code.
-                </h3-title>
+                </h-title>
                 <div class="flex-none items-center">
                     <btn-link> Let's chat </btn-link>
                 </div>
@@ -60,7 +60,7 @@ import List from '@/components/molecules/List';
 import BtnLink from '@/components/atoms/BtnLink';
 import Card from '@/components/molecules/Card';
 import Segment from '@/components/organisms/Segment.vue';
-import H3Title from '@/components/atoms/Title.vue';
+import HTitle from '@/components/atoms/HTitle.vue';
 export default {
     components: {
         Hero,
@@ -68,7 +68,7 @@ export default {
         BtnLink,
         Card,
         List,
-        H3Title,
+        HTitle,
     },
     data() {
         return {
