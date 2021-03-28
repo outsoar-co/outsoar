@@ -4,7 +4,7 @@
             <grid
                 cols="grid-cols-2"
                 gap="4"
-                class="px-4 py-8 lg:p-12 lg:my-4"
+                class="px-6 py-8 lg:p-12 lg:my-4"
                 breakpoints="lg:grid-cols-4"
             >
                 <div class="flex flex-col">
@@ -131,7 +131,7 @@ export default {
                 { label: 'Industry Insights', component: LinkedIn, url: '#' },
             ],
             copyright: `Copyright ${new Date().getFullYear()} by Outsoar`,
-            madewithlove: `Powered By Nuxtjs. Made with ♥️ in 🇵🇭 PHL`,
+            madewithlove: `Made with ♥️ in 🇵🇭 PHL`,
         };
     },
 };

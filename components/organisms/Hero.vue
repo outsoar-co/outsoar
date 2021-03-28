@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col mx-auto items-center py-32 mb-32">
+    <div class="flex flex-col mx-auto items-center py-16 lg:py-32 mb-32">
         <div class="flex flex-col mb-8 text-center items-center">
             <h1
                 class="font-extrabold text-center text-6xl lg:text-8xl font-sans-bold my-2"
