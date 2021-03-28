@@ -12,6 +12,7 @@
                         v-for="(n, i) in topMenuItems"
                         :key="i"
                         class="flex flex-col justify-items-center hover:text-outsoar cursor-pointer"
+                        @click="pushRouter(n.to)"
                     >
                         <h3
                             class="text-center font-bold text-xl leading-1 lg:my-4"
@@ -71,6 +72,7 @@ export default {
                 {
                     label: 'Development & Design',
                     component: 'BuildingWebsites',
+                    to: '/services/development-and-design',
                 },
                 { label: 'Planning & Consultancy', component: 'ScrumBoard' },
                 { label: 'DevOps & Support', component: 'BugFixing' },
@@ -88,6 +90,12 @@ export default {
     computed: {
         isDisplay() {
             return this.display ? 'block' : 'hidden';
+        },
+    },
+    methods: {
+        pushRouter(to) {
+            this.$router.push({ path: to });
+            this.$emit('close', false);
         },
     },
 };

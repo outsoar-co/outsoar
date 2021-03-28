@@ -1,5 +1,15 @@
 <template>
     <footer>
+        <Segment class="bg-gray-100 shadow-inner">
+            <div class="flex flex-col my-6 justify-center items-center">
+                <h-title class="text-5xl mb-4 text-center">
+                    We write & ship beautiful code.
+                </h-title>
+                <div class="flex-none items-center">
+                    <btn-link> Let's chat </btn-link>
+                </div>
+            </div>
+        </Segment>
         <div class="container mx-auto">
             <grid
                 cols="grid-cols-2"
@@ -90,6 +100,8 @@ import {
 import Grid from '@/components/molecules/Grid';
 import AnchorLink from '@/components/atoms/AnchorLink';
 import HTitle from '@/components/atoms/HTitle';
+import Segment from '@/components/organisms/Segment';
+import BtnLink from '@/components/atoms/BtnLink';
 
 export default {
     components: {
@@ -100,6 +112,8 @@ export default {
         Outsoar,
         AnchorLink,
         HTitle,
+        Segment,
+        BtnLink,
     },
     data() {
         return {
@@ -113,7 +127,7 @@ export default {
                 {
                     label: 'Development & Design',
                     component: Facebook,
-                    url: '#',
+                    url: '/services/development-and-design',
                 },
                 {
                     label: 'Planning & Consultancy',

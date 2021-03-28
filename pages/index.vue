@@ -3,7 +3,7 @@
         <Segment class="bg-white h-screen">
             <hero />
         </Segment>
-        <Segment class="bg-gray-200 shadow-inner px-8">
+        <Segment class="bg-gray-100 shadow-inner px-8">
             <card
                 class="container p-6 transform -translate-y-12 lg:-translate-y-24"
             >
@@ -31,7 +31,7 @@
                 <h-title size="text-4xl"> Who we are</h-title>
             </div>
         </Segment>
-        <Segment class="bg-gray-200 shadow-inner">
+        <Segment class="bg-gray-100 shadow-inner">
             <!-- <hero /> -->
             <div class="flex flex-col my-6 justify-center items-center">
                 <h-title size="text-4xl"> How we do it</h-title>
@@ -43,16 +43,6 @@
                 <h-title size="text-4xl"> Trusted by</h-title>
             </div>
         </Segment>
-        <Segment class="bg-gray-200 shadow-inner">
-            <div class="flex flex-col my-6 justify-center items-center">
-                <h-title class="text-5xl mb-4 text-center">
-                    We write & ship beautiful code.
-                </h-title>
-                <div class="flex-none items-center">
-                    <btn-link> Let's chat </btn-link>
-                </div>
-            </div>
-        </Segment>
     </main>
 </template>
 
@@ -61,8 +51,8 @@ import Hero from '@/components/organisms/Hero';
 import List from '@/components/molecules/List';
 import BtnLink from '@/components/atoms/BtnLink';
 import Card from '@/components/molecules/Card';
-import Segment from '@/components/organisms/Segment.vue';
-import HTitle from '@/components/atoms/HTitle.vue';
+import Segment from '@/components/organisms/Segment';
+import HTitle from '@/components/atoms/HTitle';
 
 export default {
     components: {
