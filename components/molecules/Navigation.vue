@@ -2,7 +2,7 @@
     <nav
         :class="[
             isDisplay,
-            'fixed bottom-0 top-0 left-0 right-0 flex flex-col items-center justify-center flex-1 space-y-4 bg-white',
+            'fixed bottom-0 top-0 left-0 right-0 flex flex-col items-center justify-center bg-white',
         ]"
     >
         <div class="container">
@@ -14,7 +14,7 @@
                         class="flex flex-col justify-items-center hover:text-outsoar cursor-pointer"
                     >
                         <h3
-                            class="text-center font-bold text-xl leading-1 my-4"
+                            class="text-center font-bold text-xl leading-1 lg:my-4"
                         >
                             {{ n.label }}
                         </h3>
@@ -22,14 +22,14 @@
                             :is="n.component"
                             :class="[
                                 'fill-current hover:text-outsoar',
-                                'object-contain h-24 w-auto p-2 my-4 lg:h-64',
+                                'object-contain h-24 w-auto lg:p-2 lg:my-4 lg:h-64',
                             ]"
                         />
                     </div>
                 </grid>
             </div>
-            <hr />
-            <div class="flex flex-wrap justify-center overflow-hidden my-4">
+            <hr class="my-8" />
+            <div class="flex flex-wrap justify-center overflow-hidden">
                 <a
                     v-for="(n, i) in MenuItems"
                     :key="i"
