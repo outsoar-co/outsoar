@@ -3,7 +3,7 @@
         <div class="container mx-auto">
             <grid
                 cols="grid-cols-2"
-                gap="4"
+                gap="gap-4"
                 class="px-6 py-8 lg:p-12 lg:my-4"
                 breakpoints="lg:grid-cols-4"
             >
