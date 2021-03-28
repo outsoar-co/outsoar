@@ -1,5 +1,5 @@
 <template>
-    <div :class="['grid', colClass, gapClass, breakpoints]">
+    <div :class="['grid', cols, gap, breakpoints]">
         <slot />
     </div>
 </template>
@@ -7,24 +7,16 @@
 export default {
     props: {
         cols: {
-            type: [String, Number],
-            default: 1,
+            type: String,
+            default: 'grid-cols-1',
         },
         gap: {
-            type: [String, Number],
-            default: 1,
+            type: String,
+            default: 'gap-1',
         },
         breakpoints: {
             type: String,
             default: 'md:grid-cols-6',
-        },
-    },
-    computed: {
-        colClass() {
-            return `grid-cols-${this.cols}`;
-        },
-        gapClass() {
-            return `gap-${this.gap}`;
         },
     },
 };

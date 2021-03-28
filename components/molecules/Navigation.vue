@@ -7,7 +7,7 @@
     >
         <div class="container">
             <div class="flex justify-center">
-                <grid gap="4" breakpoints="lg:grid-cols-3">
+                <grid gap="gap-4" breakpoints="lg:grid-cols-3">
                     <div
                         v-for="(n, i) in topMenuItems"
                         :key="i"
