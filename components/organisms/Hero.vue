@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col mx-auto items-center my-16">
+    <div class="flex flex-col mx-auto items-center my-24 py-16">
         <div class="flex flex-col mb-8 text-center items-center">
             <h1
                 class="font-extrabold text-center text-6xl lg:text-8xl font-sans-bold my-2"
@@ -29,7 +29,7 @@
                 <span class="block my-2">your company</span>
             </h3>
         </div>
-        <div class="flex flex-col my-8 text-center items-center text-xl">
+        <div class="flex flex-col my-4 text-center items-center text-xl">
             <span class="block">Custom software helps you </span>
             <span class="block"
                 >gain customers faster, reduce operating costs,</span
@@ -37,35 +37,39 @@
             <span class="block">and create new income streams.</span>
         </div>
         <btn-link to="#">Learn How </btn-link>
+        <chevron-double-down class="h-6 w-6 my-6 fill-current animate-bounce" />
     </div>
 </template>
 <script>
 import BtnLink from '@/components/atoms/BtnLink';
+import ChevronDoubleDown from '@/components/atoms/icons/ChevronDoubleDown';
 
 export default {
     components: {
         BtnLink,
+        ChevronDoubleDown,
     },
     data() {
         return {
             current: 0,
-            words: ['outsoar'],
+            words: [],
             strings: [
-                '[ Web Pages ]',
-                '{ Mobile App }',
-                '&lt; E-Commerse &gt;',
+                '[ Website Pages ]',
+                '{ Mobile Applications }',
+                '&lt; Custom Softwares &gt;',
             ],
         };
     },
     created() {
         const vm = this;
-        const words = ['jumpstart', 'transform'];
+        const words = ['outsoar', 'jumpstart', 'transform'];
         setInterval(function () {
             if (words[vm.current]) {
                 vm.words.push(words[vm.current]);
                 vm.current++;
             } else {
                 vm.current = 0;
+                vm.words = [];
             }
         }, 3000);
     },

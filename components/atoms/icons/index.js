@@ -4,5 +4,14 @@ const Instagram = () => import('./Instagram');
 const Github = () => import('./Github');
 const LinkedIn = () => import('./LinkedIn');
 const Outsoar = () => import('./Outsoar');
+const ChevronDoubleDown = () => import('./ChevronDoubleDown');
 
-export { Facebook, Twitter, Instagram, Github, LinkedIn, Outsoar };
+export {
+    Facebook,
+    Twitter,
+    Instagram,
+    Github,
+    LinkedIn,
+    Outsoar,
+    ChevronDoubleDown,
+};

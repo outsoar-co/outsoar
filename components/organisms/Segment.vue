@@ -1,6 +1,6 @@
 <template>
     <section>
-        <div class="flex flex-col items-center p-8">
+        <div class="flex flex-col items-center">
             <slot />
         </div>
     </section>

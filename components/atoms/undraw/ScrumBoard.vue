@@ -3,8 +3,6 @@
         id="afc98551-3d88-4acb-87ed-36f06011ac7a"
         data-name="Layer 1"
         xmlns="http://www.w3.org/2000/svg"
-        width="821.67627"
-        height="579.00958"
         viewBox="0 0 821.67627 579.00958"
     >
         <path
