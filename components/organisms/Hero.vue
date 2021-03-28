@@ -1,22 +1,21 @@
 <template>
     <div class="flex flex-col mx-auto items-center py-16 lg:py-32 mb-32">
-        <div class="flex flex-col mb-8 text-center items-center">
+        <div class="flex flex-col mb-4 lg:mb-8 text-center items-center">
             <h1
                 class="font-extrabold text-center text-6xl lg:text-8xl font-sans-bold my-2"
             >
                 <span class="block"> We build better </span>
             </h1>
             <vue-typed-js
-                class="text-center text-white text-4xl lg:text-6xl p-3 bg-gray-900 my-2"
+                class="text-center text-white text-2xl lg:text-6xl p-3 bg-gray-900 my-2"
                 :loop="true"
-                :cursor-char="'|'"
                 :fade-out-delay="1000"
                 :strings="strings"
             >
                 <span class="block typing"></span>
             </vue-typed-js>
-            <h3 class="block text-center text-6xl">
-                <span class="block my-2">that will</span>
+            <h3 class="block text-center text-4xl lg:text-6xl">
+                <span class="block">that will</span>
                 <transition-group tag="span">
                     <span
                         v-for="(w, i) in words"
@@ -26,21 +25,25 @@
                         >{{ w }}</span
                     >
                 </transition-group>
-                <span class="block my-2">your company</span>
+                <span class="block">your company</span>
             </h3>
         </div>
-        <div class="flex flex-col my-4 text-center items-center text-xl">
-            <span class="block">Custom software helps you </span>
-            <span class="block"
-                >gain customers faster, reduce operating costs,</span
-            >
-            <span class="block">and create new income streams.</span>
-        </div>
-        <btn-link to="#">Learn How </btn-link>
         <div class="absolute bottom-0 mb-4">
-            <chevron-double-down
-                class="h-6 w-6 my-6 fill-current animate-bounce"
-            />
+            <div class="flex flex-col items-center gap-2">
+                <div
+                    class="flex flex-col text-base lg:my-4 text-center items-center lg:text-xl"
+                >
+                    <span class="block">Custom software helps you </span>
+                    <span class="block"
+                        >gain customers faster, reduce operating costs,</span
+                    >
+                    <span class="block">and create new income streams.</span>
+                </div>
+                <btn-link class="my-2" to="#">Learn How </btn-link>
+                <chevron-double-down
+                    class="h-6 w-6 fill-current animate-bounce"
+                />
+            </div>
         </div>
     </div>
 </template>

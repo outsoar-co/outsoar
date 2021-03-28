@@ -28,14 +28,14 @@
                     </div>
                 </grid>
             </div>
-            <hr class="my-8" />
+            <hr class="my-2 lg:my-8" />
             <div class="flex flex-wrap justify-center overflow-hidden">
                 <a
                     v-for="(n, i) in MenuItems"
                     :key="i"
                     href="#"
                     :class="[
-                        'py-2 font-medium text-xl text-center uppercase hover:text-outsoar',
+                        'py-2 font-medium text-lg text-center uppercase hover:text-outsoar',
                         'w-1/2 overflow-hidden lg:w-1/3',
                     ]"
                     >{{ n }}</a

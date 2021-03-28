@@ -1,11 +1,11 @@
 <template>
     <main>
-        <Segment class="bg-white">
+        <Segment class="bg-white h-screen">
             <hero />
         </Segment>
         <Segment class="bg-gray-200 shadow-inner px-8">
             <card
-                class="container p-6 transform -translate-y-12 lg:-translate-y-32"
+                class="container p-6 transform -translate-y-12 lg:-translate-y-24"
             >
                 <template #body>
                     <h-title size="text-4xl" class="text-center">
