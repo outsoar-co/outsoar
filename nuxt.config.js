@@ -14,7 +14,12 @@ export default {
      ** See https://nuxtjs.org/api/configuration-head
      */
     head: {
-        title: 'Outsoar - Development Company In North PHL',
+        title: 'Outsoar',
+        titleTemplate: 'Development Company In North PHL',
+        htmlAttrs: {
+            lang: 'en',
+            amp: true
+        },
         meta: [
             { charset: 'utf-8' },
             {
