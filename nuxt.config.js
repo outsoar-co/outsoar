@@ -67,7 +67,21 @@ export default {
         '@nuxtjs/pwa',
         // Doc: https://github.com/nuxt/content
         '@nuxt/content',
+        '@nuxtjs/gtm',
     ],
+
+    // Used as fallback if no runtime config is provided
+    gtm: {
+        id: 'GTM-XXXXXXX',
+        pageTracking: true
+    },
+
+    publicRuntimeConfig: {
+        gtm: {
+          id: process.env.GOOGLE_TAG_MANAGER_ID
+        }
+    },
+
     /*
      ** Axios module configuration
      ** See https://axios.nuxtjs.org/options
