@@ -1,8 +1,8 @@
 <template>
     <footer>
-        <Segment class="bg-gray-100 shadow-inner">
+        <Segment class="bg-white">
             <div class="flex flex-col my-6 justify-center items-center">
-                <h-title class="text-5xl mb-4 text-center">
+                <h-title size="text-xl" class="mb-4 text-center">
                     We write & ship beautiful code.
                 </h-title>
                 <div class="flex-none items-center">
@@ -12,13 +12,18 @@
         </Segment>
         <div class="container mx-auto">
             <grid
-                cols="grid-cols-2"
+                cols="grid-cols-1"
                 gap="gap-4"
                 class="px-6 py-8 lg:p-12 lg:my-4"
-                breakpoints="lg:grid-cols-4"
+                breakpoints="lg:grid-cols-4 justify-items-center lg:justify-items-start"
             >
                 <div class="flex flex-col">
-                    <h-title class="my-2 uppercase">Follow us</h-title>
+                    <h-title
+                        size="text-xl"
+                        breakpoints="lg:text-2xl lg:text-left"
+                        class="my-2 uppercase"
+                        >Follow us</h-title
+                    >
                     <ul>
                         <li v-for="(s, i) in social" :key="i">
                             <anchor-link
@@ -37,7 +42,12 @@
                     </ul>
                 </div>
                 <div class="flex flex-col">
-                    <h-title class="my-2 uppercase">Services</h-title>
+                    <h-title
+                        size="text-xl"
+                        breakpoints="lg:text-2xl lg:text-left"
+                        class="my-2 uppercase"
+                        >Services</h-title
+                    >
                     <ul>
                         <li v-for="(s, i) in services" :key="i">
                             <anchor-link
@@ -52,7 +62,12 @@
                     </ul>
                 </div>
                 <div class="flex flex-col">
-                    <h-title class="my-2 uppercase">Discover</h-title>
+                    <h-title
+                        size="text-xl"
+                        breakpoints="lg:text-2xl lg:text-left"
+                        class="my-2 uppercase"
+                        >Discover</h-title
+                    >
                     <ul>
                         <li v-for="(s, i) in discoveries" :key="i">
                             <anchor-link

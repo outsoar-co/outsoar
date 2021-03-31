@@ -1,31 +1,33 @@
 <template>
-    <div class="flex flex-col mx-auto items-center py-16 lg:py-32 mb-32">
-        <div class="flex flex-col mb-4 lg:mb-8 text-center items-center">
+    <div class="flex flex-col mx-auto items-center">
+        <div
+            class="absolute top-25 flex flex-col p-4 lg:p-8 text-center items-center"
+        >
             <h1
                 class="font-extrabold text-center text-6xl lg:text-8xl font-sans-bold my-2"
             >
                 <span class="block"> We build better </span>
             </h1>
             <vue-typed-js
-                class="text-center text-white text-2xl lg:text-6xl p-3 bg-gray-900 my-2"
+                class="text-center text-white text-2xl lg:text-4xl bg-gray-900 m-1 p-1"
                 :loop="true"
                 :fade-out-delay="1000"
                 :strings="strings"
             >
-                <span class="block typing"></span>
+                <span class="typing"></span>
             </vue-typed-js>
-            <h3 class="block font-sans text-center text-4xl lg:text-6xl">
-                <span class="block">that will</span>
+            <h3 class="block font-sans text-center text-3xl lg:text-4xl">
+                <span class="">that will</span>
                 <transition-group tag="span">
                     <span
-                        v-for="(w, i) in words"
-                        :key="w"
-                        :class="{ hidden: current !== i }"
-                        class="font-extrabold underline uppercase"
-                        >{{ w }}</span
+                        v-for="w in words"
+                        :key="w.text"
+                        :class="{ hidden: !w.display }"
+                        class="font-extrabold underline"
+                        >{{ w.text }}</span
                     >
                 </transition-group>
-                <span class="block">your company</span>
+                <span class="">your company</span>
             </h3>
         </div>
         <div class="absolute bottom-0 mb-4">
@@ -59,7 +61,11 @@ export default {
     data() {
         return {
             current: 0,
-            words: [],
+            words: [
+                { text: 'outsoar', display: false },
+                { text: 'jumpstart', display: false },
+                { text: 'transform', display: false },
+            ],
             strings: [
                 '[ Website Pages ]',
                 '{ Mobile Applications }',
@@ -69,16 +75,24 @@ export default {
     },
     created() {
         const vm = this;
-        const words = ['outsoar', 'jumpstart', 'transform'];
         setInterval(function () {
-            if (words[vm.current]) {
-                vm.words.push(words[vm.current]);
-                vm.current++;
-            } else {
-                vm.current = 0;
-                vm.words = [];
-            }
+            vm.traverseWords();
         }, 3000);
+    },
+    mounted() {
+        this.traverseWords();
+    },
+    methods: {
+        traverseWords() {
+            if (this.words[this.current]) {
+                this.words = this.words.map((item, index) => {
+                    return { text: item.text, display: this.current === index };
+                });
+                this.current++;
+            } else {
+                this.current = 0;
+            }
+        },
     },
 };
 </script>

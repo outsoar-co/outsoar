@@ -1,5 +1,5 @@
 <template>
-    <div :class="[size, 'font-sans-bold font-extrabold']">
+    <div :class="[size, 'font-sans-bold', direction, breakpoints]">
         <slot />
     </div>
 </template>
@@ -9,6 +9,14 @@ export default {
         size: {
             type: String,
             default: 'text-lg',
+        },
+        breakpoints: {
+            type: String,
+            default: 'lg:text-4xl',
+        },
+        direction: {
+            type: String,
+            default: 'text-center',
         },
     },
 };
