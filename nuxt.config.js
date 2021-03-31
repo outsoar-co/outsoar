@@ -72,14 +72,8 @@ export default {
 
     // Used as fallback if no runtime config is provided
     gtm: {
-        id: 'GTM-XXXXXXX',
+        id: process.env.GOOGLE_CONTAINER_ID,
         pageTracking: true
-    },
-
-    publicRuntimeConfig: {
-        gtm: {
-          id: process.env.GOOGLE_TAG_MANAGER_ID
-        }
     },
 
     /*
