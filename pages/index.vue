@@ -37,7 +37,13 @@
                 <h-title size="text-4xl"> How we do it</h-title>
             </div>
         </Segment>
-        <Segment class="bg-white">
+        <Segment class="bg-white shadow-inner">
+            <!-- <hero /> -->
+            <div class="flex flex-col my-6 justify-center items-center">
+                <h-title size="text-4xl"> Our technologies</h-title>
+            </div>
+        </Segment>
+        <Segment class="bg-gray-100">
             <!-- <hero /> -->
             <div class="flex flex-col my-6 justify-center items-center">
                 <h-title size="text-4xl"> Trusted by</h-title>
