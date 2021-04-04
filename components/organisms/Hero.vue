@@ -1,6 +1,5 @@
 <template>
     <div class="flex flex-col mx-auto items-center">
-        <!-- <shape-divider /> -->
         <div
             class="absolute top-25 flex flex-col p-4 lg:p-8 text-center items-center"
         >
@@ -9,27 +8,6 @@
             >
                 <span class="block"> We build better </span>
             </h1>
-            <!-- <vue-typed-js
-                class="text-center text-white text-2xl lg:text-4xl bg-gray-900 m-1 p-1"
-                :loop="true"
-                :fade-out-delay="1000"
-                :strings="strings"
-            >
-                <span class="typing"></span>
-            </vue-typed-js> -->
-            <!-- <vue-typer
-                :text="strings"
-                :repeat="Infinity"
-                :shuffle="true"
-                initial-action="typing"
-                :pre-type-delay="70"
-                :type-delay="70"
-                :pre-erase-delay="2000"
-                :erase-delay="250"
-                erase-style="clear"
-                :erase-on-complete="false"
-                caret-animation="smooth"
-            ></vue-typer> -->
             <typist
                 class="text-center text-white text-2xl lg:text-4xl bg-gray-900 m-1 p-1"
                 :words="strings"

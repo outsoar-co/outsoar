@@ -18,7 +18,7 @@ export default {
         titleTemplate: 'Development Company In North PHL',
         htmlAttrs: {
             lang: 'en',
-            amp: true
+            amp: true,
         },
         meta: [
             { charset: 'utf-8' },
@@ -73,7 +73,7 @@ export default {
     // Used as fallback if no runtime config is provided
     gtm: {
         id: process.env.GOOGLE_CONTAINER_ID,
-        pageTracking: true
+        pageTracking: true,
     },
 
     /*
@@ -85,10 +85,15 @@ export default {
      ** Content module configuration
      ** See https://content.nuxtjs.org/configuration
      */
-    content: {},
+    content: {
+        liveEdit: false,
+    },
     /*
      ** Build configuration
      ** See https://nuxtjs.org/api/configuration-build/
      */
     build: {},
+    tailwindcss: {
+        jit: true,
+    },
 };

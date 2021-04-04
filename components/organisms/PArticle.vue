@@ -1,6 +1,6 @@
 <template>
-    <div class="container mx-auto p-4">
-        <div class="prose max-w-xl mx-auto mt-8 md:mt-16">
+    <div class="p-4">
+        <div class="prose lg:prose-xl max-w-4xl mx-auto mt-8 lg:mt-16">
             <slot />
         </div>
     </div>
