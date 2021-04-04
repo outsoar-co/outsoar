@@ -1,6 +1,6 @@
 <template>
     <footer>
-        <Segment class="bg-white">
+        <Segment class="bg-gradient-to-r from-outsoar">
             <div class="flex flex-col my-6 justify-center items-center">
                 <h-title size="text-xl" class="mb-4 text-center">
                     We write & ship beautiful code.

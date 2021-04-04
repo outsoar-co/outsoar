@@ -13,7 +13,7 @@ module.exports = {
         },
         extend: {
             colors: {
-                outsoar: '#f8981e',
+                outsoar: '#ed8937',
                 'dark-desaturated-blue': '#2c3e50',
             },
             fontSize: {

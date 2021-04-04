@@ -17,7 +17,7 @@ export const state = () => ({
                         body: 'Contrary to popular belief',
                     },
                 },
-                slug: 'development-and-design',
+                slug: 'services/development-and-design',
                 // timestamps here
             },
         ],

@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-gradient-to-r from-outsoar to-white">
+    <div class="bg-gradient-to-r from-outsoar to-white py-2">
         <div class="flex flex-row h-64 max-w-4xl mx-auto">
             <div class="w-1/2 flex flex-col items-center justify-center">
                 <h-title>{{ options.text }}</h-title>

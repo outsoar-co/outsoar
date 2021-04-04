@@ -3,7 +3,10 @@
         <!-- <p v-if="$fetchState.pending">Fetching mountains...</p>
         <p v-else-if="$fetchState.error">An error occurred :(</p> -->
         <banner :options="page.props.banner" />
-        <Segment class="bg-gray-100">
+        <div class="max-w-4xl mx-auto m-2">
+            <breadcrumbs />
+        </div>
+        <Segment class="bg-white">
             <p-article>
                 <nuxt-content :document="page" />
             </p-article>
@@ -15,20 +18,25 @@
 import PArticle from '@/components/organisms/PArticle';
 import Segment from '@/components/organisms/Segment.vue';
 import Banner from '@/components/organisms/Banner.vue';
+import Breadcrumbs from '@/components/molecules/Breadcrumbs.vue';
+
 export default {
     components: {
         PArticle,
         Segment,
         Banner,
+        Breadcrumbs,
     },
     async asyncData({ $content, params, error, store }) {
-        const slug = params.slug || 'index';
-        const namespace = params.namespace || 'articles';
+        const path = `/${params.pathMatch || 'index'}`;
+        console.log(path);
         const pageDetail = store.getters['content/items'].data.find(
-            (item) => item.slug === params.slug
+            (item) => item.slug === params.pathMatch
         );
         try {
-            const page = await $content(namespace, slug).fetch();
+            const [page] = await $content({ deep: true })
+                .where({ path })
+                .fetch();
             return { page: Object.assign({}, pageDetail, page) };
         } catch (error) {
             error({ statusCode: 404, message: 'Page not found' });
