@@ -4,7 +4,7 @@
         data-name="ALL LAYERS"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1102.71 1285.98"
-        class="fill-current text-black hover:text-outsoar"
+        class="fill-current black hover:text-outsoar"
     >
         <g id="FRONT_WHITE" data-name="FRONT WHITE">
             <polygon

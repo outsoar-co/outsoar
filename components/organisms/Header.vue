@@ -3,6 +3,9 @@
         :class="[
             'sticky top-0 left-0 right-0 z-30',
             { 'bg-white shadow': scrollY > 0 },
+            {
+                'shadow-none': scrollY == 0 && $route.name == 'index',
+            },
         ]"
     >
         <div
@@ -12,10 +15,21 @@
                 to="/"
                 class="inline-block text-nuxt-gray h-10 lg:h-10 z-10 mr-auto nuxt-link-active"
             >
-                <logo :class="['h-10 lg:h-12 sans-bold']" />
+                <logo
+                    :class="[
+                        'h-10 lg:h-12 sans-bold',
+                        { 'fill-current text-black ': scrollY == 0 },
+                        {
+                            'fill-current text-outsoar':
+                                scrollY > 0 ||
+                                navigation.display ||
+                                $route.name != 'index',
+                        },
+                    ]"
+                />
             </nuxt-link>
-            <navigation @close="onToggle" :display="navigation.display" />
-            <hamburger @toggle="onToggle" />
+            <navigation :display="navigation.display" @close="onToggle" />
+            <hamburger :display="navigation.display" @toggle="onToggle" />
         </div>
     </header>
 </template>
@@ -50,8 +64,6 @@ export default {
         },
         handleScroll(event) {
             this.scrollY = window.scrollY;
-            // console.log('event: ', this.scrollY);
-            // Any code to be executed when the window is scrolled
         },
     },
 };

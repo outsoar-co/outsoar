@@ -1,34 +1,42 @@
 <template>
-    <tasty-burger-button
-        :type="buttonType"
-        :active="isActive"
-        :size="size"
-        :color="color"
-        :active-color="activeColor"
-        @toggle="onToggle"
-    />
+    <button class="outline-none focus:outline-none black z-50" @click="toogle">
+        <component :is="iconComponent" class="h-10 w-10" />
+    </button>
 </template>
-
 <script>
-import { TastyBurgerButton } from 'vue-tasty-burgers';
+import IconMenu from '~/components/atoms/icons/Menu';
+import IconClose from '~/components/atoms/icons/Close';
 
 export default {
     components: {
-        'tasty-burger-button': TastyBurgerButton,
+        IconMenu,
+        IconClose,
+    },
+    props: {
+        display: {
+            type: Boolean,
+            default: false,
+        },
     },
     data() {
         return {
-            buttonType: 'elastic',
-            isActive: false,
-            size: 'm',
-            color: 'black',
-            activeColor: 'gray',
+            active: false,
         };
     },
+    computed: {
+        iconComponent() {
+            return this.active ? IconClose : IconMenu;
+        },
+    },
+    watch: {
+        display(val) {
+            this.active = val;
+        },
+    },
     methods: {
-        onToggle(active) {
-            // this.isActive = !active;
-            this.$emit('toggle', active);
+        toogle() {
+            this.active = !this.active;
+            this.$emit('toggle', this.active);
         },
     },
 };

@@ -1,5 +1,6 @@
 <template>
     <div class="flex flex-col mx-auto items-center">
+        <!-- <shape-divider /> -->
         <div
             class="absolute top-25 flex flex-col p-4 lg:p-8 text-center items-center"
         >
@@ -52,7 +53,6 @@
 <script>
 import BtnLink from '@/components/atoms/BtnLink';
 import ChevronDoubleDown from '@/components/atoms/icons/ChevronDoubleDown';
-
 export default {
     components: {
         BtnLink,
@@ -96,4 +96,18 @@ export default {
     },
 };
 </script>
-<style scoped></style>
+<style scoped>
+.skewed {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #2c3e50;
+    z-index: 0;
+    transform: skewY(-8deg);
+    transform-origin: top left;
+}
+</style>
