@@ -17,9 +17,7 @@
     "@nuxtjs/gtm": "^2.4.0",
     "@nuxtjs/pwa": "^3.0.0-beta.20",
     "@tailwindcss/line-clamp": "^0.2.0",
-    "nuxt": "^2.13.0",
-    "vue-tasty-burgers": "^1.2.3",
-    "vue-typed-js": "^0.1.2"
+    "nuxt": "^2.13.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.0.0",
