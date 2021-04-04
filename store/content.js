@@ -10,8 +10,14 @@ export const state = () => ({
                 params: {},
                 options: {},
                 meta: [{ id: 1, content_id: 1, key: 'foo', value: 'bar' }],
-                props: {},
-                slug: 'development-and-design',
+                props: {
+                    banner: {
+                        icon: 'BuildingWebsites',
+                        text: 'Development and Design',
+                        body: 'Contrary to popular belief',
+                    },
+                },
+                slug: 'services/development-and-design',
                 // timestamps here
             },
         ],
@@ -34,5 +40,7 @@ export const mutations = {};
 export const actions = {};
 
 export const getters = {
-    //
+    items(state) {
+        return state.items;
+    },
 };

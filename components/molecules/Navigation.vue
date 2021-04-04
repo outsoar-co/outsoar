@@ -5,8 +5,10 @@
             'fixed bottom-0 top-0 left-0 right-0 flex flex-col items-center justify-center bg-white',
         ]"
     >
-        <div class="container">
-            <div class="flex justify-center">
+        <div
+            class="container mx-auto min-h-screen flex flex-col justify-center items-center"
+        >
+            <div class="flex flex-cols justify-center h-full">
                 <grid gap="gap-4" breakpoints="lg:grid-cols-3">
                     <div
                         v-for="(n, i) in topMenuItems"

@@ -9,7 +9,7 @@
         ]"
     >
         <div
-            class="container relative mx-auto px-4 py-2 flex items-center lg:py-6 h-full"
+            class="container relative mx-auto p-4 flex items-center lg:py-6 h-full"
         >
             <nuxt-link
                 to="/"
