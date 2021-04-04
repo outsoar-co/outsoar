@@ -14,6 +14,7 @@ module.exports = {
         extend: {
             colors: {
                 outsoar: '#f8981e',
+                'dark-desaturated-blue': '#2c3e50',
             },
             fontSize: {
                 xxs: '.65rem',

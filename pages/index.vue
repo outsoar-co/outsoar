@@ -1,9 +1,9 @@
 <template>
     <main>
-        <Segment class="bg-white h-screen">
-            <hero />
+        <Segment class="h-screen asymmetric">
+            <hero class="bg-dark-desaturated-blue" />
         </Segment>
-        <Segment class="bg-gray-100 shadow-inner px-8">
+        <Segment class="bg-gray-100 shadow-inner">
             <card
                 class="container p-6 transform -translate-y-12 lg:-translate-y-24"
             >
@@ -96,3 +96,38 @@ export default {
     },
 };
 </script>
+
+<style scoped>
+/* .asymmetric::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-origin: top left;
+    transform: skewY(-12deg);
+    z-index: -10;
+} */
+
+.asymmetric::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(#f8981e),
+        to(#f7b733)
+    );
+    background-image: linear-gradient(80deg, #f8981e, #f27958);
+    transform-origin: top left;
+    transform: skewY(-12deg);
+    z-index: -10;
+}
+</style>

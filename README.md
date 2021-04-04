@@ -1,6 +1,5 @@
-# outsoar-website
+# Outsoar - Web Development Company from North of Philippines
 
-## Build Setup
 
 ```bash
 # install dependencies
