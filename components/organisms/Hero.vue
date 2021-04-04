@@ -9,14 +9,32 @@
             >
                 <span class="block"> We build better </span>
             </h1>
-            <vue-typed-js
+            <!-- <vue-typed-js
                 class="text-center text-white text-2xl lg:text-4xl bg-gray-900 m-1 p-1"
                 :loop="true"
                 :fade-out-delay="1000"
                 :strings="strings"
             >
                 <span class="typing"></span>
-            </vue-typed-js>
+            </vue-typed-js> -->
+            <!-- <vue-typer
+                :text="strings"
+                :repeat="Infinity"
+                :shuffle="true"
+                initial-action="typing"
+                :pre-type-delay="70"
+                :type-delay="70"
+                :pre-erase-delay="2000"
+                :erase-delay="250"
+                erase-style="clear"
+                :erase-on-complete="false"
+                caret-animation="smooth"
+            ></vue-typer> -->
+            <typist
+                class="text-center text-white text-2xl lg:text-4xl bg-gray-900 m-1 p-1"
+                :words="strings"
+                :human="false"
+            ></typist>
             <h3 class="block font-sans text-center text-3xl lg:text-4xl">
                 <span class="">that will</span>
                 <transition-group tag="span">
@@ -28,7 +46,7 @@
                         >{{ w.text }}</span
                     >
                 </transition-group>
-                <span class="">your company</span>
+                <span>your company</span>
             </h3>
         </div>
         <div class="absolute bottom-0 mb-4">
@@ -53,10 +71,13 @@
 <script>
 import BtnLink from '@/components/atoms/BtnLink';
 import ChevronDoubleDown from '@/components/atoms/icons/ChevronDoubleDown';
+import Typist from '@/components/atoms/Typer';
+
 export default {
     components: {
         BtnLink,
         ChevronDoubleDown,
+        Typist,
     },
     data() {
         return {
@@ -69,7 +90,7 @@ export default {
             strings: [
                 '[ Website Pages ]',
                 '{ Mobile Applications }',
-                '&lt; Custom Softwares &gt;',
+                '< Custom Softwares >',
             ],
         };
     },
@@ -96,18 +117,3 @@ export default {
     },
 };
 </script>
-<style scoped>
-.skewed {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #2c3e50;
-    z-index: 0;
-    transform: skewY(-8deg);
-    transform-origin: top left;
-}
-</style>
