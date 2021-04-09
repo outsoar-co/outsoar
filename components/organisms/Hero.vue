@@ -1,17 +1,17 @@
 <template>
     <div class="bg-dark-vue flex min-h-screen">
-        <div class="container mx-auto lg:m-auto lg:pb-80">
+        <div class="container mx-auto lg:m-auto lg:pb-72">
             <div
                 class="flex flex-wrap items-center justify-center content-center"
             >
-                <div class="p-2">
-                    <rocket class="h-24 md:h-32 lg:h-auto" />
+                <div class="mt-4">
+                    <rocket class="h-40 lg:h-auto" />
                 </div>
                 <div
                     class="flex flex-col gap-2 items-strech justify-items-center"
                 >
                     <h1
-                        class="font-extrabold text-center text-xl lg:text-6xl font-sans-bold my-2 text-white"
+                        class="font-extrabold text-center text-3xl lg:text-6xl font-sans-bold my-2 text-white"
                     >
                         <span class="block">We build better</span>
                     </h1>

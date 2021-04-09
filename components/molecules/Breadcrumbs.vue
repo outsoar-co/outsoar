@@ -24,12 +24,16 @@ export default {
             const tmp = [];
             tmp.push({ path: '/', meta: { title: 'Home' } });
             this.items.data.forEach((link) => {
-                tmp.push(
-                    Object.assign(
-                        { meta: { title: link.title } },
-                        { to: `/${link.slug}` }
-                    )
-                );
+                console.log('route name: ', this.$route.params.pathMatch);
+                console.log('slug: ', link.slug);
+                if (link.slug === this.$route.params.pathMatch) {
+                    tmp.push(
+                        Object.assign(
+                            { meta: { title: link.title } },
+                            { to: `/${link.slug}` }
+                        )
+                    );
+                }
             });
             return tmp;
         },

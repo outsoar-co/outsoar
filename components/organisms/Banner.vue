@@ -1,5 +1,5 @@
 <template>
-    <div class="to-white py-2 bg-dark-vue max-w-4xl mx-auto">
+    <div class="to-white py-2 bg-dark-vue mx-auto">
         <div class="flex flex-row mx-auto p-4">
             <div class="w-1/2 flex flex-col items-center justify-center">
                 <h-title class="text-white">{{ options.text }}</h-title>
