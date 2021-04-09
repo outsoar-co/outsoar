@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full h-full">
+    <div class="antialiased min-h-screen">
         <Header />
         <Nuxt />
         <Footer />

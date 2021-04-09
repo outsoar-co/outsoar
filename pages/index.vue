@@ -1,17 +1,29 @@
 <template>
     <main>
-        <Segment class="h-screen asymmetric">
-            <hero class="bg-dark-desaturated-blue" />
+        <Segment class="h-screen bg-dark-vue">
+            <hero />
         </Segment>
         <Segment class="bg-gray-100 shadow-inner">
             <card
-                class="container p-6 transform -translate-y-12 lg:-translate-y-24"
+                class="container p-6 mt-6 transform -translate-y-20 lg:-translate-y-28"
             >
                 <template #body>
                     <h-title size="text-4xl" class="text-center">
                         We are experts in
                     </h-title>
-                    <list :items="services">
+                    <list
+                        :items="services"
+                        :attr-class="{
+                            items: {
+                                basedClass:
+                                    'flex flex-col lg:flex-row flex-wrap',
+                            },
+                            item: {
+                                basedClass:
+                                    'flex flex-col w-full lg:w-1/3 gap-6 p-2',
+                            },
+                        }"
+                    >
                         <template #icon="{ item }">
                             <component
                                 :is="item.icon"
@@ -123,9 +135,9 @@ export default {
         left top,
         right top,
         from(#f8981e),
-        to(#f7b733)
+        to(#fc2d20)
     );
-    background-image: linear-gradient(80deg, #f8981e, #f27958);
+    background-image: linear-gradient(80deg, #f8981e, #fc2d20);
     transform-origin: top left;
     transform: skewY(-12deg);
     z-index: -10;

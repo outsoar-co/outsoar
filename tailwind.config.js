@@ -13,7 +13,10 @@ module.exports = {
         },
         extend: {
             colors: {
-                outsoar: '#ed8937',
+                outsoar: '#fd910f', // FD6335 // F59536 // F4A771 // FD9012
+                'pale-outsoar': '#fd9012', // E38523
+                laravel: '#f8981e',
+                'dark-vue': '#35495e',
                 'dark-desaturated-blue': '#2c3e50',
             },
             fontSize: {

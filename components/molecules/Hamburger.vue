@@ -1,6 +1,13 @@
 <template>
     <button class="outline-none focus:outline-none black z-50" @click="toogle">
-        <component :is="iconComponent" class="h-10 w-10" />
+        <component
+            :is="iconComponent"
+            :class="{
+                'text-white':
+                    !display && scrollY == 0 && $route.name == 'index',
+            }"
+            class="h-10 lg:h-12"
+        />
     </button>
 </template>
 <script>
@@ -16,6 +23,10 @@ export default {
         display: {
             type: Boolean,
             default: false,
+        },
+        scrollY: {
+            type: Number,
+            default: 0,
         },
     },
     data() {

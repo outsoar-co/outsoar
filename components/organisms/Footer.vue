@@ -1,8 +1,8 @@
 <template>
     <footer>
-        <Segment class="bg-gradient-to-r from-outsoar">
+        <Segment class="bg-dark-vue">
             <div class="flex flex-col my-6 justify-center items-center">
-                <h-title size="text-xl" class="mb-4 text-center">
+                <h-title size="text-xl" class="mb-4 text-center text-white">
                     We write & ship beautiful code.
                 </h-title>
                 <div class="flex-none items-center">
@@ -14,69 +14,56 @@
             <grid
                 cols="grid-cols-1"
                 gap="gap-4"
-                class="px-6 py-8 lg:p-12 lg:my-4"
+                class="px-6 py-8 lg:p-12"
                 breakpoints="lg:grid-cols-4 justify-items-center lg:justify-items-start"
             >
-                <div class="flex flex-col">
+                <div class="flex flex-col text-center lg:text-left">
                     <h-title
                         size="text-xl"
                         breakpoints="lg:text-2xl lg:text-left"
-                        class="my-2 uppercase"
-                        >Follow us</h-title
+                        class="mb-8 uppercase"
+                        >About Us</h-title
                     >
-                    <ul>
-                        <li v-for="(s, i) in social" :key="i">
+                    <ul class="text-dark-vue">
+                        <li v-for="(s, i) in aboutus" :key="i" class="mb-2">
                             <anchor-link
                                 :to="s.url"
                                 class="flex flex-row items-center"
                             >
-                                <component
-                                    :is="s.component"
-                                    class="h-4 w-4 fill-current hover:text-outsoar"
-                                />
-                                <span class="font-bold text-base ml-2">{{
-                                    s.label
-                                }}</span>
+                                {{ s.label }}
                             </anchor-link>
                         </li>
                     </ul>
                 </div>
-                <div class="flex flex-col">
+                <div class="flex flex-col text-center lg:text-left">
                     <h-title
                         size="text-xl"
                         breakpoints="lg:text-2xl lg:text-left"
-                        class="my-2 uppercase"
-                        >Services</h-title
-                    >
-                    <ul>
-                        <li v-for="(s, i) in services" :key="i">
-                            <anchor-link
-                                :to="s.url"
-                                class="flex flex-row items-center"
-                            >
-                                <span class="font-bold text-base">{{
-                                    s.label
-                                }}</span>
-                            </anchor-link>
-                        </li>
-                    </ul>
-                </div>
-                <div class="flex flex-col">
-                    <h-title
-                        size="text-xl"
-                        breakpoints="lg:text-2xl lg:text-left"
-                        class="my-2 uppercase"
+                        class="mb-8 uppercase"
                         >Discover</h-title
                     >
-                    <ul>
-                        <li v-for="(s, i) in discoveries" :key="i">
+                    <ul class="text-dark-vue">
+                        <li v-for="(s, i) in discoveries" :key="i" class="mb-2">
                             <anchor-link
                                 :to="s.url"
                                 class="flex flex-row items-center"
                             >
-                                <span class="font-bold text-base">{{
-                                    s.label
-                                }}</span>
+                                {{ s.label }}
+                            </anchor-link>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex flex-col text-center lg:text-left">
+                    <h-title
+                        size="text-xl"
+                        breakpoints="lg:text-2xl lg:text-left"
+                        class="mb-8 uppercase"
+                        >Services</h-title
+                    >
+                    <ul class="text-dark-vue">
+                        <li v-for="(s, i) in services" :key="i" class="mb-2">
+                            <anchor-link :to="s.url">
+                                {{ s.label }}
                             </anchor-link>
                         </li>
                     </ul>
@@ -85,16 +72,32 @@
                     <div
                         class="flex flex-wrap py-2 content-center justify-center"
                     >
-                        <outsoar class="h-16 w-16" />
-                        <p class="p-2">
+                        <outsoar class="h-16 w-16 fill-current text-dark-vue" />
+                        <p class="text-sm lg:text-base p-2 text-dark-vue">
                             We build better Web Experience that will outsoar
                             your company
                         </p>
+                        <ul class="text-dark-vue flex flex-row gap-4 lg:gap-6">
+                            <li v-for="(s, i) in social" :key="i">
+                                <anchor-link
+                                    :to="s.url"
+                                    class="flex flex-row items-center"
+                                >
+                                    <component
+                                        :is="s.component"
+                                        class="h-6 w-6 fill-current hover:text-outsoar"
+                                    />
+                                    <!-- <span class="font-bold text-base ml-2">{{
+                                        s.label
+                                    }}</span> -->
+                                </anchor-link>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </grid>
         </div>
-        <div class="bg-black text-white">
+        <div class="bg-gray-700 text-white">
             <div
                 class="container text-xs lg:text-sm mx-auto flex flex-row justify-between p-2"
             >
@@ -138,6 +141,11 @@ export default {
                 { label: 'Twitter', component: Twitter, url: '#' },
                 { label: 'linkedIn', component: LinkedIn, url: '#' },
             ],
+            aboutus: [
+                { label: 'Work Culture', component: Github, url: '#' },
+                { label: 'Company History', component: Facebook, url: '#' },
+                { label: 'Mission & Vision', component: Twitter, url: '#' },
+            ],
             services: [
                 {
                     label: 'Development & Design',
@@ -152,12 +160,9 @@ export default {
                 { label: 'DevOps & Support', component: Twitter, url: '#' },
             ],
             discoveries: [
-                { label: 'How we do things', component: Facebook, url: '#' },
+                { label: 'Our Process', component: Facebook, url: '#' },
                 { label: 'Case Studies', component: Github, url: '#' },
-                { label: 'Who We Are', component: Twitter, url: '#' },
-                { label: 'Our Technologies', component: LinkedIn, url: '#' },
                 { label: 'Annoucements', component: LinkedIn, url: '#' },
-                { label: 'Industry Insights', component: LinkedIn, url: '#' },
             ],
             copyright: `Copyright ${new Date().getFullYear()} by Outsoar`,
             madewithlove: `Made with ♥️ in 🇵🇭 PHL`,
