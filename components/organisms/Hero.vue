@@ -1,7 +1,7 @@
 <template>
     <div class="bg-dark-vue flex min-h-screen">
         <div
-            class="mx-auto lg:m-auto lg:pb-64 flex flex-col lg:flex-row items-center"
+            class="mx-auto lg:m-auto lg:pb-80 flex flex-col lg:flex-row items-center"
         >
             <div class="flex flex-col gap-2 items-center">
                 <h1
