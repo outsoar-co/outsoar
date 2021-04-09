@@ -5,7 +5,7 @@
                 class="flex flex-wrap items-center justify-center content-center"
             >
                 <div>
-                    <rocket />
+                    <rocket class="h-40 lg:h-auto" />
                 </div>
                 <div class="flex flex-col gap-2 items-center">
                     <h1
