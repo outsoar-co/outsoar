@@ -8,7 +8,7 @@
         <div
             class="container mx-auto min-h-screen flex flex-col justify-center items-center"
         >
-            <div class="flex flex-cols justify-center h-full">
+            <div class="flex flex-cols justify-center max-h-screen">
                 <grid gap="gap-4" breakpoints="lg:grid-cols-3">
                     <div
                         v-for="(n, i) in topMenuItems"
