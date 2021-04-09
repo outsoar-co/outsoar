@@ -3,7 +3,9 @@
         <div class="flex flex-row mx-auto p-4">
             <div class="w-1/2 flex flex-col items-center justify-center">
                 <h-title class="text-white">{{ options.text }}</h-title>
-                <p class="text-sm lg:text-lg text-white">{{ options.body }}</p>
+                <p class="text-sm lg:text-base text-white">
+                    {{ options.body }}
+                </p>
             </div>
             <div class="w-1/2">
                 <component

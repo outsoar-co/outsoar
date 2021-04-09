@@ -1,36 +1,40 @@
 <template>
     <div class="bg-dark-vue flex min-h-screen">
-        <div
-            class="mx-auto lg:m-auto lg:pb-80 flex flex-col lg:flex-row items-center"
-        >
-            <div class="flex flex-col gap-2 items-center">
-                <h1
-                    class="font-extrabold text-center text-4xl lg:text-6xl font-sans-bold my-2 text-white"
-                >
-                    <span class="block"> We build better </span>
-                </h1>
-                <typist
-                    class="text-center text-white text-xl lg:text-2xl bg-outsoar m-1 p-1"
-                    :words="strings"
-                    :human="false"
-                ></typist>
-                <h3
-                    class="block font-sans text-center text-xl lg:text-2xl text-white"
-                >
-                    <span class="">that will</span>
-                    <transition-group tag="span">
-                        <span
-                            v-for="w in words"
-                            :key="w.text"
-                            :class="{ hidden: !w.display }"
-                            class="font-extrabold underline"
-                            >{{ w.text }}</span
-                        >
-                    </transition-group>
-                    <span>your company</span>
-                </h3>
+        <div class="container mx-auto lg:m-auto lg:pb-80">
+            <div
+                class="flex flex-wrap items-center justify-center content-center"
+            >
+                <div>
+                    <rocket />
+                </div>
+                <div class="flex flex-col gap-2 items-center">
+                    <h1
+                        class="font-extrabold text-center text-4xl lg:text-6xl font-sans-bold my-2 text-white"
+                    >
+                        <span class="block">We build better</span>
+                    </h1>
+                    <typist
+                        class="text-center text-white text-xl lg:text-2xl bg-outsoar m-1 p-1"
+                        :words="strings"
+                        :human="false"
+                    ></typist>
+                    <h3
+                        class="block font-sans text-center text-xl lg:text-2xl text-white"
+                    >
+                        <span class="">that will</span>
+                        <transition-group tag="span">
+                            <span
+                                v-for="w in words"
+                                :key="w.text"
+                                :class="{ hidden: !w.display }"
+                                class="font-extrabold underline"
+                                >{{ w.text }}</span
+                            >
+                        </transition-group>
+                        <span>your company</span>
+                    </h3>
+                </div>
             </div>
-            <rocket />
         </div>
         <div class="container mx-auto absolute bottom-10 left-0 right-0">
             <div class="flex flex-col items-center gap-2">
