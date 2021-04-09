@@ -151,9 +151,13 @@ export default {
                 {
                     label: 'Planning & Consultancy',
                     component: Github,
-                    url: '#',
+                    url: '/services/planning-and-consultancy',
                 },
-                { label: 'DevOps & Support', component: Twitter, url: '#' },
+                {
+                    label: 'DevOps & Support',
+                    component: Twitter,
+                    url: '/services/devops-and-support',
+                },
             ],
             discoveries: [
                 { label: 'Our Process', component: Facebook, url: '#' },

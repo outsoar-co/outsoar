@@ -20,6 +20,42 @@ export const state = () => ({
                 slug: 'services/development-and-design',
                 // timestamps here
             },
+            {
+                id: 2,
+                title: 'Planning and Consultancy',
+                body: '',
+                head: {},
+                params: {},
+                options: {},
+                meta: [{ id: 2, content_id: 2, key: 'foo', value: 'bar' }],
+                props: {
+                    banner: {
+                        icon: 'ScrumBoard',
+                        text: 'Planning and Consultancy',
+                        body: 'Contrary to popular belief',
+                    },
+                },
+                slug: 'services/planning-and-consultancy',
+                // timestamps here
+            },
+            {
+                id: 3,
+                title: 'DevOps and Support',
+                body: '',
+                head: {},
+                params: {},
+                options: {},
+                meta: [{ id: 3, content_id: 3, key: 'foo', value: 'bar' }],
+                props: {
+                    banner: {
+                        icon: 'BugFixing',
+                        text: 'DevOps & Support',
+                        body: 'Contrary to popular belief',
+                    },
+                },
+                slug: 'services/devops-and-support',
+                // timestamps here
+            },
         ],
         first_page_url: null,
         from: null,

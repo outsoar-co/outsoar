@@ -17,7 +17,7 @@
                 class="container text-xs lg:text-sm mx-auto flex flex-row items-center justify-end"
             >
                 <a
-                    href="#"
+                    href="https://slack.com/intl/en-ph/"
                     class="mx-2 flex flex-row items-center justify-items-center"
                 >
                     <slack class="mr-2 h-4 w-4 fill-current text-white" />

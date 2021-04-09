@@ -76,8 +76,16 @@ export default {
                     component: 'BuildingWebsites',
                     to: '/services/development-and-design',
                 },
-                { label: 'Planning & Consultancy', component: 'ScrumBoard' },
-                { label: 'DevOps & Support', component: 'BugFixing' },
+                {
+                    label: 'Planning & Consultancy',
+                    component: 'ScrumBoard',
+                    to: '/services/planning-and-consultancy',
+                },
+                {
+                    label: 'DevOps & Support',
+                    component: 'BugFixing',
+                    to: '/services/devops-and-support',
+                },
             ],
             MenuItems: [
                 'How we do things',
