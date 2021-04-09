@@ -27,14 +27,34 @@
                 points="302.32 107.68 302.32 174.88 260.77 154.1 260.77 131.79 157.11 72.31 15.61 153.68 15.61 110.34 156.23 22.88 302.32 107.68"
             />
             <text
-                class="fill-current text-black cls-2"
+                class="fill-curren cls-2"
+                :class="{
+                    'text-dark-vue':
+                        scrollY > 0 || display || $route.name != 'index',
+                    'text-white':
+                        scrollY === 0 && !display && $route.name == 'index',
+                }"
                 transform="translate(362.09 278.09) scale(1.25)"
             >
-                outsoar
+                Outsoar
             </text>
         </g>
     </svg>
 </template>
+<script>
+export default {
+    props: {
+        scrollY: {
+            type: Number,
+            default: 0,
+        },
+        display: {
+            type: Boolean,
+            default: false,
+        },
+    },
+};
+</script>
 <style scoped>
 .cls-1 {
     fill: #f8971d;

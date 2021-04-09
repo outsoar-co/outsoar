@@ -1,5 +1,5 @@
 <template>
-    <ul>
+    <ul class="m-4">
         <li>
             <nuxt-link
                 v-for="(link, i) in breadcrumbsLinks"

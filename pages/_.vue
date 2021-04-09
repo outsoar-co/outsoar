@@ -1,7 +1,5 @@
 <template>
     <main>
-        <!-- <p v-if="$fetchState.pending">Fetching mountains...</p>
-        <p v-else-if="$fetchState.error">An error occurred :(</p> -->
         <banner :options="page.props.banner" />
         <div class="max-w-4xl mx-auto m-2">
             <breadcrumbs />

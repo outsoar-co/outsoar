@@ -5,7 +5,7 @@
                 <component :is="item.icon" />
             </slot>
             <slot name="title" :item="item">
-                <h-title>{{ item.title }}</h-title>
+                <h-title breakpoints="lg:text-xl">{{ item.title }}</h-title>
             </slot>
             <slot name="body" :item="item">
                 <div class="text-base line-clamp-3">{{ item.body }}</div>

@@ -1,5 +1,13 @@
 <template>
-    <div :class="[size, 'font-sans-bold', direction, breakpoints]">
+    <div
+        :class="[
+            size,
+            'font-sans-bold',
+            'text-dark-vue',
+            direction,
+            breakpoints,
+        ]"
+    >
         <slot />
     </div>
 </template>
