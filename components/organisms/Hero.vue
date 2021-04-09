@@ -7,39 +7,43 @@
                 <div>
                     <rocket class="h-40 lg:h-auto" />
                 </div>
-                <div class="flex flex-col gap-2 items-center">
+                <div
+                    class="flex flex-col gap-2 items-strech justify-items-center"
+                >
                     <h1
                         class="font-extrabold text-center text-4xl lg:text-6xl font-sans-bold my-2 text-white"
                     >
                         <span class="block">We build better</span>
                     </h1>
                     <typist
-                        class="text-center text-white text-xl lg:text-2xl bg-outsoar m-1 p-1"
+                        class="text-center text-dark-vue text-base lg:text-xl bg-outsoar m-1 p-1 lg:p-2 lg:m-2"
                         :words="strings"
                         :human="false"
                     ></typist>
-                    <h3
-                        class="block font-sans text-center text-xl lg:text-2xl text-white"
-                    >
-                        <span class="">that will</span>
-                        <transition-group tag="span">
-                            <span
-                                v-for="w in words"
-                                :key="w.text"
-                                :class="{ hidden: !w.display }"
-                                class="font-extrabold underline"
-                                >{{ w.text }}</span
-                            >
-                        </transition-group>
-                        <span>your company</span>
-                    </h3>
+                    <div class="flex-grow">
+                        <h3
+                            class="flex-grow block font-sans text-center text-base lg:text-xl text-white"
+                        >
+                            <span class="">that will</span>
+                            <transition-group tag="span">
+                                <span
+                                    v-for="w in words"
+                                    :key="w.text"
+                                    :class="{ hidden: !w.display }"
+                                    class="font-extrabold underline"
+                                    >{{ w.text }}</span
+                                >
+                            </transition-group>
+                            <span>your company</span>
+                        </h3>
+                    </div>
                 </div>
             </div>
         </div>
         <div
-            class="container mx-auto absolute bottom-0 lg:bottom-10 left-0 right-0"
+            class="container mx-auto absolute bottom-6 lg:bottom-4 left-0 right-0"
         >
-            <div class="flex flex-col items-center gap-2">
+            <div class="flex flex-col items-center gap-4">
                 <div
                     class="flex flex-col text-base text-center items-center lg:text-lg text-white"
                 >
@@ -49,7 +53,7 @@
                     >
                     <span class="block">and create new income streams.</span>
                 </div>
-                <btn-link class="mb-8" to="#">Learn How</btn-link>
+                <btn-link to="#">Learn How</btn-link>
                 <chevron-double-down
                     class="h-6 w-6 fill-current animate-bounce text-white"
                 />
