@@ -4,14 +4,14 @@
             <div
                 class="flex flex-wrap items-center justify-center content-center"
             >
-                <div>
-                    <rocket class="h-40 lg:h-auto" />
+                <div class="p-2">
+                    <rocket class="h-24 md:h-32 lg:h-auto" />
                 </div>
                 <div
                     class="flex flex-col gap-2 items-strech justify-items-center"
                 >
                     <h1
-                        class="font-extrabold text-center text-4xl lg:text-6xl font-sans-bold my-2 text-white"
+                        class="font-extrabold text-center text-xl lg:text-6xl font-sans-bold my-2 text-white"
                     >
                         <span class="block">We build better</span>
                     </h1>
@@ -41,11 +41,11 @@
             </div>
         </div>
         <div
-            class="container mx-auto absolute bottom-6 lg:bottom-4 left-0 right-0"
+            class="container mx-auto absolute bottom-0 lg:bottom-8 left-0 right-0"
         >
             <div class="flex flex-col items-center gap-4">
                 <div
-                    class="flex flex-col text-base text-center items-center lg:text-lg text-white"
+                    class="flex flex-col text-xs text-center items-center lg:text-lg text-white"
                 >
                     <span class="block">Custom software helps you </span>
                     <span class="block"
