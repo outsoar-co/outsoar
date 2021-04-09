@@ -1,14 +1,12 @@
 <template>
     <main>
-        <Segment class="h-screen bg-dark-vue">
-            <hero />
-        </Segment>
+        <hero />
         <Segment class="bg-gray-100 shadow-inner">
             <card
                 class="container p-6 mt-6 transform -translate-y-20 lg:-translate-y-28"
             >
                 <template #body>
-                    <h-title size="text-4xl" class="text-center">
+                    <h-title size="text-3xl" class="text-center">
                         We are experts in
                     </h-title>
                     <list
@@ -40,25 +38,25 @@
         <Segment class="bg-white">
             <!-- <hero /> -->
             <div class="flex flex-col my-6 justify-center items-center">
-                <h-title size="text-4xl"> Who we are</h-title>
+                <h-title size="text-3xl"> Who we are</h-title>
             </div>
         </Segment>
         <Segment class="bg-gray-100 shadow-inner">
             <!-- <hero /> -->
             <div class="flex flex-col my-6 justify-center items-center">
-                <h-title size="text-4xl"> How we do it</h-title>
+                <h-title size="text-3xl"> How we do it</h-title>
             </div>
         </Segment>
         <Segment class="bg-white shadow-inner">
             <!-- <hero /> -->
             <div class="flex flex-col my-6 justify-center items-center">
-                <h-title size="text-4xl"> Our technologies</h-title>
+                <h-title size="text-3xl"> Our technologies</h-title>
             </div>
         </Segment>
         <Segment class="bg-gray-100">
             <!-- <hero /> -->
             <div class="flex flex-col my-6 justify-center items-center">
-                <h-title size="text-4xl"> Trusted by</h-title>
+                <h-title size="text-3xl"> Trusted by</h-title>
             </div>
         </Segment>
     </main>

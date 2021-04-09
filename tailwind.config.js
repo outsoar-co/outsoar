@@ -1,3 +1,4 @@
+// tailwind.config.js
 /*
  ** TailwindCSS Configuration File
  **
