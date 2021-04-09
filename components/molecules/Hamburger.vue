@@ -6,7 +6,7 @@
                 'text-white':
                     !display && scrollY == 0 && $route.name == 'index',
             }"
-            class="h-10 lg:h-12"
+            class="h-8 lg:h-10"
         />
     </button>
 </template>

@@ -26,10 +26,7 @@
                     >
                     <ul class="text-dark-vue">
                         <li v-for="(s, i) in aboutus" :key="i" class="mb-2">
-                            <anchor-link
-                                :to="s.url"
-                                class="flex flex-row items-center"
-                            >
+                            <anchor-link :to="s.url">
                                 {{ s.label }}
                             </anchor-link>
                         </li>
@@ -44,10 +41,7 @@
                     >
                     <ul class="text-dark-vue">
                         <li v-for="(s, i) in discoveries" :key="i" class="mb-2">
-                            <anchor-link
-                                :to="s.url"
-                                class="flex flex-row items-center"
-                            >
+                            <anchor-link :to="s.url">
                                 {{ s.label }}
                             </anchor-link>
                         </li>
@@ -73,7 +67,9 @@
                         class="flex flex-wrap py-2 content-center justify-center"
                     >
                         <outsoar class="h-16 w-16 fill-current text-dark-vue" />
-                        <p class="text-sm lg:text-base p-2 text-dark-vue">
+                        <p
+                            class="text-sm p-2 text-dark-vue text-center lg:text-left"
+                        >
                             We build better Web Experience that will outsoar
                             your company
                         </p>
