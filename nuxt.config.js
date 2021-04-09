@@ -57,6 +57,7 @@ export default {
         '@nuxtjs/eslint-module',
         // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
         '@nuxtjs/tailwindcss',
+        '@nuxtjs/gtm'
     ],
     /*
      ** Nuxt.js modules
@@ -66,16 +67,14 @@ export default {
         '@nuxtjs/axios',
         '@nuxtjs/pwa',
         // Doc: https://github.com/nuxt/content
-        '@nuxt/content',
-        '@nuxtjs/gtm',
+        '@nuxt/content'
     ],
 
     // Used as fallback if no runtime config is provided
     gtm: {
-        id: process.env.GOOGLE_CONTAINER_ID,
+        id: 'GTM-N8VKR7C',
         pageTracking: true,
     },
-
     /*
      ** Axios module configuration
      ** See https://axios.nuxtjs.org/options
