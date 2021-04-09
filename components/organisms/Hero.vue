@@ -36,7 +36,9 @@
                 </div>
             </div>
         </div>
-        <div class="container mx-auto absolute bottom-10 left-0 right-0">
+        <div
+            class="container mx-auto absolute bottom-0 lg:bottom-10 left-0 right-0"
+        >
             <div class="flex flex-col items-center gap-2">
                 <div
                     class="flex flex-col text-base text-center items-center lg:text-lg text-white"
