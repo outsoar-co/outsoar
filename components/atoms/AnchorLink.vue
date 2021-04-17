@@ -1,5 +1,8 @@
 <template>
-    <nuxt-link :to="to" class="hover:text-outsoar">
+    <nuxt-link
+        :to="to"
+        class="hover:text-light-outsoar dark:hover:text-dark-outsoar"
+    >
         <slot />
     </nuxt-link>
 </template>

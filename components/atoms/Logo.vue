@@ -4,7 +4,7 @@
         data-name="ALL LAYERS"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1797.9 374.1"
-        class="fill-current"
+        class="fill-current text-light-outsoar dark:text-dark-outsoar"
     >
         <defs />
         <g id="RSB">
@@ -27,11 +27,11 @@
                 points="302.32 107.68 302.32 174.88 260.77 154.1 260.77 131.79 157.11 72.31 15.61 153.68 15.61 110.34 156.23 22.88 302.32 107.68"
             />
             <text
-                class="fill-curren cls-2"
+                class="fill-current cls-2 text-dark-vue dark:text-light-vue"
                 :class="{
                     'text-dark-vue':
                         scrollY > 0 || display || $route.name != 'index',
-                    'text-white':
+                    'text-dark-vue':
                         scrollY === 0 && !display && $route.name == 'index',
                 }"
                 transform="translate(362.09 278.09) scale(1.25)"
@@ -56,9 +56,6 @@ export default {
 };
 </script>
 <style scoped>
-.cls-1 {
-    fill: #f8971d;
-}
 .cls-2 {
     font-size: 200.4px;
     font-family: TitilliumWeb-Bold;

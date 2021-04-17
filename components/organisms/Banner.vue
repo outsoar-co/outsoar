@@ -1,17 +1,32 @@
 <template>
-    <div class="to-white py-2 bg-dark-vue mx-auto">
-        <div class="flex flex-row mx-auto p-4">
-            <div class="w-1/2 flex flex-col items-center justify-center">
-                <h-title class="text-white">{{ options.text }}</h-title>
-                <p class="text-sm lg:text-base text-white">
-                    {{ options.body }}
-                </p>
+    <div
+        :class="[
+            'bg-gray-200 text-dark-vue dark:text-light-vue dark:bg-dark-odd',
+        ]"
+    >
+        <div
+            class="container mx-auto flex flex-wrap lg:flex-row items-center justify-center py-6"
+        >
+            <div class="flex">
+                <div class="m-auto flex flex-col lg:justify-end">
+                    <h-title
+                        size="text-xl"
+                        breakpoints="lg:text-4xl lg:text-left"
+                    >
+                        {{ options.text }}
+                    </h-title>
+                    <p class="text-sm text-center lg:text-base">
+                        {{ options.body }}
+                    </p>
+                </div>
             </div>
-            <div class="w-1/2">
-                <component
-                    :is="iconComponent"
-                    class="object-fill h-64 w-full fill-current text-outsoar"
-                />
+            <div class="flex items-center justify-start">
+                <div class="mx-auto">
+                    <component
+                        :is="iconComponent"
+                        class="object-fill h-64 w-full fill-current text-outsoar"
+                    />
+                </div>
             </div>
         </div>
     </div>

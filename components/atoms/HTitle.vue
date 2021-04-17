@@ -6,6 +6,7 @@
             'text-dark-vue',
             direction,
             breakpoints,
+            'text-vue-dark dark:text-light-vue',
         ]"
     >
         <slot />

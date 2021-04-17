@@ -1,5 +1,5 @@
 <template>
-    <ul class="m-4">
+    <ul class="text-dark-vue dark:text-light-vue">
         <li>
             <nuxt-link
                 v-for="(link, i) in breadcrumbsLinks"
@@ -24,8 +24,6 @@ export default {
             const tmp = [];
             tmp.push({ path: '/', meta: { title: 'Home' } });
             this.items.data.forEach((link) => {
-                console.log('route name: ', this.$route.params.pathMatch);
-                console.log('slug: ', link.slug);
                 if (link.slug === this.$route.params.pathMatch) {
                     tmp.push(
                         Object.assign(

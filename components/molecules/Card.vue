@@ -1,5 +1,7 @@
 <template>
-    <div class="overflow-hidden bg-white rounded-lg shadow-xl">
+    <div
+        class="overflow-hidden bg-white dark:bg-dark-odd dark:text-light-vue rounded-lg shadow-xl"
+    >
         <slot name="header">
             <div class="flex">
                 <slot name="header-title"></slot>

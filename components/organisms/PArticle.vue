@@ -1,7 +1,12 @@
 <template>
-    <div class="p-4">
-        <div class="prose lg:prose-xl max-w-4xl mx-auto mt-4 lg:mt-8">
+    <div class="flex items-center justify-center">
+        <article
+            :class="[
+                'prose md:prose-xl dark:prose-dark dark:md:prose-xl-dark',
+                'max-w-screen-lg',
+            ]"
+        >
             <slot />
-        </div>
+        </article>
     </div>
 </template>

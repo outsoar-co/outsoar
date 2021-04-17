@@ -1,7 +1,12 @@
 <template>
     <nuxt-link
         :to="to"
-        class="no-underline inline-block px-4 py-2 shadow uppercase hover:shadow-md hover:text-white text-base bg-outsoar"
+        :class="[
+            'text-base font-bold no-underline inline-block px-4 py-2 rounded-sm',
+            'hover:shadow-inner hover:text-dark-vue text-base',
+            'border-b-4 border-dark-outsoar dark:border-light-outsoar',
+            'bg-light-outsoar text-light-vue dark:bg-dark-outsoar',
+        ]"
     >
         <slot />
     </nuxt-link>
@@ -16,3 +21,4 @@ export default {
     },
 };
 </script>
+<style lang="postcss" scoped></style>

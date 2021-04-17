@@ -1,62 +1,82 @@
 <template>
-    <div class="bg-dark-vue flex min-h-screen">
-        <div class="container mx-auto lg:m-auto lg:pb-72">
+    <div
+        class="bg-light-vue text-dark-vue dark:bg-dark-vue dark:text-white flex min-h-screen lg:mb-36"
+    >
+        <div class="container mx-auto">
             <div
-                class="flex flex-wrap items-center justify-center content-center"
+                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mb-10"
             >
-                <div class="mt-4">
-                    <rocket class="h-40 lg:h-auto" />
-                </div>
                 <div
-                    class="flex flex-col gap-2 items-strech justify-items-center"
+                    class="flex flex-wrap items-center justify-center content-center"
                 >
-                    <h1
-                        class="font-extrabold text-center text-3xl lg:text-6xl font-sans-bold my-2 text-white"
-                    >
-                        <span class="block">We build better</span>
-                    </h1>
-                    <typist
-                        class="text-center text-dark-vue text-base lg:text-xl bg-outsoar m-1 p-1 lg:p-2 lg:m-2"
-                        :words="strings"
-                        :human="false"
-                    ></typist>
-                    <div class="flex-grow">
-                        <h3
-                            class="flex-grow block font-sans text-center text-base lg:text-xl text-white"
+                    <rocket class="h-64 lg:h-3/4" />
+                    <div class="flex flex-col gap-2 justify-center">
+                        <h1
+                            class="font-extrabold text-center text-3xl lg:text-7xl font-sans-bold my-2"
                         >
-                            <span class="">that will</span>
-                            <transition-group tag="span">
-                                <span
-                                    v-for="w in words"
-                                    :key="w.text"
-                                    :class="{ hidden: !w.display }"
-                                    class="font-extrabold underline"
-                                    >{{ w.text }}</span
-                                >
-                            </transition-group>
-                            <span>your company</span>
-                        </h3>
+                            <span class="block">We build better</span>
+                        </h1>
+                        <div
+                            :class="[
+                                'w-3/4 mx-auto flex items-center justify-center',
+                                'bg-dark-vue text-light-vue',
+                                'dark:bg-light-vue dark:text-dark-vue',
+                            ]"
+                        >
+                            <typist
+                                :class="[
+                                    'text-center text-base p-1 w-full',
+                                    'lg:text-xl',
+                                ]"
+                                :words="strings"
+                                :human="false"
+                            ></typist>
+                        </div>
+                        <div class="flex flex-wrap">
+                            <h3
+                                class="flex-grow font-sans text-center text-base lg:text-xl"
+                            >
+                                <span class="">that will</span>
+                                <transition-group tag="span">
+                                    <span
+                                        v-for="w in words"
+                                        :key="w.text"
+                                        :class="{ hidden: !w.display }"
+                                        class="font-extrabold underline"
+                                        >{{ w.text }}</span
+                                    >
+                                </transition-group>
+                                <span>your company</span>
+                            </h3>
+                        </div>
+                        <div class="flex my-2">
+                            <btn-link to="#" class="mx-auto">
+                                <div class="flex flex-row items-center">
+                                    <span>Talk to us today!</span>
+                                    <!-- <chevron-double-right
+                                        class="animate-wiggle wiggle"
+                                    /> -->
+                                </div>
+                            </btn-link>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div
-            class="container mx-auto absolute bottom-0 lg:bottom-8 left-0 right-0"
-        >
-            <div class="flex flex-col items-center gap-4">
-                <div
-                    class="flex flex-col text-xs text-center items-center lg:text-lg text-white"
-                >
-                    <span class="block">Custom software helps you </span>
-                    <span class="block"
-                        >gain customers faster, reduce operating costs,</span
+            <div class="mx-auto absolute bottom-4 lg:bottom-8 left-0 right-0">
+                <div class="flex flex-col items-center gap-4">
+                    <!-- <div
+                        class="flex flex-col text-xs text-center items-center lg:text-lg text-white"
                     >
-                    <span class="block">and create new income streams.</span>
+                        <span class="block">Custom software helps you </span>
+                        <span class="block"
+                            >gain customers faster, reduce operating costs,</span
+                        >
+                        <span class="block">and create new income streams.</span>
+                    </div> -->
+                    <chevron-double-down
+                        class="h-6 w-6 fill-current animate-bounce text-dark-vue dark:text-light-vue"
+                    />
                 </div>
-                <btn-link to="#">Learn How</btn-link>
-                <chevron-double-down
-                    class="h-6 w-6 fill-current animate-bounce text-white"
-                />
             </div>
         </div>
     </div>
@@ -64,6 +84,7 @@
 <script>
 import BtnLink from '@/components/atoms/BtnLink';
 import ChevronDoubleDown from '@/components/atoms/icons/ChevronDoubleDown';
+// import ChevronDoubleRight from '@/components/atoms/icons/ChevronDoubleRight';
 import Typist from '@/components/atoms/Typer';
 import Rocket from '@/components/atoms/undraw/Rocket';
 
@@ -71,6 +92,7 @@ export default {
     components: {
         BtnLink,
         ChevronDoubleDown,
+        // ChevronDoubleRight,
         Typist,
         Rocket,
     },

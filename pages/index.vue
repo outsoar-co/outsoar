@@ -1,9 +1,9 @@
 <template>
-    <main>
+    <main class="bg-light-vue dark:bg-dark-vue">
         <hero />
-        <Segment class="bg-gray-100 shadow-inner">
+        <Segment class="bg-gray-100 dark:bg-dark-odd shadow-inner">
             <card
-                class="container p-6 lg:mt-6 transform -translate-y-10 lg:transform lg:-translate-y-28"
+                class="container p-6 pb-12 lg:transform lg:transform lg:-translate-y-32"
             >
                 <template #body>
                     <h-title size="text-3xl" class="text-center">
@@ -35,27 +35,26 @@
                 </template>
             </card>
         </Segment>
-        <Segment class="bg-white">
+        <Segment class="bg-white dark:bg-dark-even">
             <!-- <hero /> -->
-            <div class="flex flex-col my-6 justify-center items-center">
+            <div class="flex flex-col justify-center items-center">
                 <h-title size="text-3xl"> Who we are</h-title>
             </div>
         </Segment>
-        <Segment class="bg-gray-100 shadow-inner">
+        <Segment class="bg-gray-100 dark:bg-dark-odd shadow-inner">
             <!-- <hero /> -->
-            <div class="flex flex-col my-6 justify-center items-center">
+            <div class="flex flex-col justify-center items-center">
                 <h-title size="text-3xl"> How we do it</h-title>
             </div>
         </Segment>
-        <Segment class="bg-white shadow-inner">
+        <Segment class="bg-white dark:bg-dark-even shadow-inner">
             <!-- <hero /> -->
-            <div class="flex flex-col my-6 justify-center items-center">
+            <div class="flex flex-col justify-center items-center">
                 <h-title size="text-3xl"> Our technologies</h-title>
             </div>
         </Segment>
-        <Segment class="bg-gray-100">
-            <!-- <hero /> -->
-            <div class="flex flex-col my-6 justify-center items-center">
+        <Segment class="bg-gray-100 dark:bg-dark-odd">
+            <div class="flex flex-col justify-center items-center">
                 <h-title size="text-3xl"> Trusted by</h-title>
             </div>
         </Segment>
