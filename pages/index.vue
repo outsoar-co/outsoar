@@ -102,10 +102,10 @@
                     class="flex flex-wrap justify-center lg:flex-row lg:flex-nowrap p-4"
                 >
                     <div
-                        class="lg:w-1/2 grid grid-cols-3 lg:grid-cols-4 gap-6 p-4"
+                        class="w-full lg:w-1/2 grid grid-cols-3 lg:grid-cols-4 gap-6 p-4"
                     >
                         <div v-for="s in stacks" :key="s" class="h-1/2 mx-auto">
-                            <img :src="s" class="object-contain h-64 w-auto" />
+                            <img :src="s" class="object-contain h-24 w-auto" />
                         </div>
                     </div>
                     <p-article class="p-4">
@@ -139,14 +139,17 @@
                         </p>
                     </p-article>
                     <div
-                        class="lg:w-1/2 grid grid-cols-3 lg:grid-cols-4 gap-6 p-4"
+                        class="w-full lg:w-1/2 grid grid-cols-3 lg:grid-cols-4 gap-6 p-4"
                     >
                         <div
                             v-for="trust in trustedBy"
                             :key="trust"
                             class="h-1/2 mx-auto"
                         >
-                            <img :src="trust" class="object-contain w-auto" />
+                            <img
+                                :src="trust"
+                                class="object-contain h-24 w-auto"
+                            />
                         </div>
                     </div>
                 </div>
