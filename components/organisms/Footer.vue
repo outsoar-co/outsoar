@@ -146,14 +146,14 @@
             </ul>
             <p class="text-xs mt-4">&#169; {{ copyright }}</p>
         </div>
-        <div class="bg-gray-200 dark:bg-gray-700 mt-12">
+        <div class="bg-gray-200 dark:bg-gray-700 mt-12 text-xs">
             <div class="container mx-auto px-2 grid grid-cols-1 lg:grid-cols-3">
                 <div
                     class="flex flex-row items-center justify-center lg:justify-start my-2"
                 >
                     <color-mode-picker />
                 </div>
-                <ul class="flex flex-row mx-auto mb-2">
+                <ul class="flex flex-row items-center justify-center mx-auto">
                     <li>Accessibility Statement</li>
                     <li class="font-bold mx-1 lg:mx-2">/</li>
                     <li>Privacy</li>
@@ -163,7 +163,7 @@
                     <li>Sitemap</li>
                 </ul>
                 <div
-                    class="flex flex-row items-center justify-center lg:justify-end mb-2"
+                    class="flex flex-row items-center justify-center lg:justify-end my-2"
                 >
                     {{ madewithlove }}
                 </div>
