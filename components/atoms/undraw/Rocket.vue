@@ -4,8 +4,6 @@
         data-name="Layer 1"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 400 300"
-        width="406"
-        height="306"
         class="illustration styles_illustrationTablet__1DWOa"
     >
         <path
