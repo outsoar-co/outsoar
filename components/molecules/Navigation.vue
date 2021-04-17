@@ -91,7 +91,7 @@ export default {
             ],
             MenuItems: [
                 'Who we are',
-                '',
+                'What we do',
                 'Who We Are',
                 'Our Technologies',
                 'Annoucements',

@@ -42,7 +42,7 @@
                 >
                     <img
                         src="https://placeimg.com/640/480/tech"
-                        class="object-fill w-1/2 h-1/2 filter grayscale"
+                        class="object-contain lg:w-1/2 lg:h-1/2"
                     />
                     <p-article class="p-4">
                         <h4>Who we are</h4>
@@ -61,7 +61,6 @@
                             triumph, they could become the momentary masters of
                             a fraction of a dot.
                         </p>
-                        <h3>- Team Outsoar</h3>
                     </p-article>
                 </div>
             </div>
@@ -92,7 +91,7 @@
                     </p-article>
                     <img
                         src="https://placeimg.com/640/480/tech"
-                        class="object-fill w-1/2 h-1/2 filter grayscale"
+                        class="object-contain lg:w-1/2 lg:h-1/2"
                     />
                 </div>
             </div>
@@ -103,10 +102,10 @@
                     class="flex flex-wrap justify-center lg:flex-row lg:flex-nowrap p-4"
                 >
                     <div
-                        class="w-1/2 grid grid-cols-3 lg:grid-cols-4 gap-6 p-4"
+                        class="lg:w-1/2 grid grid-cols-3 lg:grid-cols-4 gap-6 p-4"
                     >
                         <div v-for="s in stacks" :key="s" class="h-1/2 mx-auto">
-                            <img :src="s" class="object-contain h-24 w-auto" />
+                            <img :src="s" class="object-contain h-64 w-auto" />
                         </div>
                     </div>
                     <p-article class="p-4">
@@ -140,17 +139,14 @@
                         </p>
                     </p-article>
                     <div
-                        class="w-1/2 grid grid-cols-3 lg:grid-cols-4 gap-6 p-4"
+                        class="lg:w-1/2 grid grid-cols-3 lg:grid-cols-4 gap-6 p-4"
                     >
                         <div
                             v-for="trust in trustedBy"
                             :key="trust"
                             class="h-1/2 mx-auto"
                         >
-                            <img
-                                :src="trust"
-                                class="object-contain h-24 w-auto"
-                            />
+                            <img :src="trust" class="object-contain w-auto" />
                         </div>
                     </div>
                 </div>
@@ -215,9 +211,6 @@ export default {
                 'https://assets1.phonebooky.com/listings/logos/000/029/634/original/Toni_and_Guy_%28logo%29.jpg',
                 'https://scontent.fmnl17-1.fna.fbcdn.net/v/t1.6435-9/82993718_109478154144107_8387073756335526663_n.png?_nc_cat=108&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeGKEJfpCFffvi65fGMwR7h1YdknPWcoONNh2Sc9Zyg402CoaAO_CUNmEmaSRm8GQmP2ARvsFljmeH6OZ5tCeXST&_nc_ohc=HndV-WbZOzUAX-Adv7s&_nc_ht=scontent.fmnl17-1.fna&oh=c6f2260fc1d48e10c381b20be7df28ae&oe=60A163C7',
                 'https://media-exp1.licdn.com/dms/image/C4D0BAQHWxlis-cuobQ/company-logo_200_200/0/1519912655201?e=2159024400&v=beta&t=LtME-VaBvRMGXYp1q-qaZT-Om_F6QOinKi1VtqAQ2uM',
-                'https://logoipsum.com/logo/logo-26.svg',
-                'https://logoipsum.com/logo/logo-25.svg',
-                'https://logoipsum.com/logo/logo-20.svg',
             ],
         };
     },

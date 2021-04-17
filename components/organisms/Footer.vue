@@ -153,17 +153,17 @@
                 >
                     <color-mode-picker />
                 </div>
-                <ul class="flex flex-row mx-auto my-2">
+                <ul class="flex flex-row mx-auto mb-2">
                     <li>Accessibility Statement</li>
-                    <li class="font-bold mx-2">/</li>
+                    <li class="font-bold mx-1 lg:mx-2">/</li>
                     <li>Privacy</li>
-                    <li class="font-bold mx-2">/</li>
+                    <li class="font-bold mx-1 lg:mx-2">/</li>
                     <li>Terms</li>
-                    <li class="font-bold mx-2">/</li>
+                    <li class="font-bold mx-1 lg:mx-2">/</li>
                     <li>Sitemap</li>
                 </ul>
                 <div
-                    class="flex flex-row items-center justify-center lg:justify-end my-2"
+                    class="flex flex-row items-center justify-center lg:justify-end mb-2"
                 >
                     {{ madewithlove }}
                 </div>
