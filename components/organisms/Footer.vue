@@ -112,7 +112,12 @@
                                 <icon-slack
                                     class="mx-2 h-4 lg:h-6 fill-current text-white"
                                 />
-                                <span>Join us on our Workplace</span>
+                                <span
+                                    >Join us on our
+                                    <span class="font-bold"
+                                        >@outsoar</span
+                                    ></span
+                                >
                             </anchor-link>
                         </li>
                     </ul>

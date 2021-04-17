@@ -9,7 +9,7 @@
                 <div
                     class="flex flex-wrap items-center justify-center content-center"
                 >
-                    <rocket class="h-64 lg:h-96" />
+                    <rocket class="h-48 lg:h-96" />
                     <div class="flex flex-col gap-2 justify-center">
                         <h1
                             class="font-extrabold text-center text-3xl lg:text-7xl font-sans-bold my-2"
