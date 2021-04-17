@@ -1,7 +1,7 @@
 <template>
-    <section>
-        <div class="flex flex-col items-center">
+    <div>
+        <section class="container mx-auto px-2">
             <slot />
-        </div>
-    </section>
+        </section>
+    </div>
 </template>

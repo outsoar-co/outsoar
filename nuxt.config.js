@@ -15,7 +15,7 @@ export default {
      */
     head: {
         title: 'Outsoar',
-        titleTemplate: 'Development Company In North PHL',
+        titleTemplate: 'Pangasinan Based Development Company',
         htmlAttrs: {
             lang: 'en',
             amp: true,
@@ -57,7 +57,9 @@ export default {
         '@nuxtjs/eslint-module',
         // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
         '@nuxtjs/tailwindcss',
-        '@nuxtjs/gtm'
+        '@nuxtjs/gtm',
+        '@nuxtjs/color-mode',
+        '@nuxtjs/svg',
     ],
     /*
      ** Nuxt.js modules
@@ -67,7 +69,7 @@ export default {
         '@nuxtjs/axios',
         '@nuxtjs/pwa',
         // Doc: https://github.com/nuxt/content
-        '@nuxt/content'
+        '@nuxt/content',
     ],
 
     // Used as fallback if no runtime config is provided
@@ -94,5 +96,10 @@ export default {
     build: {},
     tailwindcss: {
         jit: true,
+        // add '~tailwind.config` alias
+        exposeConfig: true,
+    },
+    colorMode: {
+        classSuffix: '',
     },
 };

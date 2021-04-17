@@ -1,10 +1,12 @@
 <template>
     <main>
         <banner :options="page.props.banner" />
-        <div class="max-w-4xl mx-auto m-2">
-            <breadcrumbs />
-        </div>
-        <Segment class="bg-white">
+        <Segment class="bg-white dark:bg-dark-even">
+            <div class="max-w-screen-lg mx-auto p-2">
+                <breadcrumbs />
+            </div>
+        </Segment>
+        <Segment class="bg-white dark:bg-dark-odd px-2 py-16">
             <p-article>
                 <nuxt-content :document="page" />
             </p-article>

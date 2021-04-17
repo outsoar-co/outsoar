@@ -1,13 +1,6 @@
 <template>
     <button class="outline-none focus:outline-none black z-50" @click="toogle">
-        <component
-            :is="iconComponent"
-            :class="{
-                'text-white':
-                    !display && scrollY == 0 && $route.name == 'index',
-            }"
-            class="h-8 lg:h-10"
-        />
+        <component :is="iconComponent" class="h-6 lg:h-8 dark:text-white" />
     </button>
 </template>
 <script>
