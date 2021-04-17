@@ -7,7 +7,7 @@
             </div>
         </Segment>
         <Segment class="bg-white dark:bg-dark-odd px-2 py-16">
-            <p-article>
+            <p-article class="flex items-center justify-center">
                 <nuxt-content :document="page" />
             </p-article>
         </Segment>
@@ -29,7 +29,6 @@ export default {
     },
     async asyncData({ $content, params, error, store }) {
         const path = `/${params.pathMatch || 'index'}`;
-        console.log(path);
         const pageDetail = store.getters['content/items'].data.find(
             (item) => item.slug === params.pathMatch
         );

@@ -18,7 +18,8 @@
     "@nuxtjs/pwa": "^3.0.0-beta.20",
     "@tailwindcss/line-clamp": "^0.2.0",
     "@tailwindcss/typography": "^0.4.0",
-    "nuxt": "^2.13.0"
+    "nuxt": "^2.13.0",
+    "tailwindcss-filters": "^2.0.0"
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^2.0.5",
@@ -27,13 +28,15 @@
     "@nuxtjs/svg": "^0.1.12",
     "@nuxtjs/tailwindcss": "^4.0.3",
     "@tailwindcss/jit": "^0.1.18",
+    "@tailwindcss/postcss7-compat": "^2.1.0",
     "@vue/eslint-config-prettier": "^6.0.0",
+    "autoprefixer": "^9.8.6",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.2.0",
     "eslint-plugin-nuxt": "^1.0.0",
     "eslint-plugin-prettier": "^3.3.1",
-    "postcss": "^8.2.9",
+    "postcss": "^8.2.10",
     "prettier": "^2.2.1",
-    "tailwindcss": "^2.0.4"
+    "tailwindcss": "^2.1.1"
   }
 }

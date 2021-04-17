@@ -13,6 +13,18 @@ module.exports = {
             'sans-light': ['TitilliumWeb-Light', 'sans-serif'],
             'sans-bold': ['TitilliumWeb-Bold', 'sans-serif'],
         },
+        filter: {
+            // defaults to {}
+            none: 'none',
+            grayscale: 'grayscale(1)',
+            invert: 'invert(1)',
+            sepia: 'sepia(1)',
+        },
+        backdropFilter: {
+            // defaults to {}
+            none: 'none',
+            blur: 'blur(20px)',
+        },
         extend: {
             colors: {
                 'light-outsoar': '#fd9012',
@@ -97,10 +109,9 @@ module.exports = {
         textColor: ['dark', 'dark-hover', 'dark-active'],
     },
     plugins: [
-        require('@tailwindcss/typography')({
-            modifiers: [],
-        }),
+        require('@tailwindcss/typography'),
         require('@tailwindcss/line-clamp'),
+        require('@tailwindcss/jit'),
     ],
     future: {
         purgeLayersByDefault: true,

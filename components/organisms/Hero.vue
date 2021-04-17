@@ -51,11 +51,10 @@
                         </div>
                         <div class="flex my-2">
                             <btn-link to="#" class="mx-auto">
-                                <div class="flex flex-row items-center">
-                                    <span>Talk to us today!</span>
-                                    <!-- <chevron-double-right
-                                        class="animate-wiggle wiggle"
-                                    /> -->
+                                <div
+                                    class="flex flex-row items-center hover:scale-120 transform hover:translate-x-2"
+                                >
+                                    Talk to us today
                                 </div>
                             </btn-link>
                         </div>
@@ -64,15 +63,6 @@
             </div>
             <div class="mx-auto absolute bottom-4 lg:bottom-8 left-0 right-0">
                 <div class="flex flex-col items-center gap-4">
-                    <!-- <div
-                        class="flex flex-col text-xs text-center items-center lg:text-lg text-white"
-                    >
-                        <span class="block">Custom software helps you </span>
-                        <span class="block"
-                            >gain customers faster, reduce operating costs,</span
-                        >
-                        <span class="block">and create new income streams.</span>
-                    </div> -->
                     <chevron-double-down
                         class="h-6 w-6 fill-current animate-bounce text-dark-vue dark:text-light-vue"
                     />
