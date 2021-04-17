@@ -41,7 +41,7 @@
                     class="flex flex-wrap justify-center lg:flex-row lg:flex-nowrap p-4"
                 >
                     <img
-                        src="http://placecorgi.com/640/480"
+                        src="https://placeimg.com/640/480/tech"
                         class="object-fill w-1/2 h-1/2 filter grayscale"
                     />
                     <p-article class="p-4">
@@ -91,7 +91,7 @@
                         </p>
                     </p-article>
                     <img
-                        src="http://placecorgi.com/640/480"
+                        src="https://placeimg.com/640/480/tech"
                         class="object-fill w-1/2 h-1/2 filter grayscale"
                     />
                 </div>
