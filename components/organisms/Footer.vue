@@ -147,24 +147,26 @@
             <p class="text-xs mt-4">&#169; {{ copyright }}</p>
         </div>
         <div class="bg-gray-200 dark:bg-gray-700 mt-12">
-            <div
-                class="container text-xs mx-auto flex flex-col lg:flex-row items-center justify-between p-2 lg:p-2"
-            >
-                <div class="w-1/8 mt-1">
+            <div class="container mx-auto px-2 grid grid-cols-1 lg:grid-cols-3">
+                <div
+                    class="flex flex-row items-center justify-center lg:justify-start my-2"
+                >
                     <color-mode-picker />
                 </div>
-                <ul class="flex flex-row mx-auto mt-1">
+                <ul class="flex flex-row mx-auto my-2">
                     <li>Accessibility Statement</li>
-                    <li class="font-bold mx-1 lg:mx-2">/</li>
+                    <li class="font-bold mx-2">/</li>
                     <li>Privacy</li>
-                    <li class="font-bold mx-1 lg:mx-2">/</li>
+                    <li class="font-bold mx-2">/</li>
                     <li>Terms</li>
-                    <li class="font-bold mx-1 lg:mx-2">/</li>
+                    <li class="font-bold mx-2">/</li>
                     <li>Sitemap</li>
                 </ul>
-                <p class="lg:w-1/8 flex justify-end mt-1">
+                <div
+                    class="flex flex-row items-center justify-center lg:justify-end my-2"
+                >
                     {{ madewithlove }}
-                </p>
+                </div>
             </div>
         </div>
     </footer>

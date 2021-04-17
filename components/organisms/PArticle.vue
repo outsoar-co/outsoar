@@ -1,5 +1,5 @@
 <template>
-    <div class="flex items-center justify-center">
+    <div class="flex justify-center">
         <article
             :class="[
                 'prose md:prose-xl dark:prose-dark dark:md:prose-xl-dark',

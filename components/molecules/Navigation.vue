@@ -90,8 +90,8 @@ export default {
                 },
             ],
             MenuItems: [
-                'How we do things',
-                'Case Studies',
+                'Who we are',
+                '',
                 'Who We Are',
                 'Our Technologies',
                 'Annoucements',

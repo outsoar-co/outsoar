@@ -36,26 +36,124 @@
             </card>
         </Segment>
         <Segment class="bg-white dark:bg-dark-even">
-            <!-- <hero /> -->
-            <div class="flex flex-col justify-center items-center">
-                <h-title size="text-3xl"> Who we are</h-title>
+            <div class="flex flex-col justify-center items-center p-6">
+                <div
+                    class="flex flex-wrap justify-center lg:flex-row lg:flex-nowrap p-4"
+                >
+                    <img
+                        src="http://placecorgi.com/640/480"
+                        class="object-fill w-1/2 h-1/2 filter grayscale"
+                    />
+                    <p-article class="p-4">
+                        <h4>Who we are</h4>
+                        <h1>We are Outsoar</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Sapien eget mi proin sed libero
+                            enim sed. Nibh mauris cursus mattis molestie. Urna
+                            condimentum mattis pellentesque id. Arcu ac tortor
+                        </p>
+                        <p>
+                            The Earth is a very small stage in a vast cosmic
+                            arena. Think of the rivers of blood spilled by all
+                            those generals and emperors so that, in glory and
+                            triumph, they could become the momentary masters of
+                            a fraction of a dot.
+                        </p>
+                        <h3>- Team Outsoar</h3>
+                    </p-article>
+                </div>
             </div>
         </Segment>
         <Segment class="bg-gray-100 dark:bg-dark-odd shadow-inner">
             <!-- <hero /> -->
-            <div class="flex flex-col justify-center items-center">
-                <h-title size="text-3xl"> How we do it</h-title>
+            <div class="flex flex-col justify-center items-center p-6">
+                <div
+                    class="flex flex-wrap justify-center lg:flex-row lg:flex-nowrap p-4"
+                >
+                    <p-article class="p-4">
+                        <h4>How we do it</h4>
+                        <h1>We do it for fun</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Sapien eget mi proin sed libero
+                            enim sed. Nibh mauris cursus mattis molestie. Urna
+                            condimentum mattis pellentesque id. Arcu ac tortor
+                        </p>
+                        <p>
+                            The Earth is a very small stage in a vast cosmic
+                            arena. Think of the rivers of blood spilled by all
+                            those generals and emperors so that, in glory and
+                            triumph, they could become the momentary masters of
+                            a fraction of a dot.
+                        </p>
+                    </p-article>
+                    <img
+                        src="http://placecorgi.com/640/480"
+                        class="object-fill w-1/2 h-1/2 filter grayscale"
+                    />
+                </div>
             </div>
         </Segment>
         <Segment class="bg-white dark:bg-dark-even shadow-inner">
-            <!-- <hero /> -->
-            <div class="flex flex-col justify-center items-center">
-                <h-title size="text-3xl"> Our technologies</h-title>
+            <div class="flex flex-col justify-center items-center p-6">
+                <div
+                    class="flex flex-wrap justify-center lg:flex-row lg:flex-nowrap p-4"
+                >
+                    <div
+                        class="w-1/2 grid grid-cols-3 lg:grid-cols-4 gap-6 p-4"
+                    >
+                        <div v-for="s in stacks" :key="s" class="h-1/2 mx-auto">
+                            <img :src="s" class="object-contain h-24 w-auto" />
+                        </div>
+                    </div>
+                    <p-article class="p-4">
+                        <h4>Our Technologies</h4>
+                        <h1>Stacks we are comforable to use</h1>
+                        <p>
+                            The Earth is a very small stage in a vast cosmic
+                            arena. Think of the rivers of blood spilled by all
+                            those generals and emperors so that, in glory and
+                            triumph, they could become the momentary masters of
+                            a fraction of a dot.
+                        </p>
+                    </p-article>
+                </div>
             </div>
         </Segment>
         <Segment class="bg-gray-100 dark:bg-dark-odd">
-            <div class="flex flex-col justify-center items-center">
-                <h-title size="text-3xl"> Trusted by</h-title>
+            <div class="flex flex-col justify-center items-center p-6">
+                <div
+                    class="flex flex-wrap justify-center lg:flex-row lg:flex-nowrap p-4"
+                >
+                    <p-article class="p-4">
+                        <h4>Trusted by</h4>
+                        <h1>You are on the good team.</h1>
+                        <p>
+                            The Earth is a very small stage in a vast cosmic
+                            arena. Think of the rivers of blood spilled by all
+                            those generals and emperors so that, in glory and
+                            triumph, they could become the momentary masters of
+                            a fraction of a dot.
+                        </p>
+                    </p-article>
+                    <div
+                        class="w-1/2 grid grid-cols-3 lg:grid-cols-4 gap-6 p-4"
+                    >
+                        <div
+                            v-for="trust in trustedBy"
+                            :key="trust"
+                            class="h-1/2 mx-auto"
+                        >
+                            <img
+                                :src="trust"
+                                class="object-contain h-24 w-auto"
+                            />
+                        </div>
+                    </div>
+                </div>
             </div>
         </Segment>
     </main>
@@ -68,6 +166,7 @@ import BtnLink from '@/components/atoms/BtnLink';
 import Card from '@/components/molecules/Card';
 import Segment from '@/components/organisms/Segment';
 import HTitle from '@/components/atoms/HTitle';
+import PArticle from '~/components/organisms/PArticle.vue';
 
 export default {
     components: {
@@ -77,6 +176,7 @@ export default {
         Card,
         List,
         HTitle,
+        PArticle,
     },
     data() {
         return {
@@ -101,42 +201,25 @@ export default {
                     to: '#',
                 },
             ],
+            stacks: [
+                'https://raw.githubusercontent.com/devicons/devicon/master/icons/laravel/laravel-plain-wordmark.svg',
+                'https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg',
+                'https://raw.githubusercontent.com/devicons/devicon/master/icons/wordpress/wordpress-original.svg',
+                'https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-plain.svg',
+                'https://cdn.svgporn.com/logos/shopify.svg',
+                'https://cdn.svgporn.com/logos/aws.svg',
+            ],
+            trustedBy: [
+                'https://i.pinimg.com/280x280_RS/d2/ce/05/d2ce052a66c9bcaed8ec2c302a309737.jpg',
+                'https://avatars.githubusercontent.com/u/10903974?s=200&v=4',
+                'https://assets1.phonebooky.com/listings/logos/000/029/634/original/Toni_and_Guy_%28logo%29.jpg',
+                'https://scontent.fmnl17-1.fna.fbcdn.net/v/t1.6435-9/82993718_109478154144107_8387073756335526663_n.png?_nc_cat=108&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeGKEJfpCFffvi65fGMwR7h1YdknPWcoONNh2Sc9Zyg402CoaAO_CUNmEmaSRm8GQmP2ARvsFljmeH6OZ5tCeXST&_nc_ohc=HndV-WbZOzUAX-Adv7s&_nc_ht=scontent.fmnl17-1.fna&oh=c6f2260fc1d48e10c381b20be7df28ae&oe=60A163C7',
+                'https://media-exp1.licdn.com/dms/image/C4D0BAQHWxlis-cuobQ/company-logo_200_200/0/1519912655201?e=2159024400&v=beta&t=LtME-VaBvRMGXYp1q-qaZT-Om_F6QOinKi1VtqAQ2uM',
+                'https://logoipsum.com/logo/logo-26.svg',
+                'https://logoipsum.com/logo/logo-25.svg',
+                'https://logoipsum.com/logo/logo-20.svg',
+            ],
         };
     },
 };
 </script>
-
-<style scoped>
-/* .asymmetric::before {
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    transform-origin: top left;
-    transform: skewY(-12deg);
-    z-index: -10;
-} */
-
-.asymmetric::after {
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    background-image: -webkit-gradient(
-        linear,
-        left top,
-        right top,
-        from(#f8981e),
-        to(#fc2d20)
-    );
-    background-image: linear-gradient(80deg, #f8981e, #fc2d20);
-    transform-origin: top left;
-    transform: skewY(-12deg);
-    z-index: -10;
-}
-</style>
