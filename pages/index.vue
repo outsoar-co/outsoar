@@ -3,7 +3,7 @@
         <hero />
         <Segment class="bg-gray-100 dark:bg-dark-odd shadow-inner">
             <card
-                class="container p-6 pb-12 lg:transform lg:transform lg:-translate-y-32"
+                class="container p-6 pb-12 transform -translate-y-12 lg:transform lg:-translate-y-32"
             >
                 <template #body>
                     <h-title size="text-3xl" class="text-center">

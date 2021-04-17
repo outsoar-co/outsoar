@@ -83,7 +83,7 @@
                                 <span
                                     >Call Us
                                     <span class="font-bold"
-                                        >+63917 637 3812</span
+                                        >(+63) 917 637 3812</span
                                     ></span
                                 >
                             </anchor-link>
@@ -143,12 +143,12 @@
         </div>
         <div class="bg-gray-200 dark:bg-gray-700 mt-12">
             <div
-                class="container text-xs mx-auto flex flex-row items-center justify-between p-2"
+                class="container text-xs mx-auto flex flex-col lg:flex-row items-center justify-between p-2 lg:p-2"
             >
-                <div class="w-1/8">
+                <div class="w-1/8 mt-1">
                     <color-mode-picker />
                 </div>
-                <ul class="flex flex-row mx-auto">
+                <ul class="flex flex-row mx-auto mt-1">
                     <li>Accessibility Statement</li>
                     <li class="font-bold mx-1 lg:mx-2">/</li>
                     <li>Privacy</li>
@@ -157,7 +157,9 @@
                     <li class="font-bold mx-1 lg:mx-2">/</li>
                     <li>Sitemap</li>
                 </ul>
-                <p class="w-1/8 flex justify-end">{{ madewithlove }}</p>
+                <p class="lg:w-1/8 flex justify-end mt-1">
+                    {{ madewithlove }}
+                </p>
             </div>
         </div>
     </footer>
