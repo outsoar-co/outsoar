@@ -2,10 +2,11 @@
     <nuxt-link
         :to="to"
         :class="[
-            'text-base font-bold no-underline inline-block px-6 py-2 rounded-sm',
-            'hover:shadow-inner hover:text-dark-vue text-base',
+            'text-sm no-underline inline-block rounded-sm',
+            'hover:shadow-inner hover:text-dark-vue text-base hover:font-bold',
             'border-b-4 border-dark-outsoar dark:border-light-outsoar',
             'bg-light-outsoar text-light-vue dark:bg-dark-outsoar',
+            'lg:text-base py-1 px-4 lg:px-6 lg:py-2',
         ]"
     >
         <div

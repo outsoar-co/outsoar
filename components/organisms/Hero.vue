@@ -9,12 +9,14 @@
                 <div
                     class="flex lg:flex-row flex-wrap items-center justify-center"
                 >
-                    <div>
-                        <rocket class="h-48 lg:h-96" />
+                    <div class="h-5/6">
+                        <rocket class="object-cover h-56 lg:h-96" />
                     </div>
-                    <div class="flex flex-col gap-2 justify-center">
+                    <div
+                        class="flex flex-col gap-y-2 lg:gap-y-4 justify-center"
+                    >
                         <h1
-                            class="font-extrabold text-center text-3xl lg:text-7xl font-sans-bold my-2"
+                            class="font-extrabold text-center text-3xl lg:text-7xl font-sans-bold"
                         >
                             <span class="block">We build better</span>
                         </h1>
@@ -65,6 +67,16 @@
             </div>
             <div class="mx-auto absolute bottom-4 lg:bottom-8 left-0 right-0">
                 <div class="flex flex-col items-center gap-4">
+                    <!-- <ul
+                        class="container flex flex-wrap lg:flex-row items-center justify-around"
+                    >
+                        <li>Custom Software</li>
+                        <li>E-commerce</li>
+                        <li>Wordpress Development</li>
+                        <li>Consultancy</li>
+                        <li>Support</li>
+                        <li>DevOps</li>
+                    </ul> -->
                     <chevron-double-down
                         class="h-6 w-6 fill-current animate-bounce text-dark-vue dark:text-light-vue"
                     />

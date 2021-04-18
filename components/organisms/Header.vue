@@ -1,7 +1,7 @@
 <template>
     <header
         :class="[
-            'sticky top-0 left-0 right-0 z-30 bg-light-vue dark:bg-dark-vue',
+            'sticky top-0 left-0 right-0 z-30 bg-light-vue dark:bg-dark-vue border-t-2 border-dark-vue dark:border-light-vue',
             { shadow: scrollY > 0 },
             {
                 'shadow-none': scrollY == 0 && $route.name == 'index',
