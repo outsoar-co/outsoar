@@ -37,6 +37,9 @@ export default {
             };
         },
         changeColor(color) {
+            if (color === 'system') {
+                this.$colorMode.preference = 'light';
+            }
             this.$colorMode.preference = color;
             this.toggle = color;
         },

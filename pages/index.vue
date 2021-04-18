@@ -178,7 +178,7 @@
                             </div>
                             <div
                                 v-if="i !== trustedBy.length - 1"
-                                :key="trust"
+                                :key="i"
                                 class="h-32 w-auto"
                             ></div>
                         </template>
