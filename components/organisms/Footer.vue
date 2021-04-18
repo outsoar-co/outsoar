@@ -12,7 +12,7 @@
                 </div>
             </div>
         </Segment>
-        <div class="container mx-auto px-2">
+        <div class="container mx-auto px-2 mt-4">
             <grid
                 cols="grid-cols-1"
                 gap="gap-4"

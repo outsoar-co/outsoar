@@ -60,7 +60,9 @@
                         <btn-link to="#"> Contact Us </btn-link>
                     </div>
                     <div class="py-2 w-full flex justify-center">
-                        <ul class="flex flex-col lg:flex-row items-center">
+                        <ul
+                            class="flex flex-wrap lg:flex-row items-center justify-around w-3/4"
+                        >
                             <li>
                                 <a
                                     href="tel:+639176373812"
