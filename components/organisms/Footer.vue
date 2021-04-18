@@ -73,8 +73,8 @@
                     >
                     <ul>
                         <li>
-                            <anchor-link
-                                to="tel:+639176373812"
+                            <a
+                                href="tel:+639176373812"
                                 class="flex flex-row items-center justify-items-center"
                             >
                                 <icon-phl
@@ -86,7 +86,7 @@
                                         >(+63) 917 637 3812</span
                                     ></span
                                 >
-                            </anchor-link>
+                            </a>
                         </li>
                         <li>
                             <anchor-link
@@ -138,9 +138,6 @@
                             :is="s.component"
                             class="h-6 w-6 fill-current hover:text-light-outsoar dark:hover:text-dark-outsoar"
                         />
-                        <!-- <span class="font-bold text-base ml-2">{{
-                                        s.label
-                                    }}</span> -->
                     </anchor-link>
                 </li>
             </ul>

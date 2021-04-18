@@ -36,15 +36,17 @@
             </card>
         </Segment>
         <Segment class="bg-white dark:bg-dark-even">
-            <div class="flex flex-col justify-center items-center p-6">
+            <div class="flex flex-col justify-center items-center pt-4 pb-8">
                 <div
                     class="flex flex-wrap justify-center lg:flex-row lg:flex-nowrap p-4"
                 >
-                    <img
-                        src="https://placeimg.com/640/480/tech"
-                        class="object-contain lg:w-1/2 lg:h-1/2"
-                    />
-                    <p-article class="p-4">
+                    <div class="p-4 lg:w-1/2">
+                        <img
+                            src="https://placeimg.com/640/480/animals"
+                            class="object-cover w-full"
+                        />
+                    </div>
+                    <p-article class="p-4 lg:w-1/2">
                         <h4>Who we are</h4>
                         <h1>We are Outsoar</h1>
                         <p>
@@ -63,15 +65,21 @@
                         </p>
                     </p-article>
                 </div>
+                <btn-link to="#" class="mx-auto">
+                    <div
+                        class="flex flex-row items-center hover:scale-120 transform hover:translate-x-2"
+                    >
+                        Lets Talk
+                    </div>
+                </btn-link>
             </div>
         </Segment>
         <Segment class="bg-gray-100 dark:bg-dark-odd shadow-inner">
-            <!-- <hero /> -->
-            <div class="flex flex-col justify-center items-center p-6">
+            <div class="flex flex-col justify-center items-center pt-4 pb-8">
                 <div
                     class="flex flex-wrap justify-center lg:flex-row lg:flex-nowrap p-4"
                 >
-                    <p-article class="p-4">
+                    <p-article class="p-4 lg:w-1/2">
                         <h4>How we do it</h4>
                         <h1>We do it for fun</h1>
                         <p>
@@ -89,25 +97,27 @@
                             a fraction of a dot.
                         </p>
                     </p-article>
-                    <img
-                        src="https://placeimg.com/640/480/tech"
-                        class="object-contain lg:w-1/2 lg:h-1/2"
-                    />
+                    <div class="p-4 lg:w-1/2">
+                        <img
+                            src="https://placeimg.com/640/480/tech"
+                            class="object-cover h-5/6 w-full"
+                        />
+                    </div>
                 </div>
+                <btn-link to="#" class="mx-auto">
+                    <div
+                        class="flex flex-row items-center hover:scale-120 transform hover:translate-x-2"
+                    >
+                        How can we help you
+                    </div>
+                </btn-link>
             </div>
         </Segment>
         <Segment class="bg-white dark:bg-dark-even shadow-inner">
-            <div class="flex flex-col justify-center items-center p-6">
+            <div class="flex flex-col justify-center items-center pt-4 pb-8">
                 <div
-                    class="flex flex-wrap justify-center lg:flex-row lg:flex-nowrap p-4"
+                    class="flex flex-wrap justify-center lg:flex-row lg:flex-nowrap"
                 >
-                    <div
-                        class="w-full lg:w-1/2 grid grid-cols-3 lg:grid-cols-4 gap-6 p-4"
-                    >
-                        <div v-for="s in stacks" :key="s" class="h-1/2 mx-auto">
-                            <img :src="s" class="object-contain h-24 w-auto" />
-                        </div>
-                    </div>
                     <p-article class="p-4">
                         <h4>Our Technologies</h4>
                         <h1>Stacks we are comforable to use</h1>
@@ -118,39 +128,60 @@
                             triumph, they could become the momentary masters of
                             a fraction of a dot.
                         </p>
+                        <div class="grid grid-cols-3 lg:grid-cols-4">
+                            <div
+                                v-for="s in stacks"
+                                :key="s"
+                                class="h-1/2 mx-auto"
+                            >
+                                <img :src="s" class="object-over h-24 w-full" />
+                            </div>
+                        </div>
                     </p-article>
                 </div>
+                <btn-link to="#" class="mx-auto">
+                    <div
+                        class="flex flex-row items-center hover:scale-120 transform hover:translate-x-2"
+                    >
+                        Learn more about us
+                    </div>
+                </btn-link>
             </div>
         </Segment>
         <Segment class="bg-gray-100 dark:bg-dark-odd">
-            <div class="flex flex-col justify-center items-center p-6">
+            <div class="flex flex-col justify-center items-center">
                 <div
-                    class="flex flex-wrap justify-center lg:flex-row lg:flex-nowrap p-4"
+                    class="flex flex-wrap justify-center lg:flex-row lg:flex-nowrap w-full"
                 >
-                    <p-article class="p-4">
+                    <p-article class="p-4 lg:w-1/2">
                         <h4>Trusted by</h4>
                         <h1>You are on the good team.</h1>
                         <p>
                             The Earth is a very small stage in a vast cosmic
                             arena. Think of the rivers of blood spilled by all
                             those generals and emperors so that, in glory and
-                            triumph, they could become the momentary masters of
-                            a fraction of a dot.
+                            triumph
                         </p>
                     </p-article>
                     <div
-                        class="w-full lg:w-1/2 grid grid-cols-3 lg:grid-cols-4 gap-6 p-4"
+                        class="grid grid-cols-3 lg:grid-cols-5 lg:w-1/2 h-auto"
                     >
-                        <div
-                            v-for="trust in trustedBy"
-                            :key="trust"
-                            class="h-1/2 mx-auto"
-                        >
-                            <img
-                                :src="trust"
-                                class="object-contain h-24 w-auto"
-                            />
-                        </div>
+                        <template v-for="(trust, i) in trustedBy">
+                            <div
+                                :key="trust"
+                                class="h-32 w-auto bg-white filter"
+                            >
+                                <img
+                                    :src="trust"
+                                    class="object-cover h-32 w-full"
+                                />
+                            </div>
+                            <div
+                                v-if="i !== trustedBy.length - 1"
+                                :key="trust"
+                                class="h-32 w-auto"
+                            ></div>
+                        </template>
                     </div>
                 </div>
             </div>
