@@ -7,7 +7,7 @@
         ]"
     >
         <div class="container flex justify-center min-h-screen mx-auto">
-            <div class="my-auto w-full">
+            <div class="w-full my-auto">
                 <div
                     class="flex flex-col items-center justify-center divide-y divide-light-blue-400"
                 >
@@ -16,7 +16,7 @@
                             :key="i"
                             to="#"
                             :class="[
-                                'py-2 font-medium text-lg lg:text-2xl text-center w-full',
+                                'py-2 font-bold text-lg lg:text-2xl text-center w-full',
                             ]"
                             >{{ n.label }}</anchor-link
                         >
@@ -25,7 +25,10 @@
                             :key="i.label"
                             class="w-full flex items-center justify-center"
                         >
-                            <grid gap="gap-4" breakpoints="lg:grid-cols-3">
+                            <grid
+                                gap="gap-0"
+                                breakpoints="lg:grid-cols-3 lg:gap-4"
+                            >
                                 <div
                                     v-for="(c, ci) in n.children"
                                     :key="ci"
@@ -40,10 +43,11 @@
                                             :class="[
                                                 'fill-current',
                                                 'object-contain h-24 w-auto lg:p-2 lg:my-4 lg:h-64',
+                                                'hidden lg:block',
                                             ]"
                                         />
                                         <h3
-                                            class="text-center font-bold text-base lg:text-lg leading-1 lg:my-4"
+                                            class="text-center font-medium text-base lg:text-lg leading-1 lg:my-4"
                                         >
                                             {{ c.label }}
                                         </h3>
