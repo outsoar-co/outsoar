@@ -1,13 +1,20 @@
 <template>
     <main>
-        <banner :options="page.props.banner" />
-        <Segment class="bg-white dark:bg-dark-even">
+        <Segment class="bg-grayish-red-200 dark:bg-dark-odd">
+            <div class="flex items-top justify-center flex-col py-4">
+                <div class="mx-auto">
+                    <breadcrumbs />
+                </div>
+                <banner :options="page.props.banner" />
+            </div>
+        </Segment>
+        <!-- <Segment class="bg-white dark:bg-dark-even">
             <div class="max-w-screen-lg mx-auto p-2">
                 <breadcrumbs />
             </div>
-        </Segment>
+        </Segment> -->
         <Segment class="bg-white dark:bg-dark-odd px-2 py-16">
-            <p-article class="flex items-center justify-center">
+            <p-article class="flex items-center justify-center w-full">
                 <nuxt-content :document="page" />
             </p-article>
         </Segment>

@@ -8,7 +8,9 @@
                 <h-title breakpoints="lg:text-xl">{{ item.title }}</h-title>
             </slot>
             <slot name="body" :item="item">
-                <div class="text-base line-clamp-3">{{ item.body }}</div>
+                <p-article>
+                    <div class="text-base line-clamp-3">{{ item.body }}</div>
+                </p-article>
             </slot>
             <slot name="to" :item="item">
                 <div class="flex-none">
@@ -21,11 +23,13 @@
 <script>
 import BtnLink from '@/components/atoms/BtnLink';
 import HTitle from '@/components/atoms/HTitle';
+import PArticle from '~/components/organisms/PArticle';
 
 export default {
     components: {
         BtnLink,
         HTitle,
+        PArticle,
     },
     props: {
         items: {

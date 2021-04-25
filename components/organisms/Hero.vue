@@ -6,61 +6,66 @@
             <div
                 class="w-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mb-10"
             >
-                <div
-                    class="flex lg:flex-row flex-wrap items-center justify-center"
-                >
-                    <div class="h-5/6">
-                        <rocket class="object-cover h-56 lg:h-96" />
-                    </div>
+                <div class="container mx-auto px-2">
                     <div
-                        class="flex flex-col gap-y-2 lg:gap-y-4 justify-center"
+                        class="flex lg:flex-row flex-col-reverse items-top justify-center lg:justify-start"
                     >
-                        <h1
-                            class="font-extrabold text-center text-3xl lg:text-7xl font-sans-bold"
-                        >
-                            <span class="block">We build better</span>
-                        </h1>
-                        <div
-                            :class="[
-                                'w-3/4 mx-auto flex items-center justify-center',
-                                'bg-dark-vue text-light-vue',
-                                'dark:bg-light-vue dark:text-dark-vue',
-                            ]"
-                        >
-                            <typist
-                                :class="[
-                                    'text-center text-base p-1 w-full',
-                                    'lg:text-xl',
-                                ]"
-                                :words="strings"
-                                :human="false"
-                            ></typist>
-                        </div>
-                        <div class="flex flex-wrap">
-                            <h3
-                                class="flex-grow font-sans text-center text-base lg:text-xl"
+                        <div class="flex flex-col gap-y-2 lg:gap-y-4">
+                            <h1
+                                class="font-extrabold text-center lg:text-left text-4xl lg:text-7xl font-sans-bold"
                             >
-                                <span class="">that will</span>
-                                <transition-group tag="span">
-                                    <span
-                                        v-for="w in words"
-                                        :key="w.text"
-                                        :class="{ hidden: !w.display }"
-                                        class="font-extrabold underline"
-                                        >{{ w.text }}</span
-                                    >
-                                </transition-group>
-                                <span>your company</span>
-                            </h3>
-                        </div>
-                        <div class="flex my-2">
-                            <btn-link to="#" class="mx-auto">
-                                <div
-                                    class="flex flex-row items-center hover:scale-120 transform hover:translate-x-2"
+                                <span class="block">We build Better</span>
+                            </h1>
+                            <div
+                                :class="[
+                                    'flex',
+                                    'text-dark-vue dark:text-light-vue',
+                                ]"
+                            >
+                                <typist
+                                    :class="[
+                                        'text-lg p-1 w-full',
+                                        'lg:text-3xl',
+                                        'text-center lg:text-left',
+                                    ]"
+                                    :words="strings"
+                                    :human="false"
+                                ></typist>
+                            </div>
+                            <div class="flex flex-wrap">
+                                <h3
+                                    class="flex-grow font-sans text-center lg:text-left text-sm lg:text-lg"
                                 >
-                                    Talk to us today
-                                </div>
-                            </btn-link>
+                                    <span class=""
+                                        >Delivering Digital Experience that
+                                        will</span
+                                    >
+                                    <transition-group tag="span">
+                                        <span
+                                            v-for="w in words"
+                                            :key="w.text"
+                                            :class="{ hidden: !w.display }"
+                                            class="font-extrabold underline"
+                                            >{{ w.text }}</span
+                                        >
+                                    </transition-group>
+                                    <span>your company</span>
+                                </h3>
+                            </div>
+                            <div
+                                class="flex my-2 justify-center lg:justify-start"
+                            >
+                                <btn-link to="#">
+                                    <div
+                                        class="flex flex-row items-center hover:scale-120 transform hover:translate-x-2"
+                                    >
+                                        Talk to us today
+                                    </div>
+                                </btn-link>
+                            </div>
+                        </div>
+                        <div class="h-5/6 m-auto">
+                            <rocket class="object-cover h-56 lg:h-96" />
                         </div>
                     </div>
                 </div>

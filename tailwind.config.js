@@ -35,7 +35,7 @@ module.exports = {
         },
         extend: {
             colors: {
-                'light-outsoar': '#fd9012',
+                'light-outsoar': '#ff6c02',
                 'dark-outsoar': '#ec623b',
                 // outsoar: '#e7442e', // '#ec623b', // FD6335 // F59536 // F4A771 // FD9012
                 // 'pale-outsoar': '#fd9012', // E38523
@@ -43,6 +43,7 @@ module.exports = {
                 'light-vue': '#fdfdfd',
                 'dark-odd': '#223242',
                 'dark-even': '#1f2d3b',
+                'grayish-red-200': '#eae2e2',
             },
             fontSize: {
                 xxs: '.75',

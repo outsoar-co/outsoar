@@ -2,7 +2,7 @@
     <footer
         class="bg-light-vue text-dark-vue dark:bg-dark-vue dark:text-light-vue pt-12"
     >
-        <Segment class="mb-12">
+        <Segment class="my-12">
             <div class="flex flex-col justify-center items-center">
                 <h-title size="text-xl" class="mb-4 text-center">
                     We write & ship beautiful code.
@@ -12,7 +12,7 @@
                 </div>
             </div>
         </Segment>
-        <div class="container mx-auto px-2 mt-4">
+        <div class="container mx-auto px-2 py-6">
             <grid
                 cols="grid-cols-1"
                 gap="gap-4"
@@ -125,12 +125,12 @@
             </grid>
         </div>
         <div
-            class="container mx-auto flex flex-col items-center content-center justify-center"
+            class="container mx-auto flex flex-col items-center content-center justify-center my-12"
         >
-            <outsoar class="h-16 w-16 fill-current" />
+            <!-- <outsoar class="h-10 w-10 fill-current" />
             <p class="text-sm p-4 text-center lg:text-left">
                 We build better Web Experience that will outsoar your company
-            </p>
+            </p> -->
             <ul class="flex flex-row gap-4 lg:gap-6">
                 <li v-for="(s, i) in social" :key="i">
                     <anchor-link :to="s.url" class="flex flex-row items-center">
@@ -143,7 +143,7 @@
             </ul>
             <p class="text-xs mt-4">&#169; {{ copyright }}</p>
         </div>
-        <div class="bg-gray-200 dark:bg-gray-700 mt-12 text-xs">
+        <div class="bg-gray-200 dark:bg-gray-700 mt-16 text-xs">
             <div class="container mx-auto px-2 grid grid-cols-1 lg:grid-cols-3">
                 <div
                     class="flex flex-row items-center justify-center lg:justify-start my-2"

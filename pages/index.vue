@@ -1,7 +1,7 @@
 <template>
     <main class="bg-light-vue dark:bg-dark-vue">
         <hero />
-        <Segment class="bg-gray-100 dark:bg-dark-odd shadow-inner">
+        <Segment class="bg-grayish-red-200 dark:bg-dark-odd shadow-inner">
             <card
                 class="container p-6 pb-12 transform -translate-y-12 lg:transform lg:-translate-y-32"
             >
@@ -35,7 +35,7 @@
                 </template>
             </card>
         </Segment>
-        <Segment class="bg-white dark:bg-dark-even">
+        <Segment class="bg-white dark:bg-dark-even py-8">
             <div class="flex flex-col justify-center items-center pt-4 pb-8">
                 <div
                     class="flex flex-wrap justify-center lg:flex-row lg:flex-nowrap p-4"
@@ -56,13 +56,6 @@
                             enim sed. Nibh mauris cursus mattis molestie. Urna
                             condimentum mattis pellentesque id. Arcu ac tortor
                         </p>
-                        <p>
-                            The Earth is a very small stage in a vast cosmic
-                            arena. Think of the rivers of blood spilled by all
-                            those generals and emperors so that, in glory and
-                            triumph, they could become the momentary masters of
-                            a fraction of a dot.
-                        </p>
                     </p-article>
                 </div>
                 <btn-link to="#" class="mx-auto">
@@ -74,7 +67,7 @@
                 </btn-link>
             </div>
         </Segment>
-        <Segment class="bg-gray-100 dark:bg-dark-odd shadow-inner">
+        <Segment class="bg-grayish-red-200 dark:bg-dark-odd shadow-inner py-8">
             <div class="flex flex-col justify-center items-center pt-4 pb-8">
                 <div
                     class="flex flex-wrap justify-center lg:flex-row lg:flex-nowrap p-4"
@@ -88,13 +81,6 @@
                             dolore magna aliqua. Sapien eget mi proin sed libero
                             enim sed. Nibh mauris cursus mattis molestie. Urna
                             condimentum mattis pellentesque id. Arcu ac tortor
-                        </p>
-                        <p>
-                            The Earth is a very small stage in a vast cosmic
-                            arena. Think of the rivers of blood spilled by all
-                            those generals and emperors so that, in glory and
-                            triumph, they could become the momentary masters of
-                            a fraction of a dot.
                         </p>
                     </p-article>
                     <div class="p-4 lg:w-1/2">
@@ -113,7 +99,7 @@
                 </btn-link>
             </div>
         </Segment>
-        <Segment class="bg-white dark:bg-dark-even shadow-inner">
+        <Segment class="bg-white dark:bg-dark-even shadow-inner py-8">
             <div class="flex flex-col justify-center items-center pt-4 pb-8">
                 <div
                     class="flex flex-wrap justify-center lg:flex-row lg:flex-nowrap"
@@ -148,7 +134,7 @@
                 </btn-link>
             </div>
         </Segment>
-        <Segment class="bg-gray-100 dark:bg-dark-odd">
+        <Segment class="bg-grayish-red-200 dark:bg-dark-odd">
             <div class="flex flex-col justify-center items-center">
                 <div
                     class="flex flex-wrap justify-center lg:flex-row lg:flex-nowrap w-full"
@@ -156,12 +142,6 @@
                     <p-article class="p-4 lg:w-1/2">
                         <h4>Trusted by</h4>
                         <h1>You are on the good team.</h1>
-                        <p>
-                            The Earth is a very small stage in a vast cosmic
-                            arena. Think of the rivers of blood spilled by all
-                            those generals and emperors so that, in glory and
-                            triumph
-                        </p>
                     </p-article>
                     <div
                         class="grid grid-cols-3 lg:grid-cols-5 lg:w-1/2 h-auto"
