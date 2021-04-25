@@ -16,7 +16,7 @@
                             :key="i"
                             to="#"
                             :class="[
-                                'py-2 font-bold text-lg lg:text-2xl text-center w-full',
+                                'py-2 font-bold text-4xl lg:text-2xl text-center w-full',
                             ]"
                             >{{ n.label }}</anchor-link
                         >
