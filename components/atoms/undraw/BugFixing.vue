@@ -343,7 +343,7 @@
     fill: #ffffff;
 }
 .cls-5 {
-    fill: #de9244;
+    fill: #ff6c02;
 }
 .cls-6 {
     fill: #88c0c2;

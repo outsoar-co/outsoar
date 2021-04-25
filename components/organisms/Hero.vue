@@ -65,7 +65,7 @@
                             </div>
                         </div>
                         <div class="h-5/6 m-auto">
-                            <rocket class="object-cover h-56 lg:h-96" />
+                            <web-hosting class="object-cover h-56 lg:h-96" />
                         </div>
                     </div>
                 </div>
@@ -95,7 +95,8 @@ import BtnLink from '@/components/atoms/BtnLink';
 import ChevronDoubleDown from '@/components/atoms/icons/ChevronDoubleDown';
 // import ChevronDoubleRight from '@/components/atoms/icons/ChevronDoubleRight';
 import Typist from '@/components/atoms/Typer';
-import Rocket from '@/components/atoms/undraw/Rocket';
+// import Rocket from '@/components/atoms/undraw/Rocket';
+import WebHosting from '@/components/atoms/undraw/WebHosting';
 
 export default {
     components: {
@@ -103,7 +104,8 @@ export default {
         ChevronDoubleDown,
         // ChevronDoubleRight,
         Typist,
-        Rocket,
+        // Rocket,
+        WebHosting,
     },
     data() {
         return {

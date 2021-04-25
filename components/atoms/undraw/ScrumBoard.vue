@@ -529,7 +529,7 @@
 </template>
 <style scoped>
 .cls-1 {
-    fill: #de9244;
+    fill: #ff6c02;
 }
 .cls-2 {
     fill: #ffffff;

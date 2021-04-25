@@ -72,15 +72,15 @@
                         >Get in Touch</h-title
                     >
                     <ul>
-                        <li>
+                        <li class="mb-2">
                             <a
                                 href="tel:+639176373812"
-                                class="flex flex-row items-center justify-items-center"
+                                class="flex flex-row items-top"
                             >
                                 <icon-phl
-                                    class="m-2 h-4 lg:h-6 fill-current text-white"
+                                    class="h-4 lg:h-6 fill-current text-white"
                                 />
-                                <span
+                                <span class="mx-2"
                                     >Call Us
                                     <span class="font-bold"
                                         >(+63) 917 637 3812</span
@@ -88,15 +88,15 @@
                                 >
                             </a>
                         </li>
-                        <li>
+                        <li class="mb-2">
                             <anchor-link
                                 to="mailto:hello@outsoar.ph?subject=Outsoar Enquiry"
-                                class="flex flex-row items-center justify-items-center"
+                                class="flex flex-row items-top"
                             >
                                 <icon-gmail
-                                    class="m-2 h-4 lg:h-6 fill-current text-white"
+                                    class="h-4 lg:h-6 fill-current text-white"
                                 />
-                                <span
+                                <span class="mx-2"
                                     >Email us
                                     <span class="font-bold"
                                         >hello@outsoar.ph</span
@@ -104,15 +104,15 @@
                                 >
                             </anchor-link>
                         </li>
-                        <li>
+                        <li class="mb-2">
                             <anchor-link
                                 to="https://slack.com/intl/en-ph/"
-                                class="flex flex-row items-center justify-items-center"
+                                class="flex flex-row items-top"
                             >
                                 <icon-slack
-                                    class="mx-2 h-4 lg:h-6 fill-current text-white"
+                                    class="h-4 lg:h-6 fill-current text-white"
                                 />
-                                <span
+                                <span class="mx-2"
                                     >Join us on our
                                     <span class="font-bold"
                                         >@outsoar</span

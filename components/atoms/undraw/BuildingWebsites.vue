@@ -494,7 +494,7 @@ export default {
     fill: #262424;
 }
 .cls-3 {
-    fill: #de9244;
+    fill: #ff6c02;
 }
 .cls-4 {
     fill: #88c0c2;

@@ -57,10 +57,10 @@ export default {
 </script>
 <style scoped>
 .cls-2 {
-    font-size: 200.4px;
+    font-size: 210px;
     font-family: TitilliumWeb-Bold;
     text-transform: uppercase;
-    font-weight: 500;
-    letter-spacing: 0.2em;
+    font-weight: 600;
+    letter-spacing: 0.09em;
 }
 </style>
