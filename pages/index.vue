@@ -31,6 +31,11 @@
                                 ]"
                             />
                         </template>
+                        <template #to="{ item }">
+                            <div class="flex-none flex py-4 justify-center">
+                                <btn-link :to="item.to">Learn more</btn-link>
+                            </div>
+                        </template>
                     </list>
                 </template>
             </card>
@@ -58,7 +63,7 @@
                         </p>
                     </p-article>
                 </div>
-                <btn-link to="#" class="mx-auto">
+                <btn-link to="/about-us/who-we-are" class="mx-auto">
                     <div
                         class="flex flex-row items-center hover:scale-120 transform hover:translate-x-2"
                     >
@@ -90,7 +95,7 @@
                         />
                     </div>
                 </div>
-                <btn-link to="#" class="mx-auto">
+                <btn-link to="/about-us/how-we-do-it" class="mx-auto">
                     <div
                         class="flex flex-row items-center hover:scale-120 transform hover:translate-x-2"
                     >
@@ -125,7 +130,7 @@
                         </div>
                     </p-article>
                 </div>
-                <btn-link to="#" class="mx-auto">
+                <btn-link to="/about-us/who-we-are" class="mx-auto">
                     <div
                         class="flex flex-row items-center hover:scale-120 transform hover:translate-x-2"
                     >
@@ -196,19 +201,19 @@ export default {
                     body: `Through implementing the latest technologies and patterns in the industry with exceptional attention to detail, we build and design digital systems tailored to the needs of each individual business.`,
                     icon: () =>
                         import('../components/atoms/undraw/BuildingWebsites'),
-                    to: '#',
+                    to: '/services/development-and-design',
                 },
                 {
                     title: 'Planning & Consultancy',
                     body: `We love helping businesses lay out a cohesive digital strategy for long-term success and the initial consultation to see if we're the right fit for you is on us!`,
                     icon: () => import('../components/atoms/undraw/ScrumBoard'),
-                    to: '#',
+                    to: '/services/planning-and-consultancy',
                 },
                 {
                     title: 'DevOps & Support',
                     body: `Even the most robust systems need adjusting every now and then. As we're invested in your long-term success, we provide periodic maintenance that won't break the bank and will keep you running smoothly.`,
                     icon: () => import('../components/atoms/undraw/BugFixing'),
-                    to: '#',
+                    to: '/services/devops-and-support',
                 },
             ],
             stacks: [

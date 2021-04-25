@@ -5,6 +5,7 @@
                 v-for="(link, i) in breadcrumbsLinks"
                 :key="i"
                 :to="link"
+                class="text-xs lg:text-base"
             >
                 {{ link.meta.title }}
                 <span v-if="i != breadcrumbsLinks.length - 1"> > </span>

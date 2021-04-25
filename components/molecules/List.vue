@@ -14,7 +14,7 @@
             </slot>
             <slot name="to" :item="item">
                 <div class="flex-none">
-                    <btn-link :to="item.to">Learn More</btn-link>
+                    <btn-link :to="item.to">Learn more</btn-link>
                 </div>
             </slot>
         </div>

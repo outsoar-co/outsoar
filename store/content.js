@@ -56,6 +56,60 @@ export const state = () => ({
                 slug: 'services/devops-and-support',
                 // timestamps here
             },
+            {
+                id: 4,
+                title: 'Who we are',
+                body: '',
+                head: {},
+                params: {},
+                options: {},
+                meta: [{ id: 3, content_id: 3, key: 'foo', value: 'bar' }],
+                props: {
+                    banner: {
+                        icon: 'BugFixing',
+                        text: 'Who we are',
+                        body: 'Contrary to popular belief',
+                    },
+                },
+                slug: 'about-us/who-we-are',
+                // timestamps here
+            },
+            {
+                id: 5,
+                title: 'How we do it',
+                body: '',
+                head: {},
+                params: {},
+                options: {},
+                meta: [{ id: 3, content_id: 3, key: 'foo', value: 'bar' }],
+                props: {
+                    banner: {
+                        icon: 'BugFixing',
+                        text: 'How we do it',
+                        body: 'Contrary to popular belief',
+                    },
+                },
+                slug: 'about-us/how-we-do-it',
+                // timestamps here
+            },
+            {
+                id: 5,
+                title: 'How we do it',
+                body: '',
+                head: {},
+                params: {},
+                options: {},
+                meta: [{ id: 3, content_id: 3, key: 'foo', value: 'bar' }],
+                props: {
+                    banner: {
+                        icon: 'BugFixing',
+                        text: 'How we do it',
+                        body: 'Contrary to popular belief',
+                    },
+                },
+                slug: 'about-us/how-we-do-it',
+                // timestamps here
+            },
         ],
         first_page_url: null,
         from: null,
