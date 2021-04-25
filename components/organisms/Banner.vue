@@ -1,7 +1,7 @@
 <template>
     <div
         :class="[
-            'bg-grayish-red-200 text-dark-vue dark:text-light-vue dark:bg-dark-odd',
+            'bg-grayish-red-200 text-dark-vue dark:text-light-vue dark:bg-darker-vue',
         ]"
     >
         <div class="flex items-center flex-wrap lg:flex-row">

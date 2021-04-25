@@ -1,6 +1,6 @@
 <template>
     <main>
-        <Segment class="bg-grayish-red-200 dark:bg-dark-odd">
+        <Segment class="bg-grayish-red-200 dark:bg-darker-vue">
             <div class="flex items-top justify-center flex-col py-4">
                 <div class="mx-auto">
                     <breadcrumbs />
