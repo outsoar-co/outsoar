@@ -40,6 +40,7 @@ module.exports = {
                 // outsoar: '#e7442e', // '#ec623b', // FD6335 // F59536 // F4A771 // FD9012
                 // 'pale-outsoar': '#fd9012', // E38523
                 'dark-vue': '#1b2835', // '#35495e',
+                'darker-vue': '#182430', // '#35495e',
                 'light-vue': '#fdfdfd',
                 'dark-odd': '#223242',
                 'dark-even': '#1f2d3b',

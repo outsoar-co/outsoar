@@ -143,7 +143,7 @@
             </ul>
             <p class="text-xs mt-4">&#169; {{ copyright }}</p>
         </div>
-        <div class="bg-gray-200 dark:bg-gray-700 mt-16 text-xs">
+        <div class="bg-grayish-red-200 dark:bg-darker-vue mt-16 text-xs">
             <div class="container mx-auto px-2 grid grid-cols-1 lg:grid-cols-3">
                 <div
                     class="flex flex-row items-center justify-center lg:justify-start my-2"
