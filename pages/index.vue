@@ -1,11 +1,14 @@
 <template>
     <main class="bg-light-vue dark:bg-dark-vue">
         <hero />
-        <Segment class="bg-grayish-red-200 dark:bg-dark-odd shadow-inner">
+        <segment class="bg-grayish-red-200 dark:bg-dark-odd shadow-inner">
             <card
-                class="container p-6 pb-12 transform -translate-y-12 lg:transform lg:-translate-y-32"
+                class="container px-6 py-20 transform -translate-y-12 lg:transform lg:-translate-y-32"
             >
                 <template #body>
+                    <span class="flex text-base justify-center text-center"
+                        >Our services</span
+                    >
                     <h-title size="text-3xl" class="text-center mb-4">
                         We are experts in
                     </h-title>
@@ -24,7 +27,7 @@
                     >
                         <template #icon="{ item }">
                             <div
-                                class="bg-grayish-red-200 dark:bg-dark-even rounded-3xl shadow-sm"
+                                class="bg-grayish-red-200 dark:bg-dark-even rounded-sm shadow-sm"
                             >
                                 <component
                                     :is="item.props.banner.icon"
@@ -43,35 +46,68 @@
                     </list>
                 </template>
             </card>
-        </Segment>
-        <Segment class="bg-white dark:bg-dark-even py-8">
+        </segment>
+        <segment
+            v-for="(section, index) in landSections"
+            :key="section.id"
+            :class="{
+                'bg-white dark:bg-dark-even py-8': (index + 2) % 2 === 0,
+                'bg-grayish-red-200 dark:bg-dark-odd shadow-inner py-8':
+                    (index + 2) % 2 !== 0,
+            }"
+        >
             <div class="flex flex-col justify-center items-center">
                 <div
-                    class="flex flex-wrap justify-center lg:flex-row lg:flex-nowrap p-4"
+                    class="flex flex-wrap justify-center lg:flex-row lg:flex-nowrap lg:gap-x-8 my-24"
+                    :class="{
+                        'flex-wrap-reverse lg:flex-row-reverse':
+                            (index + 2) % 2 !== 0,
+                    }"
                 >
-                    <div
-                        class="p-8 my-20 lg:w-1/2 rounded-3xl bg-grayish-red-200 dark:bg-dark-odd"
-                    >
-                        <we-are-outsoar
-                            class="fill-current object-contain h-96 w-auto mx-auto"
-                        />
+                    <div class="w-5/6 lg:w-1/2">
+                        <template
+                            v-if="
+                                section.props.banner.icon &&
+                                !/our-tools-and-technologies|trusted-by/.test(
+                                    section.slug
+                                )
+                            "
+                        >
+                            <div
+                                class="rounded-sm p-8 mx-auto"
+                                :class="{
+                                    'bg-grayish-red-200 dark:bg-dark-odd':
+                                        (index + 2) % 2 == 0,
+                                    'bg-light-vue dark:bg-dark-even':
+                                        (index + 2) % 2 !== 0,
+                                }"
+                            >
+                                <component
+                                    :is="section.props.banner.icon"
+                                    class="fill-current object-contain h-64 lg:h-96 w-auto mx-auto p-4"
+                                />
+                            </div>
+                        </template>
+                        <template
+                            v-if="
+                                /our-tools-and-technologies|trusted-by/.test(
+                                    section.slug
+                                )
+                            "
+                        >
+                            <component :is="section.props.banner.icon" />
+                        </template>
                     </div>
-                    <p-article class="p-8 my-20 lg:w-1/2">
-                        <h4>Who we are</h4>
-                        <h1>We are Outsoar</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Sapien eget mi proin sed libero
-                            enim sed. Nibh mauris cursus mattis molestie. Urna
-                            condimentum mattis pellentesque id. Arcu ac tortor
-                        </p>
+                    <p-article class="w-5/6 lg:w-1/2 p-8 lg:p-4">
+                        <span class="text-base">{{ section.title }}</span>
+                        <h1>{{ section.props.banner.text }}</h1>
+                        <p>{{ section.body }}</p>
                         <nuxt-link
-                            to="/about-us/who-we-are"
-                            class="mt-30 text-lg"
+                            v-if="section.props.linkText"
+                            :to="section.slug"
                         >
                             <div class="flex flex-row items-center">
-                                <span>Learn more about us</span>
+                                <span>{{ section.props.linkText }}</span>
                                 <chevron-double-right
                                     class="fill-current ml-1"
                                 />
@@ -80,8 +116,8 @@
                     </p-article>
                 </div>
             </div>
-        </Segment>
-        <Segment class="bg-grayish-red-200 dark:bg-dark-odd shadow-inner py-8">
+        </segment>
+        <!-- <Segment class="bg-grayish-red-200 dark:bg-dark-odd shadow-inner py-8">
             <div class="flex flex-col justify-center items-center">
                 <div
                     class="flex flex-wrap flex-wrap-reverse justify-center lg:flex-row lg:flex-row-reverse lg:flex-nowrap p-4"
@@ -94,7 +130,7 @@
                         />
                     </div>
                     <p-article class="p-8 my-20 lg:w-1/2">
-                        <h4>How we do it</h4>
+                        <span class="text-base">How we do it</span>
                         <h1>We do it for fun</h1>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -103,10 +139,7 @@
                             enim sed. Nibh mauris cursus mattis molestie. Urna
                             condimentum mattis pellentesque id. Arcu ac tortor
                         </p>
-                        <nuxt-link
-                            to="/about-us/who-we-are"
-                            class="mt-30 text-lg"
-                        >
+                        <nuxt-link to="/about-us/who-we-are">
                             <div class="flex flex-row items-center">
                                 <span>Learn more about us</span>
                                 <chevron-double-right
@@ -117,14 +150,14 @@
                     </p-article>
                 </div>
             </div>
-        </Segment>
-        <Segment class="bg-white dark:bg-dark-even shadow-inner py-8">
+        </Segment> -->
+        <!-- <Segment class="bg-white dark:bg-dark-even shadow-inner py-8">
             <div class="flex flex-col justify-center items-center pt-4 pb-8">
                 <div
                     class="flex flex-wrap justify-center lg:flex-row lg:flex-nowrap"
                 >
                     <p-article class="p-4">
-                        <h4>Our Technologies</h4>
+                        <span>Our Technologies</span>
                         <h1>Stacks we are comforable to use</h1>
                         <p>
                             The Earth is a very small stage in a vast cosmic
@@ -159,7 +192,7 @@
                     class="flex flex-wrap justify-center lg:flex-row lg:flex-nowrap w-full"
                 >
                     <p-article class="p-4 lg:w-1/2">
-                        <h4>Trusted by</h4>
+                        <span>Trusted by</span>
                         <h1>You are on the good team.</h1>
                     </p-article>
                     <div
@@ -184,7 +217,7 @@
                     </div>
                 </div>
             </div>
-        </Segment>
+        </Segment> -->
     </main>
 </template>
 
@@ -237,21 +270,22 @@ export default {
             //         to: '/services/devops-and-support',
             //     },
             // ],
-            stacks: [
-                'https://raw.githubusercontent.com/devicons/devicon/master/icons/laravel/laravel-plain-wordmark.svg',
-                'https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg',
-                'https://raw.githubusercontent.com/devicons/devicon/master/icons/wordpress/wordpress-original.svg',
-                'https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-plain.svg',
-                'https://cdn.svgporn.com/logos/shopify.svg',
-                'https://cdn.svgporn.com/logos/aws.svg',
-            ],
-            trustedBy: [
-                'https://i.pinimg.com/280x280_RS/d2/ce/05/d2ce052a66c9bcaed8ec2c302a309737.jpg',
-                'https://avatars.githubusercontent.com/u/10903974?s=200&v=4',
-                'https://assets1.phonebooky.com/listings/logos/000/029/634/original/Toni_and_Guy_%28logo%29.jpg',
-                'https://scontent.fmnl17-1.fna.fbcdn.net/v/t1.6435-9/82993718_109478154144107_8387073756335526663_n.png?_nc_cat=108&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeGKEJfpCFffvi65fGMwR7h1YdknPWcoONNh2Sc9Zyg402CoaAO_CUNmEmaSRm8GQmP2ARvsFljmeH6OZ5tCeXST&_nc_ohc=HndV-WbZOzUAX-Adv7s&_nc_ht=scontent.fmnl17-1.fna&oh=c6f2260fc1d48e10c381b20be7df28ae&oe=60A163C7',
-                'https://media-exp1.licdn.com/dms/image/C4D0BAQHWxlis-cuobQ/company-logo_200_200/0/1519912655201?e=2159024400&v=beta&t=LtME-VaBvRMGXYp1q-qaZT-Om_F6QOinKi1VtqAQ2uM',
-            ],
+            // sections: ['about-us', 'how-we-do-it', 'out-stacks', 'trusted'],
+            // stacks: [
+            //     'https://raw.githubusercontent.com/devicons/devicon/master/icons/laravel/laravel-plain-wordmark.svg',
+            //     'https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg',
+            //     'https://raw.githubusercontent.com/devicons/devicon/master/icons/wordpress/wordpress-original.svg',
+            //     'https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-plain.svg',
+            //     'https://cdn.svgporn.com/logos/shopify.svg',
+            //     'https://cdn.svgporn.com/logos/aws.svg',
+            // ],
+            // trustedBy: [
+            //     'https://i.pinimg.com/280x280_RS/d2/ce/05/d2ce052a66c9bcaed8ec2c302a309737.jpg',
+            //     'https://avatars.githubusercontent.com/u/10903974?s=200&v=4',
+            //     'https://assets1.phonebooky.com/listings/logos/000/029/634/original/Toni_and_Guy_%28logo%29.jpg',
+            //     'https://scontent.fmnl17-1.fna.fbcdn.net/v/t1.6435-9/82993718_109478154144107_8387073756335526663_n.png?_nc_cat=108&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeGKEJfpCFffvi65fGMwR7h1YdknPWcoONNh2Sc9Zyg402CoaAO_CUNmEmaSRm8GQmP2ARvsFljmeH6OZ5tCeXST&_nc_ohc=HndV-WbZOzUAX-Adv7s&_nc_ht=scontent.fmnl17-1.fna&oh=c6f2260fc1d48e10c381b20be7df28ae&oe=60A163C7',
+            //     'https://media-exp1.licdn.com/dms/image/C4D0BAQHWxlis-cuobQ/company-logo_200_200/0/1519912655201?e=2159024400&v=beta&t=LtME-VaBvRMGXYp1q-qaZT-Om_F6QOinKi1VtqAQ2uM',
+            // ],
         };
     },
     computed: {
@@ -261,6 +295,13 @@ export default {
         services() {
             return this.contents.data.filter(
                 (item) => item.props.category === 'services'
+            );
+        },
+        landSections() {
+            return this.contents.data.filter(
+                (item) =>
+                    item.props.category === 'main' &&
+                    item.props.section === 'landing'
             );
         },
     },

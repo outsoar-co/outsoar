@@ -2,7 +2,7 @@
     <main>
         <Segment class="bg-grayish-red-200 dark:bg-darker-vue">
             <div class="flex items-top justify-center flex-col py-4">
-                <div class="mx-auto">
+                <div class="mx-auto mb-4">
                     <breadcrumbs />
                 </div>
                 <banner :options="page.props.banner" />
