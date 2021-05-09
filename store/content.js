@@ -87,7 +87,13 @@ a fraction of a dot.
             {
                 id: 4,
                 title: 'Who we are',
-                body: '',
+                body: `
+The Earth is a very small stage in a vast cosmic
+arena. Think of the rivers of blood spilled by all
+those generals and emperors so that, in glory and
+triumph, they could become the momentary masters of
+a fraction of a dot.
+                `,
                 head: {},
                 params: {},
                 options: {},
@@ -96,10 +102,12 @@ a fraction of a dot.
                     banner: {
                         icon: () =>
                             import('../components/atoms/undraw/WeAreOutsoar'),
-                        text: 'Who we are',
+                        text: 'We are your team',
                         body: 'Contrary to popular belief',
                     },
+                    linkText: 'Learn more about us',
                     category: 'main',
+                    section: 'landing',
                 },
                 slug: 'about-us/who-we-are',
                 // timestamps here
@@ -107,39 +115,83 @@ a fraction of a dot.
             {
                 id: 5,
                 title: 'How we do it',
-                body: '',
+                body: `
+The Earth is a very small stage in a vast cosmic
+arena. Think of the rivers of blood spilled by all
+those generals and emperors so that, in glory and
+triumph, they could become the momentary masters of
+a fraction of a dot.
+                `,
                 head: {},
                 params: {},
                 options: {},
                 meta: [{ id: 3, content_id: 3, key: 'foo', value: 'bar' }],
                 props: {
                     banner: {
-                        icon: 'BugFixing',
-                        text: 'How we do it',
+                        icon: () =>
+                            import('../components/atoms/undraw/HowWeDoIt'),
+                        text: 'We do it for fun',
                         body: 'Contrary to popular belief',
                     },
+                    linkText: 'Checkout our process',
                     category: 'main',
+                    section: 'landing',
                 },
                 slug: 'about-us/how-we-do-it',
                 // timestamps here
             },
             {
-                id: 5,
-                title: 'How we do it',
-                body: '',
+                id: 6,
+                title: 'Our tools and tech stacks',
+                body: `
+The Earth is a very small stage in a vast cosmic
+arena. Think of the rivers of blood spilled by all
+those generals and emperors so that, in glory and
+triumph, they could become the momentary masters of
+a fraction of a dot.
+                `,
                 head: {},
                 params: {},
                 options: {},
                 meta: [{ id: 3, content_id: 3, key: 'foo', value: 'bar' }],
                 props: {
                     banner: {
-                        icon: 'BugFixing',
+                        icon: () => import('../components/molecules/ListStack'),
+                        text: 'We love opensource.',
+                        body: 'Contrary to popular belief',
+                    },
+                    linkText: 'See our tools & technologies',
+                    category: 'main',
+                    section: 'landing',
+                },
+                slug: 'about-us/our-tools-and-technologies',
+                // timestamps here
+            },
+            {
+                id: 7,
+                title: 'Trusted by',
+                body: `
+The Earth is a very small stage in a vast cosmic
+arena. Think of the rivers of blood spilled by all
+those generals and emperors so that, in glory and
+triumph, they could become the momentary masters of
+a fraction of a dot.
+                `,
+                head: {},
+                params: {},
+                options: {},
+                meta: [{ id: 3, content_id: 3, key: 'foo', value: 'bar' }],
+                props: {
+                    banner: {
+                        icon: () =>
+                            import('../components/molecules/ListTrusted'),
                         text: 'How we do it',
                         body: 'Contrary to popular belief',
                     },
                     category: 'main',
+                    section: 'landing',
                 },
-                slug: 'about-us/how-we-do-it',
+                slug: 'about-us/trusted-by',
                 // timestamps here
             },
         ],
