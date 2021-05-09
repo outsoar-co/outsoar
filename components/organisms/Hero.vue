@@ -11,6 +11,9 @@
                         class="flex lg:flex-row flex-col-reverse items-top justify-center lg:justify-start"
                     >
                         <div class="flex flex-col gap-y-2 lg:gap-y-4">
+                            <!-- <span class="text-sm"
+                                >Your creative and development team.</span
+                            > -->
                             <h1
                                 class="font-extrabold text-center lg:text-left text-4xl lg:text-7xl font-sans-bold"
                             >
@@ -34,7 +37,7 @@
                             </div>
                             <div class="flex flex-wrap">
                                 <h3
-                                    class="flex-grow font-sans text-center lg:text-left text-sm lg:text-lg"
+                                    class="flex-grow font-sans text-center lg:text-left text-sm lg:text-base"
                                 >
                                     <span class=""
                                         >Delivering Digital Experience that
@@ -64,8 +67,16 @@
                                 </btn-link>
                             </div>
                         </div>
-                        <div class="h-5/6 m-auto">
-                            <web-hosting class="object-cover h-56 lg:h-96" />
+                        <div class="relative h-5/6 mb-4 p-4 w-auto lg:w-1/2">
+                            <div
+                                class="absolute inset-0 scale-90 bg-light-outsoar dark:bg-white opacity-80 rounded-sm transform rotate-1 mx-auto"
+                            ></div>
+                            <div
+                                class="absolute inset-0 scale-90 bg-grayish-red-200 dark:bg-dark-even rounded-sm transform -rotate-1 mx-auto"
+                            ></div>
+                            <rocket
+                                class="object-cover h-62 lg:h-96 transform scale-80 lg:scale-75 lg:-translate-x-40"
+                            />
                         </div>
                     </div>
                 </div>
@@ -83,7 +94,7 @@
                         <li>DevOps</li>
                     </ul> -->
                     <chevron-double-down
-                        class="h-6 w-6 fill-current animate-bounce text-dark-vue dark:text-light-vue"
+                        class="h-6 w-6 fill-current animate-bounce text-dark-vue dark:text-light-vue hidden lg:block"
                     />
                 </div>
             </div>
@@ -95,8 +106,8 @@ import BtnLink from '@/components/atoms/BtnLink';
 import ChevronDoubleDown from '@/components/atoms/icons/ChevronDoubleDown';
 // import ChevronDoubleRight from '@/components/atoms/icons/ChevronDoubleRight';
 import Typist from '@/components/atoms/Typer';
-// import Rocket from '@/components/atoms/undraw/Rocket';
-import WebHosting from '@/components/atoms/undraw/WebHosting';
+import Rocket from '@/components/atoms/undraw/Rocket';
+// import WebHosting from '@/components/atoms/undraw/WebHosting';
 
 export default {
     components: {
@@ -104,8 +115,8 @@ export default {
         ChevronDoubleDown,
         // ChevronDoubleRight,
         Typist,
-        // Rocket,
-        WebHosting,
+        Rocket,
+        // WebHosting,
     },
     data() {
         return {

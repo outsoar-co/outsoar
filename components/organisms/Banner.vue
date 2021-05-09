@@ -4,11 +4,13 @@
             'bg-grayish-red-200 text-dark-vue dark:text-light-vue dark:bg-darker-vue',
         ]"
     >
-        <div class="flex items-center flex-wrap lg:flex-row">
+        <div class="flex items-center flex-col lg:flex-row">
             <div class="flex w-1/2">
-                <div class="flex flex-col items-top lg:justify-end">
+                <div
+                    class="mx-auto flex flex-col items-top lg:justify-content-center"
+                >
                     <h-title
-                        size="text-xl"
+                        size="text-4xl"
                         breakpoints="lg:text-7xl lg:text-left"
                     >
                         {{ options.text }}
@@ -18,10 +20,10 @@
                     </p>
                 </div>
             </div>
-            <div class="w-1/2">
+            <div class="lg:w-1/2">
                 <component
-                    :is="iconComponent"
-                    class="object-fill h-3/4 w-auto fill-current text-outsoar"
+                    :is="options.icon"
+                    class="mx-auto object-contain h-64 lg:h-96 w-auto fill-current text-outsoar"
                 />
             </div>
         </div>
@@ -45,12 +47,6 @@ export default {
                         'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece',
                 };
             },
-        },
-    },
-    computed: {
-        iconComponent() {
-            return () =>
-                import(`~/components/atoms/undraw/${this.options.icon}`);
         },
     },
 };

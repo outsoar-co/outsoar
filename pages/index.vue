@@ -6,7 +6,7 @@
                 class="container p-6 pb-12 transform -translate-y-12 lg:transform lg:-translate-y-32"
             >
                 <template #body>
-                    <h-title size="text-3xl" class="text-center">
+                    <h-title size="text-3xl" class="text-center mb-4">
                         We are experts in
                     </h-title>
                     <list
@@ -18,22 +18,26 @@
                             },
                             item: {
                                 basedClass:
-                                    'flex flex-col w-full lg:w-1/3 gap-6 p-2',
+                                    'flex flex-col w-full lg:w-1/3 gap-6 lg:p-8 p-4',
                             },
                         }"
                     >
                         <template #icon="{ item }">
-                            <component
-                                :is="item.icon"
-                                :class="[
-                                    'fill-current hover:text-outsoar',
-                                    'object-contain h-64 w-auto p-2 my-4 lg:h-64',
-                                ]"
-                            />
+                            <div
+                                class="bg-grayish-red-200 dark:bg-dark-even rounded-3xl shadow-sm"
+                            >
+                                <component
+                                    :is="item.props.banner.icon"
+                                    :class="[
+                                        'fill-current hover:text-outsoar',
+                                        'object-contain h-64 w-full lg:h-56 mx-auto lg:p-6 p-2',
+                                    ]"
+                                />
+                            </div>
                         </template>
                         <template #to="{ item }">
                             <div class="flex-none flex py-4 justify-center">
-                                <btn-link :to="item.to">Learn more</btn-link>
+                                <btn-link :to="item.slug">Learn more</btn-link>
                             </div>
                         </template>
                     </list>
@@ -41,17 +45,18 @@
             </card>
         </Segment>
         <Segment class="bg-white dark:bg-dark-even py-8">
-            <div class="flex flex-col justify-center items-center pt-4 pb-8">
+            <div class="flex flex-col justify-center items-center">
                 <div
                     class="flex flex-wrap justify-center lg:flex-row lg:flex-nowrap p-4"
                 >
-                    <div class="p-4 lg:w-1/2">
-                        <img
-                            src="https://placeimg.com/640/480/animals"
-                            class="object-cover w-full"
+                    <div
+                        class="p-8 my-20 lg:w-1/2 rounded-3xl bg-grayish-red-200 dark:bg-dark-odd"
+                    >
+                        <we-are-outsoar
+                            class="fill-current object-contain h-96 w-auto mx-auto"
                         />
                     </div>
-                    <p-article class="p-4 lg:w-1/2">
+                    <p-article class="p-8 my-20 lg:w-1/2">
                         <h4>Who we are</h4>
                         <h1>We are Outsoar</h1>
                         <p>
@@ -61,23 +66,34 @@
                             enim sed. Nibh mauris cursus mattis molestie. Urna
                             condimentum mattis pellentesque id. Arcu ac tortor
                         </p>
+                        <nuxt-link
+                            to="/about-us/who-we-are"
+                            class="mt-30 text-lg"
+                        >
+                            <div class="flex flex-row items-center">
+                                <span>Learn more about us</span>
+                                <chevron-double-right
+                                    class="fill-current ml-1"
+                                />
+                            </div>
+                        </nuxt-link>
                     </p-article>
                 </div>
-                <btn-link to="/about-us/who-we-are" class="mx-auto">
-                    <div
-                        class="flex flex-row items-center hover:scale-120 transform hover:translate-x-2"
-                    >
-                        Lets Talk
-                    </div>
-                </btn-link>
             </div>
         </Segment>
         <Segment class="bg-grayish-red-200 dark:bg-dark-odd shadow-inner py-8">
-            <div class="flex flex-col justify-center items-center pt-4 pb-8">
+            <div class="flex flex-col justify-center items-center">
                 <div
-                    class="flex flex-wrap justify-center lg:flex-row lg:flex-nowrap p-4"
+                    class="flex flex-wrap flex-wrap-reverse justify-center lg:flex-row lg:flex-row-reverse lg:flex-nowrap p-4"
                 >
-                    <p-article class="p-4 lg:w-1/2">
+                    <div
+                        class="p-8 my-20 lg:w-1/2 rounded-3xl bg-light-vue dark:bg-dark-even"
+                    >
+                        <how-we-do-it
+                            class="fill-current object-contain h-96 w-auto mx-auto"
+                        />
+                    </div>
+                    <p-article class="p-8 my-20 lg:w-1/2">
                         <h4>How we do it</h4>
                         <h1>We do it for fun</h1>
                         <p>
@@ -87,21 +103,19 @@
                             enim sed. Nibh mauris cursus mattis molestie. Urna
                             condimentum mattis pellentesque id. Arcu ac tortor
                         </p>
+                        <nuxt-link
+                            to="/about-us/who-we-are"
+                            class="mt-30 text-lg"
+                        >
+                            <div class="flex flex-row items-center">
+                                <span>Learn more about us</span>
+                                <chevron-double-right
+                                    class="fill-current ml-1"
+                                />
+                            </div>
+                        </nuxt-link>
                     </p-article>
-                    <div class="p-4 lg:w-1/2">
-                        <img
-                            src="https://placeimg.com/640/480/tech"
-                            class="object-cover h-5/6 w-full"
-                        />
-                    </div>
                 </div>
-                <btn-link to="/about-us/how-we-do-it" class="mx-auto">
-                    <div
-                        class="flex flex-row items-center hover:scale-120 transform hover:translate-x-2"
-                    >
-                        How can we help you
-                    </div>
-                </btn-link>
             </div>
         </Segment>
         <Segment class="bg-white dark:bg-dark-even shadow-inner py-8">
@@ -175,13 +189,17 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import Hero from '@/components/organisms/Hero';
 import List from '@/components/molecules/List';
 import BtnLink from '@/components/atoms/BtnLink';
 import Card from '@/components/molecules/Card';
 import Segment from '@/components/organisms/Segment';
 import HTitle from '@/components/atoms/HTitle';
-import PArticle from '~/components/organisms/PArticle.vue';
+import PArticle from '@/components/organisms/PArticle.vue';
+import WeAreOutsoar from '@/components/atoms/undraw/WeAreOutsoar';
+import HowWeDoIt from '@/components/atoms/undraw/HowWeDoIt';
+import ChevronDoubleRight from '@/components/atoms/icons/ChevronDoubleRight';
 
 export default {
     components: {
@@ -192,30 +210,33 @@ export default {
         List,
         HTitle,
         PArticle,
+        WeAreOutsoar,
+        HowWeDoIt,
+        ChevronDoubleRight,
     },
     data() {
         return {
-            services: [
-                {
-                    title: 'Development & Design',
-                    body: `Through implementing the latest technologies and patterns in the industry with exceptional attention to detail, we build and design digital systems tailored to the needs of each individual business.`,
-                    icon: () =>
-                        import('../components/atoms/undraw/BuildingWebsites'),
-                    to: '/services/development-and-design',
-                },
-                {
-                    title: 'Planning & Consultancy',
-                    body: `We love helping businesses lay out a cohesive digital strategy for long-term success and the initial consultation to see if we're the right fit for you is on us!`,
-                    icon: () => import('../components/atoms/undraw/ScrumBoard'),
-                    to: '/services/planning-and-consultancy',
-                },
-                {
-                    title: 'DevOps & Support',
-                    body: `Even the most robust systems need adjusting every now and then. As we're invested in your long-term success, we provide periodic maintenance that won't break the bank and will keep you running smoothly.`,
-                    icon: () => import('../components/atoms/undraw/BugFixing'),
-                    to: '/services/devops-and-support',
-                },
-            ],
+            // services: [
+            //     {
+            //         title: 'Development & Design',
+            //         body: `Through implementing the latest technologies and patterns in the industry with exceptional attention to detail, we build and design digital systems tailored to the needs of each individual business.`,
+            //         icon: () =>
+            //             import('../components/atoms/undraw/BuildingWebsites'),
+            //         to: '/services/development-and-design',
+            //     },
+            //     {
+            //         title: 'Planning & Consultancy',
+            //         body: `We love helping businesses lay out a cohesive digital strategy for long-term success and the initial consultation to see if we're the right fit for you is on us!`,
+            //         icon: () => import('../components/atoms/undraw/ScrumBoard'),
+            //         to: '/services/planning-and-consultancy',
+            //     },
+            //     {
+            //         title: 'DevOps & Support',
+            //         body: `Even the most robust systems need adjusting every now and then. As we're invested in your long-term success, we provide periodic maintenance that won't break the bank and will keep you running smoothly.`,
+            //         icon: () => import('../components/atoms/undraw/BugFixing'),
+            //         to: '/services/devops-and-support',
+            //     },
+            // ],
             stacks: [
                 'https://raw.githubusercontent.com/devicons/devicon/master/icons/laravel/laravel-plain-wordmark.svg',
                 'https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg',
@@ -232,6 +253,16 @@ export default {
                 'https://media-exp1.licdn.com/dms/image/C4D0BAQHWxlis-cuobQ/company-logo_200_200/0/1519912655201?e=2159024400&v=beta&t=LtME-VaBvRMGXYp1q-qaZT-Om_F6QOinKi1VtqAQ2uM',
             ],
         };
+    },
+    computed: {
+        ...mapGetters('content', {
+            contents: 'items',
+        }),
+        services() {
+            return this.contents.data.filter(
+                (item) => item.props.category === 'services'
+            );
+        },
     },
 };
 </script>
