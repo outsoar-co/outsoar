@@ -19,14 +19,14 @@
                 class="my-8"
                 breakpoints="lg:grid-cols-4 justify-items-center lg:justify-items-start"
             >
-                <div class="flex flex-col text-center lg:text-left">
+                <div class="flex flex-col my-8 text-center lg:text-left">
                     <h-title
                         size="text-xl"
                         breakpoints="lg:text-2xl lg:text-left"
                         class="mb-8 uppercase"
                         >About Us</h-title
                     >
-                    <ul>
+                    <ul class="text-xs">
                         <li v-for="(s, i) in aboutus" :key="i" class="mb-2">
                             <anchor-link :to="s.url">
                                 {{ s.label }}
@@ -34,14 +34,14 @@
                         </li>
                     </ul>
                 </div>
-                <div class="flex flex-col text-center lg:text-left">
+                <div class="flex flex-col my-8 text-center lg:text-left">
                     <h-title
                         size="text-xl"
                         breakpoints="lg:text-2xl lg:text-left"
                         class="mb-8 uppercase"
                         >Discover</h-title
                     >
-                    <ul>
+                    <ul class="text-xs">
                         <li v-for="(s, i) in discoveries" :key="i" class="mb-2">
                             <anchor-link :to="s.url">
                                 {{ s.label }}
@@ -49,14 +49,14 @@
                         </li>
                     </ul>
                 </div>
-                <div class="flex flex-col text-center lg:text-left">
+                <div class="flex flex-col my-8 text-center lg:text-left">
                     <h-title
                         size="text-xl"
                         breakpoints="lg:text-2xl lg:text-left"
                         class="mb-8 uppercase"
                         >Services</h-title
                     >
-                    <ul>
+                    <ul class="text-xs">
                         <li v-for="(s, i) in services" :key="i" class="mb-2">
                             <anchor-link :to="s.url">
                                 {{ s.label }}
@@ -64,18 +64,18 @@
                         </li>
                     </ul>
                 </div>
-                <div class="flex flex-col">
+                <div class="flex flex-col my-8">
                     <h-title
                         size="text-xl"
                         breakpoints="lg:text-2xl lg:text-left"
                         class="mb-8 uppercase"
                         >Get in Touch</h-title
                     >
-                    <ul>
+                    <ul class="text-xs">
                         <li class="mb-2">
                             <a
                                 href="tel:+639176373812"
-                                class="flex flex-row items-top"
+                                class="flex flex-row items-center"
                             >
                                 <icon-phl
                                     class="h-4 lg:h-6 fill-current text-white"
@@ -91,7 +91,7 @@
                         <li class="mb-2">
                             <anchor-link
                                 to="mailto:hello@outsoar.ph?subject=Outsoar Enquiry"
-                                class="flex flex-row items-top"
+                                class="flex flex-row items-center"
                             >
                                 <icon-gmail
                                     class="h-4 lg:h-6 fill-current text-white"
@@ -107,7 +107,7 @@
                         <li class="mb-2">
                             <anchor-link
                                 to="https://slack.com/intl/en-ph/"
-                                class="flex flex-row items-top"
+                                class="flex flex-row items-center"
                             >
                                 <icon-slack
                                     class="h-4 lg:h-6 fill-current text-white"

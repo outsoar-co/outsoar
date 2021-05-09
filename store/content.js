@@ -5,17 +5,25 @@ export const state = () => ({
             {
                 id: 1,
                 title: 'Development and Design',
-                body: '',
+                body: `
+The Earth is a very small stage in a vast cosmic
+arena. Think of the rivers of blood spilled by all
+those generals and emperors so that, in glory and
+triumph, they could become the momentary masters of
+a fraction of a dot.
+                `,
                 head: {},
                 params: {},
                 options: {},
                 meta: [{ id: 1, content_id: 1, key: 'foo', value: 'bar' }],
                 props: {
                     banner: {
-                        icon: 'BuildingWebsites',
+                        icon: () =>
+                            import('../components/atoms/undraw/DevAndDesign'),
                         text: 'Development and Design',
                         body: 'Contrary to popular belief',
                     },
+                    category: 'services',
                 },
                 slug: 'services/development-and-design',
                 // timestamps here
@@ -23,17 +31,27 @@ export const state = () => ({
             {
                 id: 2,
                 title: 'Planning and Consultancy',
-                body: '',
+                body: `
+The Earth is a very small stage in a vast cosmic
+arena. Think of the rivers of blood spilled by all
+those generals and emperors so that, in glory and
+triumph, they could become the momentary masters of
+a fraction of a dot.
+                `,
                 head: {},
                 params: {},
                 options: {},
                 meta: [{ id: 2, content_id: 2, key: 'foo', value: 'bar' }],
                 props: {
                     banner: {
-                        icon: 'ScrumBoard',
+                        icon: () =>
+                            import(
+                                '../components/atoms/undraw/PlanningAndConsultancy'
+                            ),
                         text: 'Planning and Consultancy',
                         body: 'Contrary to popular belief',
                     },
+                    category: 'services',
                 },
                 slug: 'services/planning-and-consultancy',
                 // timestamps here
@@ -41,17 +59,27 @@ export const state = () => ({
             {
                 id: 3,
                 title: 'DevOps and Support',
-                body: '',
+                body: `
+The Earth is a very small stage in a vast cosmic
+arena. Think of the rivers of blood spilled by all
+those generals and emperors so that, in glory and
+triumph, they could become the momentary masters of
+a fraction of a dot.
+                `,
                 head: {},
                 params: {},
                 options: {},
                 meta: [{ id: 3, content_id: 3, key: 'foo', value: 'bar' }],
                 props: {
                     banner: {
-                        icon: 'BugFixing',
-                        text: 'DevOps & Support',
+                        icon: () =>
+                            import(
+                                '../components/atoms/undraw/DevopsAndSupport'
+                            ),
+                        text: 'DevOps and Support',
                         body: 'Contrary to popular belief',
                     },
+                    category: 'services',
                 },
                 slug: 'services/devops-and-support',
                 // timestamps here
@@ -66,10 +94,12 @@ export const state = () => ({
                 meta: [{ id: 3, content_id: 3, key: 'foo', value: 'bar' }],
                 props: {
                     banner: {
-                        icon: 'BugFixing',
+                        icon: () =>
+                            import('../components/atoms/undraw/WeAreOutsoar'),
                         text: 'Who we are',
                         body: 'Contrary to popular belief',
                     },
+                    category: 'main',
                 },
                 slug: 'about-us/who-we-are',
                 // timestamps here
@@ -88,6 +118,7 @@ export const state = () => ({
                         text: 'How we do it',
                         body: 'Contrary to popular belief',
                     },
+                    category: 'main',
                 },
                 slug: 'about-us/how-we-do-it',
                 // timestamps here
@@ -106,6 +137,7 @@ export const state = () => ({
                         text: 'How we do it',
                         body: 'Contrary to popular belief',
                     },
+                    category: 'main',
                 },
                 slug: 'about-us/how-we-do-it',
                 // timestamps here
