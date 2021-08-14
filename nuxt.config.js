@@ -30,7 +30,30 @@ export default {
                 hid: 'description',
                 name: 'description',
                 content:
-                    'Building better websites, mobile and custom softwares',
+                    'Outsoar PH | Building better websites, mobile and custom softwares',
+            },
+            {
+                hid: 'og:image',
+                name: 'og:image',
+                content: '/outsoar-og.jpg',
+            },
+            {
+                hid: 'og:site_name',
+                name: 'og:site_name',
+                content: 'outsoar.ph',
+            },
+            {
+                hid: 'apple-mobile-web-app-title',
+                name: 'apple-mobile-web-app-title',
+                content: 'outsoar.ph',
+            },
+            {
+                name: 'msapplication-TileColor',
+                content: '#ffffff',
+            },
+            {
+                name: 'theme-color',
+                content: '#ffffff',
             },
         ],
         link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
