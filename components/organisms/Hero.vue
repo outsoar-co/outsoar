@@ -68,12 +68,12 @@
                             </div>
                         </div>
                         <div class="relative h-5/6 mb-4 p-4 w-auto lg:w-1/2">
-                            <div
+                            <!-- <div
                                 class="absolute inset-0 scale-90 bg-light-outsoar dark:bg-white opacity-80 rounded-sm transform rotate-1 mx-auto"
                             ></div>
                             <div
                                 class="absolute inset-0 scale-90 bg-grayish-red-200 dark:bg-dark-even rounded-sm transform -rotate-1 mx-auto"
-                            ></div>
+                            ></div> -->
                             <rocket
                                 class="object-cover h-62 lg:h-96 transform scale-80 lg:scale-75 lg:-translate-x-40"
                             />
