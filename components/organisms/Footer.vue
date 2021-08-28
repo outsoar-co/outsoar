@@ -2,7 +2,7 @@
     <footer
         class="bg-light-vue text-dark-vue dark:bg-dark-vue dark:text-light-vue pt-12"
     >
-        <Segment class="my-12">
+        <segment class="my-12">
             <div class="flex flex-col justify-center items-center">
                 <h-title size="text-xl" class="mb-4 text-center">
                     We write & ship beautiful code.
@@ -11,7 +11,7 @@
                     <btn-link> Let's chat </btn-link>
                 </div>
             </div>
-        </Segment>
+        </segment>
         <div class="container mx-auto px-2 py-6">
             <grid
                 cols="grid-cols-1"

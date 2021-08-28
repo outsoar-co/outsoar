@@ -192,7 +192,6 @@ a fraction of a dot.
                     section: 'landing',
                 },
                 slug: 'about-us/trusted-by',
-                // timestamps here
             },
         ],
         first_page_url: null,

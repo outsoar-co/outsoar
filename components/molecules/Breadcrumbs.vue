@@ -25,14 +25,15 @@ export default {
             const tmp = [];
             tmp.push({ path: '/', meta: { title: 'Home' } });
             this.items.data.forEach((link) => {
-                if (link.slug === this.$route.params.pathMatch) {
-                    tmp.push(
-                        Object.assign(
-                            { meta: { title: link.title } },
-                            { to: `/${link.slug}` }
-                        )
-                    );
+                if (link.slug !== this.$route.params.pathMatch) {
+                    return;
                 }
+                tmp.push(
+                    Object.assign(
+                        { meta: { title: link.title } },
+                        { to: `/${link.slug}` }
+                    )
+                );
             });
             return tmp;
         },
