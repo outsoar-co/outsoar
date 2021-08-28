@@ -14,8 +14,7 @@ export default {
      ** See https://nuxtjs.org/api/configuration-head
      */
     head: {
-        title: 'Outsoar',
-        titleTemplate: 'Pangasinan Based Development Company',
+        title: "Outsoar PH | Philippines's Better Software Agency",
         htmlAttrs: {
             lang: 'en',
             amp: true,
@@ -30,7 +29,7 @@ export default {
                 hid: 'description',
                 name: 'description',
                 content:
-                    'Outsoar PH | Building better websites, mobile and custom softwares',
+                    'We build and design better software to jumstart your business. We ship scallable, creative, and neat solution with fun!',
             },
             {
                 hid: 'og:image',
