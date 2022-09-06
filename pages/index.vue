@@ -1,15 +1,15 @@
 <template>
     <main class="bg-light-vue dark:bg-dark-vue">
         <hero />
-        <segment class="bg-grayish-red-200 dark:bg-dark-odd shadow-inner">
+        <segment class="shadow-inner bg-grayish-red-200 dark:bg-dark-odd">
             <card
                 class="container px-6 py-20 transform -translate-y-12 lg:transform lg:-translate-y-32"
             >
                 <template #body>
-                    <span class="flex text-base justify-center text-center"
+                    <span class="flex justify-center text-base text-center"
                         >Our services</span
                     >
-                    <h-title size="text-3xl" class="text-center mb-4">
+                    <h-title size="text-3xl" class="mb-4 text-center">
                         We are experts in
                     </h-title>
                     <list
@@ -21,13 +21,13 @@
                             },
                             item: {
                                 basedClass:
-                                    'flex flex-col w-full lg:w-1/3 gap-6 lg:p-8 p-4',
+                                    'flex flex-col w-full lg:w-1/3 gap-6 lg:p-8 p-4 text-center',
                             },
                         }"
                     >
                         <template #icon="{ item }">
                             <div
-                                class="bg-grayish-red-200 dark:bg-dark-even rounded-sm shadow-sm"
+                                class="rounded-sm shadow-sm bg-grayish-red-200 dark:bg-dark-even"
                             >
                                 <component
                                     :is="item.props.banner.icon"
@@ -39,7 +39,7 @@
                             </div>
                         </template>
                         <template #to="{ item }">
-                            <div class="flex-none flex py-4 justify-center">
+                            <div class="flex justify-center flex-none py-4">
                                 <btn-link :to="item.slug">Learn more</btn-link>
                             </div>
                         </template>
@@ -56,9 +56,9 @@
                     (index + 2) % 2 !== 0,
             }"
         >
-            <div class="flex flex-col justify-center items-center">
+            <div class="flex flex-col items-center justify-center">
                 <div
-                    class="flex flex-wrap justify-center lg:flex-row lg:flex-nowrap lg:gap-x-8 my-24"
+                    class="flex flex-wrap justify-center my-24 lg:flex-row lg:flex-nowrap lg:gap-x-8"
                     :class="{
                         'flex-wrap-reverse lg:flex-row-reverse':
                             (index + 2) % 2 !== 0,
@@ -74,7 +74,7 @@
                             "
                         >
                             <div
-                                class="rounded-sm p-8 mx-auto"
+                                class="p-8 mx-auto rounded-sm"
                                 :class="{
                                     'bg-grayish-red-200 dark:bg-dark-odd':
                                         (index + 2) % 2 == 0,
@@ -84,7 +84,7 @@
                             >
                                 <component
                                     :is="section.props.banner.icon"
-                                    class="fill-current object-contain h-64 lg:h-96 w-auto mx-auto p-4"
+                                    class="object-contain w-auto h-64 p-4 mx-auto fill-current lg:h-96"
                                 />
                             </div>
                         </template>
@@ -98,7 +98,7 @@
                             <component :is="section.props.banner.icon" />
                         </template>
                     </div>
-                    <p-article class="w-5/6 lg:w-1/2 p-8 lg:p-4">
+                    <p-article class="w-5/6 p-8 lg:w-1/2 lg:p-4">
                         <span class="text-base">{{ section.title }}</span>
                         <h1>{{ section.props.banner.text }}</h1>
                         <p>{{ section.body }}</p>
@@ -109,7 +109,7 @@
                             <div class="flex flex-row items-center">
                                 <span>{{ section.props.linkText }}</span>
                                 <chevron-double-right
-                                    class="fill-current ml-1"
+                                    class="ml-1 fill-current"
                                 />
                             </div>
                         </nuxt-link>
