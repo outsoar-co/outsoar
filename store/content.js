@@ -2,15 +2,13 @@ export const state = () => ({
     items: {
         current_page: 1,
         data: [
+            // Development and Design
             {
                 id: 1,
                 title: 'Development and Design',
                 body: `
-The Earth is a very small stage in a vast cosmic
-arena. Think of the rivers of blood spilled by all
-those generals and emperors so that, in glory and
-triumph, they could become the momentary masters of
-a fraction of a dot.
+                    Get the best and most accurate branding effect by creating a website that prioritizes how it appears, 
+                    functions, and collaborates to captivate visitors.
                 `,
                 head: {},
                 params: {},
@@ -21,13 +19,14 @@ a fraction of a dot.
                         icon: () =>
                             import('../components/atoms/undraw/DevAndDesign'),
                         text: 'Development and Design',
-                        body: 'Contrary to popular belief',
+                        body: 'Experience Digital Transformation',
                     },
                     category: 'services',
                 },
                 slug: 'services/development-and-design',
                 // timestamps here
             },
+            // Planning and Consultancy
             {
                 id: 2,
                 title: 'Planning and Consultancy',
@@ -56,6 +55,7 @@ a fraction of a dot.
                 slug: 'services/planning-and-consultancy',
                 // timestamps here
             },
+            // DevOps and Support
             {
                 id: 3,
                 title: 'DevOps and Support',
@@ -84,6 +84,7 @@ a fraction of a dot.
                 slug: 'services/devops-and-support',
                 // timestamps here
             },
+            // Who we are
             {
                 id: 4,
                 title: 'Who we are',
@@ -112,6 +113,7 @@ a fraction of a dot.
                 slug: 'about-us/who-we-are',
                 // timestamps here
             },
+            // How we do it
             {
                 id: 5,
                 title: 'How we do it',
@@ -140,6 +142,7 @@ a fraction of a dot.
                 slug: 'about-us/how-we-do-it',
                 // timestamps here
             },
+            // Our tools and tech stacks
             {
                 id: 6,
                 title: 'Our tools and tech stacks',
@@ -167,6 +170,7 @@ a fraction of a dot.
                 slug: 'about-us/our-tools-and-technologies',
                 // timestamps here
             },
+            // Trusted by
             {
                 id: 7,
                 title: 'Trusted by',

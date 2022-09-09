@@ -1,14 +1,14 @@
 <template>
     <main>
         <segment class="bg-grayish-red-200 dark:bg-darker-vue">
-            <div class="flex items-top justify-center flex-col py-4">
+            <div class="flex flex-col justify-center py-8 items-top">
                 <div class="mx-auto mb-4">
                     <breadcrumbs />
                 </div>
                 <banner :options="page.props.banner" />
             </div>
         </segment>
-        <segment class="bg-white dark:bg-dark-odd px-2 py-16">
+        <segment class="px-2 py-16 bg-white dark:bg-dark-odd">
             <p-article class="flex items-center justify-center w-full">
                 <nuxt-content :document="page" />
             </p-article>
