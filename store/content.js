@@ -30,11 +30,7 @@ export const state = () => ({
                 id: 2,
                 title: 'Planning and Consultancy',
                 body: `
-The Earth is a very small stage in a vast cosmic
-arena. Think of the rivers of blood spilled by all
-those generals and emperors so that, in glory and
-triumph, they could become the momentary masters of
-a fraction of a dot.
+                With extensive expertise in software engineering, Our company provides a comprehensive range of software development services, including advice on many elements of the software development process.
                 `,
                 head: {},
                 params: {},
@@ -47,7 +43,7 @@ a fraction of a dot.
                                 '../components/atoms/undraw/PlanningAndConsultancy'
                             ),
                         text: 'Planning and Consultancy',
-                        body: 'Contrary to popular belief',
+                        body: 'Manage and complete planning applications',
                     },
                     category: 'services',
                 },
