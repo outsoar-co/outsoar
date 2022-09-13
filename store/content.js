@@ -7,8 +7,7 @@ export const state = () => ({
                 id: 1,
                 title: 'Development and Design',
                 body: `
-                    Get the best and most accurate branding effect by creating a website that prioritizes how it appears, 
-                    functions, and collaborates to captivate visitors.
+                Develop a website that underscores how it seems, delivers, and collaborates to attract people to have the finest and most accurate design and marketing impact.
                 `,
                 head: {},
                 params: {},
