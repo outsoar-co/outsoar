@@ -7,7 +7,7 @@ export const state = () => ({
                 id: 1,
                 title: 'Development and Design',
                 body: `
-                Develop a website that underscores how it seems, delivers, and collaborates to attract people to have the finest and most accurate design and marketing impact.
+                Provides the broadest range of online solution development alternatives to assist streamline operations, enhance productivity, and accelerate overall success rates in the most critical sectors, industries, and niches.
                 `,
                 head: {},
                 params: {},
@@ -30,7 +30,7 @@ export const state = () => ({
                 id: 2,
                 title: 'Planning and Consultancy',
                 body: `
-                With extensive expertise in software engineering, Our company provides a comprehensive range of software development services, including advice on many elements of the software development process.
+                With considerable knowledge in software engineering, Our firm offers a full variety of software development services, including, advice on various aspects of the software development process.
                 `,
                 head: {},
                 params: {},
@@ -55,11 +55,7 @@ export const state = () => ({
                 id: 3,
                 title: 'DevOps and Support',
                 body: `
-The Earth is a very small stage in a vast cosmic
-arena. Think of the rivers of blood spilled by all
-those generals and emperors so that, in glory and
-triumph, they could become the momentary masters of
-a fraction of a dot.
+                With Outsoar PH, you may explore all the possibilities of DevOps as a Service. We adhere to industry best practices and employ cloud platforms to construct strong and cost-effective solutions for enterprises.
                 `,
                 head: {},
                 params: {},
@@ -72,7 +68,7 @@ a fraction of a dot.
                                 '../components/atoms/undraw/DevopsAndSupport'
                             ),
                         text: 'DevOps and Support',
-                        body: 'Contrary to popular belief',
+                        body: 'Greater customer satisfaction',
                     },
                     category: 'services',
                 },

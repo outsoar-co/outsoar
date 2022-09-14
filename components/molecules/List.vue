@@ -9,7 +9,7 @@
             </slot>
             <slot name="body" :item="item">
                 <p-article>
-                    <div class="text-base line-clamp-3">{{ item.body }}</div>
+                    <div class="text-base line-clamp-5">{{ item.body }}</div>
                 </p-article>
             </slot>
             <slot name="to" :item="item">
