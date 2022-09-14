@@ -3,6 +3,19 @@ title: Planning and Consultancy
 description: Planning and Consultancy
 ---
 
-# Welcome
+__Outsoar PH__ believes that integrating Development into company strategy promotes corporate growth and revenue generation, allowing for a more streamlined, adaptable, and efficient workflow. With software development experience, we are always happy to implement strategy or self-contained projects that integrate platform-based and bespoke solutions.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tempus arcu ex, quis luctus neque dictum eu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in ipsum varius nunc ultricies iaculis sit amet sit amet urna. Pellentesque quis tortor sit amet metus lacinia pulvinar. Donec vulputate lectus interdum massa cursus, vel ultrices felis rhoncus. Donec ex eros, ullamcorper vel ornare sit amet, dictum sed massa. In hac habitasse platea dictumst. Vestibulum feugiat tellus vehicula urna condimentum, in condimentum dolor accumsan. Nullam eget tempor neque. Curabitur cursus, elit in elementum vestibulum, lacus neque efficitur lacus, at gravida libero ex sollicitudin nunc. Duis iaculis sapien ligula, at tempus diam rutrum et. Phasellus in fermentum odio. Sed maximus, dolor eget rhoncus tempus, tellus ante consequat eros, et lacinia tellus elit vel lectus.
+
+- **Consultancy**
+- **Identifying needs** 
+- **Service Assistance**
+- **Agreements**
+- **Payments**
+- **Issues and complaints promptly efficiency**
+- **Provide client businesses with guidance and knowledge to aid in enhancing company success**
+
+## Business Analysis
+
+Our business analysts do requirements engineering and define the scope of the solution with a focus on the requirements of your target audience. To keep everyone involved in the process on the same page, they also act as a bridge between business stakeholders and an IT team.
+
+Working with a whole team of specialized web developers and designers in **Outsoar PH** whose practices are straightforward, supportive, and effective ensures that the output supplied will result in a productive user experience.
