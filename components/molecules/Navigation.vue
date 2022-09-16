@@ -12,23 +12,43 @@
                     class="flex flex-col items-center justify-center divide-y divide-light-blue-400"
                 >
                     <template v-for="(n, i) in menuItems">
-                        <a
+                        <button
                             :key="i"
-                            :href="n.slug"
                             :class="[
                                 'hover:text-light-outsoar dark:hover:text-dark-outsoar',
                                 'py-2 font-bold text-4xl lg:text-2xl text-center w-full',
                             ]"
                             @click="pushRouter(n.slug)"
-                            >{{ n.title }}</a
                         >
+                            {{ n.title }}
+                        </button>
                     </template>
-                    <div class="py-2 w-full flex justify-center">
-                        <btn-link to="#"> Contact Us </btn-link>
+                    <div
+                        v-if="$nuxt.$route.path != '/contact-us/contact'"
+                        class="flex justify-center w-full py-2"
+                    >
+                        <!-- <btn-link to="/contact-us/contact">
+                            <p
+                                @click.prevent="
+                                    pushRouter('/contact-us/contact')
+                                "
+                            >
+                                Contact Us
+                            </p>
+                        </btn-link> -->
+                        <btn-link to="/contact-us/contact">
+                            <p
+                                @click.prevent="
+                                    pushRouter('/contact-us/contact')
+                                "
+                            >
+                                Contact Us
+                            </p>
+                        </btn-link>
                     </div>
-                    <div class="py-2 w-full flex justify-center">
+                    <div class="flex justify-center w-full py-2">
                         <ul
-                            class="flex flex-wrap lg:flex-row items-center justify-around w-3/4"
+                            class="flex flex-wrap items-center justify-around w-3/4 lg:flex-row"
                         >
                             <li>
                                 <a
@@ -36,7 +56,7 @@
                                     class="flex flex-row items-center justify-items-center"
                                 >
                                     <icon-phl
-                                        class="m-2 h-4 lg:h-6 fill-current text-white"
+                                        class="h-4 m-2 text-white fill-current lg:h-6"
                                     />
                                     <span
                                         >Call Us
@@ -52,7 +72,7 @@
                                     class="flex flex-row items-center justify-items-center"
                                 >
                                     <icon-gmail
-                                        class="m-2 h-4 lg:h-6 fill-current text-white"
+                                        class="h-4 m-2 text-white fill-current lg:h-6"
                                     />
                                     <span
                                         >Email us
@@ -68,7 +88,7 @@
                                     class="flex flex-row items-center justify-items-center"
                                 >
                                     <icon-slack
-                                        class="mx-2 h-4 lg:h-6 fill-current text-white"
+                                        class="h-4 mx-2 text-white fill-current lg:h-6"
                                     />
                                     <span
                                         >Join us on our
@@ -176,8 +196,8 @@ export default {
     },
     methods: {
         pushRouter(to) {
-            console.log('to: ', to);
-            this.$router.push({ path: to });
+            console.log('to ' + to);
+            this.$router.push({ path: `/${to}` });
             this.$emit('close', false);
         },
     },
