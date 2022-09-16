@@ -1,6 +1,6 @@
 <template>
     <button
-        class="no-underline inline-block font-medium px-4 py-2 shadow uppercase hover:shadow-md text-dark-vue hover:text-white sm:mr-4 text-base mb-4 bg-outsoar"
+        class="inline-block px-4 py-2 mb-4 text-base font-medium no-underline uppercase border-b-4 shadow text-dark-vue sm:mr-4 bg-light-outsoar text-light-vue dark:bg-dark-outsoar border-dark-outsoar dark:border-light-outsoar"
     >
         <slot> Button </slot>
     </button>
