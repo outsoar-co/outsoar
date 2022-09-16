@@ -188,6 +188,32 @@ a fraction of a dot.
                 },
                 slug: 'about-us/trusted-by',
             },
+            // Contact Us
+            {
+                id: 8,
+                title: 'Contact Us',
+                body: `
+The Earth is a very small stage in a vast cosmic
+arena. Think of the rivers of blood spilled by all
+those generals and emperors so that, in glory and
+triumph, they could become the momentary masters of
+a fraction of a dot.
+                `,
+                head: {},
+                params: {},
+                options: {},
+                meta: [{ id: 3, content_id: 3, key: 'foo', value: 'bar' }],
+                props: {
+                    banner: {
+                        icon: () =>
+                            import('../components/atoms/undraw/ContactUs'),
+                        text: 'Contact Us',
+                        body: `We'd love to hear from you`,
+                    },
+                    category: 'contact',
+                },
+                slug: 'contact-us/contact',
+            },
         ],
         first_page_url: null,
         from: null,
